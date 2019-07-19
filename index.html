@@ -1,9 +1,78 @@
 <!doctype html>
 <html>
+<script src="https://d3js.org/d3.v5.min.js"></script>
   <head>
-    <title>This is the title of the webpage!</title>
+    <title>Number of Suicide per 100k Population per Country</title>
   </head>
   <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
+    <p>Number of Suicide per 100k Population per Country</p>
+    <script type="text/javascript">
+		// Set the dimensions of the canvas / graph
+
+    	var width = 1080;
+    	var height = 3000;
+    	var svg = d3.select("body")
+                	.append("svg")
+               		.attr("width", width);
+        var div = d3.select("body").append("div")
+        			.attr("width", "40px")
+        			.attr("height", "40px")
+        			.attr("padding", "2px")
+        			.attr("font", "15px")
+        			.attr("position", "absolute")
+        			.attr("background", "white")
+        			.style("opacity", 0);
+        
+    	d3.csv("data/100kPop_per_country.csv").then(function(data) {
+    		console.log(data);
+    		data = data.reverse()
+        	var maxdata = data[0].Suicides_per_100KPop;
+        	var textlen = 200;
+        	console.log('max country', data[0].Country)
+        	var xs = d3.scaleLinear().domain([0, parseFloat(maxdata) + 100]).range([0, width-textlen]);
+        	var height = 20 * data.length;
+
+        	svg.attr("height", height + 30)
+
+    		svg.selectAll("rect")
+    	    	.data(data)
+    	    	.enter()
+    	    	.append("rect")
+    	    		.attr("x", textlen)
+    	    		.attr("y", function(d, i) {return i * 20 + 20;})
+    	    		.attr("width", function(d) {return xs(d.Suicides_per_100KPop) ;})
+    	    		.attr("height", 18)
+    	    		.attr("fill", d3.color("steelblue"))
+    	    		.on("mouseover", function(d, i) {
+    	    			div.transition()
+    	    				.duration(200)
+    	    				.style("opacity", 1);
+    	    			div.html("Country:" + d.Country + "<b>" + "Suicide Rate (Per 100k Pop):" + d.Suicides_per_100KPop)
+    	    				.style("left", (d3.select(this).attr("x")) + "px")
+    	    				.style("top", (i * 20 + 20) + "px");
+    	    		})
+    	    		.on("mouseout", function(d) {		
+            			div.transition()		
+                			.duration(500)		
+                			.style("opacity", 0);	
+                	});
+    	    
+    	    svg.selectAll("text")
+    	    	.data(data)
+    	    	.enter()
+    	    	.append("text")
+    	    		.attr("x", 10)
+    	    		.attr("y", function(d, i) {return i * 20 + 35;})
+    	    		.text(function(d) {return d.Country;})
+    	    		.attr("font-size", "17px")
+    	    		.attr("fill", "black");
+
+
+    	});
+
+    	
+    </script>
   </body>
+  
+
 </html>
