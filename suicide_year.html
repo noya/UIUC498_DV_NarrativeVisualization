@@ -1,0 +1,185 @@
+<!doctype html>
+<meta charset="utf-8">
+<style type="text/css">
+/* 13. Basic Styling with CSS */
+.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 200px;
+  height: 12px;
+  padding: 8px;
+  margin-top: -20px;
+  font: 15px sans-serif;
+  pointer-events: none;
+  background: rgba(255, 255, 255, .8);
+}
+
+/* Style the lines by removing the fill and applying a stroke */
+.line {
+    fill: none;
+    stroke: #ffab00;
+    stroke-width: 3;
+}
+  
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+/* Style the dots by assigning a fill and stroke */
+.dot {
+    fill: #ffab00;
+    stroke: #fff;
+}
+  
+.focus circle {
+  fill: none;
+  stroke: steelblue;
+}
+
+</style>
+<html>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://d3js.org/d3-time.v1.min.js"></script>
+<script src="https://d3js.org/d3-time-format.v2.min.js"></script>
+  <head>
+    <title>World Suicide Rate from 1985~2016</title>
+  </head>
+  <body>
+    <h1>World Suicide Rate from 1985~2016 </h1>
+    <p>What Year Has The Highest Suicide Rate?</p>
+    <p>Graph of Avereage Suicide Rates per year (per 100k Population)</p>
+    <script type="text/javascript">
+		// Set the dimensions of the canvas / graph
+
+        var margin = {top:20, right: 160, bottom: 50, left:30}
+            , width = window.innerWidth - margin.left - margin.right
+            , height = window.innerHeight - margin.top - margin.bottom;
+        
+        var svg = d3.select("body").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        var div = d3.select("body").append("div")
+            .attr("class", "tooltip")
+            .style("display", "none");
+
+        // load data
+    	d3.csv("data/suicides_year.csv").then(function(data) {
+            // template based on https://bl.ocks.org/gordlea/27370d1eea8464b04538e6d8ced39e89
+    		console.log(data);
+            // format the data
+            var parseTime = d3.timeParse("%Y");
+            var formatTime = d3.timeFormat("%Y")
+            data.forEach(function(d) {
+                d.Year = parseTime(d.Year);
+                d.Avg_Suicides_per_100K_Pop = +d.Avg_Suicides_per_100K_Pop;
+            });
+            var max_suicide = d3.max(data, function(d) {return d.Avg_Suicides_per_100K_Pop;});
+
+            // X scale to index data
+            console.log('max suicide' + max_suicide);
+            var min_max_years = d3.extent(data, function(d) {return d.Year;});
+            console.log('min_max_years' + min_max_years + 'min year' + min_max_years[0] + 'max yaer' + min_max_years[1]);
+
+            var xs = d3.scaleTime()
+                .domain([min_max_years[0], min_max_years[1]])
+                .range([0, width]);
+
+            var ys = d3.scaleLinear()
+                .domain([0, max_suicide])
+                .range([height, 0]);
+
+            var line = d3.line()
+                .x(function(d, i) {return xs((d.Year));})
+                .y(function(d) {return ys(d.Avg_Suicides_per_100K_Pop);})
+                .curve(d3.curveMonotoneX)
+            // call the xaxis in a group tag
+            svg.append("g")
+                .attr("class", "x axis")
+                .attr("transform", "translate(0," + height + ")")
+                // .call(d3.axisBottom(xs).tickFormat(d3.timeFormat("%Y"))); // Create an axis component with d3.axisBottom
+                .call(d3.axisBottom(xs)); // Create an axis component with d3.axisBottom
+            // call the y axis in a group tag
+            svg.append("g")
+                .attr("class", "y axis")
+                .call(d3.axisLeft(ys)); // Create an axis component with d3.axisLeft
+
+            // append the path, bind the data
+            svg.append("path")
+                .datum(data)
+                .attr("class", "line")
+                .attr("d", line)
+
+            // 12. Appends a circle for each datapoint 
+            svg.selectAll(".dot")
+                .data(data)
+              .enter().append("circle") // Uses the enter().append() method
+                .attr("class", "dot") // Assign a class for styling
+                .attr("cx", function(d, i) { return xs((d.Year)) })
+                .attr("cy", function(d) { return ys(d.Avg_Suicides_per_100K_Pop) })
+                .attr("r", 5)
+                  .on("mouseout", mouseout)
+                  .on("mouseout", function() {
+                    d3.select(this)
+                    .style("stroke", "none");
+                    return mouseout();
+                  })
+                  // .on("mouseover", function(d) {return mouseover(d)} )
+                  .on("mouseover", function(d) {
+                    d3.select(this)
+                    .style("stroke", "black");
+                    return mouseover(d);
+                    });
+
+            var focus = svg.append("g")
+                .attr("class", "focus")
+                .style("display", "none");
+
+            focus.append("circle")
+              .attr("r", 4.5);
+
+            focus.append("text")
+              .attr("x", 9)
+              .attr("dy", ".35em");
+
+            function mouseover(d)  {
+                div.transition().duration(300).style("opacity", 0.9).style("display", "inline");
+                div.html("Year: " + formatTime(d.Year) +  "<br>Suicide Rate: " + d['Avg_Suicides_per_100K_Pop'])
+                    .style("display", "inline")
+                    .style("left", d3.event.pageX + 10 + "px")
+                    .style("top", d3.event.pageY +20 + "px");
+            }
+            function mouseout() {
+                div.transition()        
+                    .duration(500)      
+                    .style("opacity", 0)
+                    .style("display", "none");  
+            }
+
+            // text label for x axis
+            // text label for the x axis
+            svg.append("text")             
+              .attr("transform",
+                    "translate(" + (width/2) + " ," + 
+                                   (height + margin.top + 20) + ")")
+              .style("text-anchor", "middle")
+              .text("Year");
+
+            svg.append("text")             
+              .attr("transform", "rotate(-90)")
+              .attr("y", 0 - margin.left)
+              .attr("x", 0 - (height/2))
+              .attr("dy", "1em")
+              .style("text-anchor", "middle")
+              .text("Average Suicides Every 100K Population");
+    	});
+
+    	
+    </script>
+  </body>
+  
+
+</html>
