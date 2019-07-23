@@ -36,13 +36,14 @@
                     .attr("class", "tooltip")
                     .style("display", "none");
         
-    	d3.csv("data/100kPop_per_country.csv").then(function(data) {
+    	d3.csv("data/suicides_country.csv").then(function(data) {
     		console.log(data);
     		data = data.reverse();
-        	var maxdata = data[0].Suicides_per_100KPop;
+        	var maxdata = data[0]['Avg. Suicides_per_100K_Pop'];
         	var textlen = 200;
+            var margin = 50;
         	console.log('max country', data[0].Country)
-        	var xs = d3.scaleLinear().domain([0, parseFloat(maxdata) + 100]).range([0, width-textlen]);
+        	var xs = d3.scaleLinear().domain([0, parseFloat(maxdata)]).range([0, width-textlen-margin]);
         	var height = 20 * data.length;
 
         	svg.attr("height", height + 30)
@@ -53,13 +54,13 @@
     	    	.append("rect")
     	    		.attr("x", textlen)
     	    		.attr("y", function(d, i) {return i * 20 + 20;})
-    	    		.attr("width", function(d) {return xs(d.Suicides_per_100KPop) ;})
+    	    		.attr("width", function(d) {return xs(d['Avg. Suicides_per_100K_Pop']) ;})
     	    		.attr("height", 18)
     	    		.attr("fill", d3.color("steelblue"))
     	    		.on("mouseover", function(d) {
                         d3.select(this).attr("stroke", "black");
                         div.transition().duration(300).style("opacity", 0.9).style("display", "inline");
-    	    			div.html(d.Country + " Suicide Rate:" + d.Suicides_per_100KPop + " pp")
+    	    			div.html(d.Country + " Suicide Rate:" + d['Avg. Suicides_per_100K_Pop'] + " pp")
                             .style("display", "inline")
     	    				.style("left", d3.event.pageX + 50 + "px")
     	    				.style("top", d3.event.pageY +20 + "px");

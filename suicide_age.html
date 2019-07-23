@@ -1,0 +1,118 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+
+.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 360px;
+  height: 12px;
+  padding: 8px;
+  margin-top: -20px;
+  font: 15px sans-serif;
+  pointer-events: none;
+  background: rgba(255, 255, 255, .8);
+}
+
+</style>
+<html>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+  <head>
+    <title>World Suicide Rate from 1985~2016</title>
+  </head>
+  <body>
+    <h1>World Suicide Rate from 1985~2016 </h1>
+    <p>What Age Bracket Do You Think Has The Highest Suicide Rate?</p>
+    <p>List of Suicide Rates per age (per 100k Population)</p>
+    <script type="text/javascript">
+		// Set the dimensions of the canvas / graph
+
+    	var width = 1080;
+    	var height = 680;
+        var margin = 30;
+    	var svg = d3.select("body")
+                	.append("svg")
+               		.attr("width", width);
+        var div = d3.select("body").append("div")
+                    .attr("class", "tooltip")
+                    .style("display", "none");
+    	d3.csv("data/suicides_age.csv").then(function(data) {
+    		console.log(data);
+            const females = new Map();
+            const males = new Map();
+            var maxheight = 0;
+            console.log(data.keys());
+            var ages = new Set();
+            // ages.add(data.map())
+            for (var i = 0; i < data.length; i++) {
+                ages.add(data[i].Age);
+                maxheight = Math.max(maxheight, data[i].Avg_Suicides_per_100K_Pop);
+            }
+            console.log('maxheight' + maxheight);
+            console.log('ages' + Array.from(ages));
+            //var margin = {top:20, right:90, bottom: 30, left: 120};
+            // var dataset = d3.layout.stack()(["male", "female"].map(function(sex) {
+            //     return data.map(function(d) {
+            //         return {x: parse(d.Age), y: +d[sex]};
+            //     });
+            // }));
+
+            // set x, y and colors
+            // var x = d3.scale.ordinal()
+            //     .domain(dataset[0].map(function(d) {return d.x;}))
+            //     .rangeRoundBands([margin+20, width-margin], 0.02);
+
+            // var ys = d3.scale.linear()
+            //     .domain([0, d3.max(dataset, function(d) {return d3.max(d, function(d) {return d.y0 + d.y; })})])
+    		var ys = d3.scaleLinear().domain([0, maxheight]).range([height-margin, 0]);
+            var xs = d3.scaleLinear().domain([0, data.length]).range([margin + 20, width-margin]);
+            // var xs = d3.scaleBand().domain(Array.from(ages)).range([margin + 20, width-margin]);
+
+            // xs.domain(data.map(function(d) {return d.Age;}))
+            var cs = d3.scaleLinear().domain([0, 1]).range(['steelblue', 'orange']);
+            var sexmap = new Map([['male', 0], ['female', 1]]);
+            console.log('male' + sexmap.get('male'));
+            console.log('x' + xs('25-34 years'))
+            var barwidth = 50;
+            svg.attr("height", height);
+            svg.selectAll("rect")
+                .data(data)
+                .enter()
+                .append("rect")
+                    .attr("x", function(d, i) {return xs(i);})
+                    // .attr("x", function(d) {return xs(d.Age);})
+                    .attr("y", function(d, i) {return ys(d.Avg_Suicides_per_100K_Pop);})
+                    .attr("width", function(d, i) {return barwidth;})
+                    .attr("height", function(d) {return height-ys(d.Avg_Suicides_per_100K_Pop);})
+                    .attr("fill", function(d) {return cs(sexmap.get(d.Sex));})
+                    .on("mouseover", function(d) {
+                        d3.select(this).attr("stroke", "black");
+                        div.transition().duration(300).style("opacity", 0.9).style("display", "inline");
+                        div.html("Age: " + d.Age + " <br>Sex:" + d.Sex + "<br>Suicide Rate" + d['Avg_Suicides_per_100K_Pop'] + " pp")
+                            .style("display", "inline")
+                            .style("left", d3.event.pageX + 50 + "px")
+                            .style("top", d3.event.pageY +20 + "px");
+                    })
+                    .on("mouseout", function(d) {   
+                        d3.select(this).attr("stroke", "none"); 
+                        div.transition()        
+                            .duration(500)      
+                            .style("opacity", 0)
+                            .style("display", "none");  
+                    });
+            
+            svg.append("g")
+                .attr("transform", "translate("+margin+",0)")
+                .call(d3.axisLeft(ys));
+            svg.append("g")
+                .attr("transform", "translate(0, "+(height)+")")
+                .call(d3.axisBottom(xs));
+
+    	});
+
+    	
+    </script>
+  </body>
+  
+
+</html>
