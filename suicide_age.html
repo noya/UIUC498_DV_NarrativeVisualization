@@ -27,20 +27,27 @@
     <script type="text/javascript">
 		// Set the dimensions of the canvas / graph
 
-    	var width = 1080;
-    	var height = 680;
-        var margin = 30;
-    	var svg = d3.select("body")
+        var margin = {top:20, right: 160, bottom: 50, left:30};
+        var width = 960 - margin.left - margin.right;
+        var height = 500 - margin.top - margin.bottom;
+
+        var svg = d3.select("body")
                 	.append("svg")
-               		.attr("width", width);
+               		.attr("width", width + margin.left + margin.right)
+                    .attr("height", height + margin.top + margin.bottom)
+                    .append("g")
+                    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
         var div = d3.select("body").append("div")
                     .attr("class", "tooltip")
                     .style("display", "none");
+
+        // load data
     	d3.csv("data/suicides_age.csv").then(function(data) {
     		console.log(data);
-            const females = new Map();
-            const males = new Map();
             var maxheight = 0;
+            var barwidth = 50;
+
             console.log(data.keys());
             var ages = new Set();
             // ages.add(data.map())
@@ -50,37 +57,23 @@
             }
             console.log('maxheight' + maxheight);
             console.log('ages' + Array.from(ages));
-            //var margin = {top:20, right:90, bottom: 30, left: 120};
-            // var dataset = d3.layout.stack()(["male", "female"].map(function(sex) {
-            //     return data.map(function(d) {
-            //         return {x: parse(d.Age), y: +d[sex]};
-            //     });
-            // }));
 
-            // set x, y and colors
-            // var x = d3.scale.ordinal()
-            //     .domain(dataset[0].map(function(d) {return d.x;}))
-            //     .rangeRoundBands([margin+20, width-margin], 0.02);
+    		var ys = d3.scaleLinear().domain([0, maxheight]).range([height, 0]);
+            var xs = d3.scaleLinear().domain([0, data.length]).range([0, width]);
+            var x = d3.scalePoint().domain(["5-14", "15-24", "25-34", "35-54", "55-74", "75+", ""]).range([0, width]);
 
-            // var ys = d3.scale.linear()
-            //     .domain([0, d3.max(dataset, function(d) {return d3.max(d, function(d) {return d.y0 + d.y; })})])
-    		var ys = d3.scaleLinear().domain([0, maxheight]).range([height-margin, 0]);
-            var xs = d3.scaleLinear().domain([0, data.length]).range([margin + 20, width-margin]);
-            // var xs = d3.scaleBand().domain(Array.from(ages)).range([margin + 20, width-margin]);
-
-            // xs.domain(data.map(function(d) {return d.Age;}))
             var cs = d3.scaleLinear().domain([0, 1]).range(['steelblue', 'orange']);
             var sexmap = new Map([['male', 0], ['female', 1]]);
             console.log('male' + sexmap.get('male'));
-            console.log('x' + xs('25-34 years'))
-            var barwidth = 50;
+            // console.log('x' + xs('25-34 years'))
             svg.attr("height", height);
-            svg.selectAll("rect")
+            svg.append("g")
+                    .attr("transform", "translate("+margin.left+","+margin.top+")")
+                .selectAll("rect")
                 .data(data)
                 .enter()
                 .append("rect")
                     .attr("x", function(d, i) {return xs(i);})
-                    // .attr("x", function(d) {return xs(d.Age);})
                     .attr("y", function(d, i) {return ys(d.Avg_Suicides_per_100K_Pop);})
                     .attr("width", function(d, i) {return barwidth;})
                     .attr("height", function(d) {return height-ys(d.Avg_Suicides_per_100K_Pop);})
@@ -88,7 +81,7 @@
                     .on("mouseover", function(d) {
                         d3.select(this).attr("stroke", "black");
                         div.transition().duration(300).style("opacity", 0.9).style("display", "inline");
-                        div.html("Age: " + d.Age + " <br>Sex:" + d.Sex + "<br>Suicide Rate" + d['Avg_Suicides_per_100K_Pop'] + " pp")
+                        div.html("Age: " + d.Age + " <br>Sex: " + d.Sex + "<br>Suicide Rate: " + d['Avg_Suicides_per_100K_Pop'])
                             .style("display", "inline")
                             .style("left", d3.event.pageX + 50 + "px")
                             .style("top", d3.event.pageY +20 + "px");
@@ -102,11 +95,11 @@
                     });
             
             svg.append("g")
-                .attr("transform", "translate("+margin+",0)")
+                .attr("transform", "translate("+margin.left+","+margin.top+")")
                 .call(d3.axisLeft(ys));
             svg.append("g")
-                .attr("transform", "translate(0, "+(height)+")")
-                .call(d3.axisBottom(xs));
+                .attr("transform", "translate("+margin.left+", "+(height+margin.top)+")")
+                .call(d3.axisBottom().scale(x).ticks(6));
 
     	});
 
