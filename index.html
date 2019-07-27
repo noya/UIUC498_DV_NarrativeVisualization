@@ -187,11 +187,11 @@ body{
 <script src="https://d3js.org/d3-transition.v1.min.js"></script>
 
   <head>
-    <title>World Suicide Rate from 1985~2016</title>
+    <title>World Suicide Rate 1985~2016</title>
   </head>
   <body>
         <div id = "title">
-            <h3> World Suicide Rate from 1985~2016 </h3>
+            <h2 class="text-secondary"> World Suicide Rate 1985~2016 </h2>
         </div>
         
         <div id = "top">
@@ -400,11 +400,13 @@ body{
             // d3.csv("data/suicides_sex_year.csv", function(data) {      
                 // write title of graph
                 var title = d3.select("#graph_title").append("h2")
+                    .attr("class", "text-info")
                     .text("Avereage Suicide Rates Per Sex Per Year")
                     .attr("align", "center");
 
                 // Add information to the graph to guide use
                 var header = d3.select("#highlight").append("h4")
+                    // .attr("class", "text-primary")
                     .text("Which Sex Has The Highest Suicide Rate?")
                     .attr("align", "left");
                 var info = d3.select("#highlight").append("p")
@@ -556,6 +558,7 @@ body{
 
                 // write title of graph
                 var title = d3.select("#graph_title").append("h2")
+                    .attr("class", "text-info")
                     .text("Avereage Suicide Rates Per Year")
                     .attr("align", "center");
 
@@ -741,6 +744,7 @@ body{
 
                 // write title of graph
                 var title = d3.select("#graph_title").append("h2")
+                    .attr("class", "text-info")
                     .text("Avereage Suicide Rates Per Age Per Year")
                     .attr("align", "center");
 
