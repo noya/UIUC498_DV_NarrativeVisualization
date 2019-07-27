@@ -3,6 +3,7 @@
 
 *Cindy Tseng (cindyst2@illinois.edu)*
 
+The dataset used for this project is taken from Kaggle [https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016]
 
 **Messaging. What is the message you are trying to communicate with the narrative visualization?**
 

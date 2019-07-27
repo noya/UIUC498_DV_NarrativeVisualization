@@ -2,43 +2,56 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <style type="text/css">
+    #title {
+        height:10vh;
+        padding: 8px;
+    }
     #top {
-        height:5vh;
+        height:10vh;
     }
-    #main {
-        height:50vh;
-    }
-    #leftspace {
-        float:left;
-        width:5%;
-        height:70vh;
-    }
-    #leftbox { 
+    #page_button {
                 float:left;  
                 width:20%; 
-                height:70vh; 
-            } 
-            #middlebox{ 
-                float:left;  
-                width:70%; 
-                height:70vh; 
-            } 
-            #rightspace{ 
-                float:left;  
-                width:5%; 
-                height:70vh; 
-            } 
-    #page_button {
-        float:left;  
-        width:20%; 
-        /*height:10vh; */
-    }
-    #graph_title {
-        float:left;  
-        width:70%; 
-        /*height:10vh; */
-    }
+                height:10vh; 
+                padding: 8px;
+            }
+        
+        #graph_title {
+            float:left;  
+            width:70%; 
+            padding: 10px;
+        }
 
+    #main {
+        height:70vh;
+    }
+    
+        /*#leftspace {
+            float:left;
+            width:5%;
+            height:70vh;
+        }*/
+        #leftbox { 
+            float:left;  
+            width:20%; 
+            padding: 10px;
+            height: inherit;
+
+            /*height:70vh; */
+        } 
+            #author {
+            float:right;
+            padding:10px;
+            /*width:inherit;*/
+            /*padding: 10px;*/
+            }
+        #middlebox{ 
+            float:left;  
+            width:70%; 
+            height: inherit;
+            /*height:70vh; */
+        } 
+       
 
 /* 13. Basic Styling with CSS */
 .tooltip {
@@ -177,23 +190,32 @@ body{
     <title>World Suicide Rate from 1985~2016</title>
   </head>
   <body>
-   
-        <h3>World Suicide Rate from 1985~2016 </h3>
+        <div id = "title">
+            <h3> World Suicide Rate from 1985~2016 </h3>
+        </div>
+        
         <div id = "top">
-            <div id = "page_button">
-                <button id = "bn" type="button" class="btn btn-outline-dark btn-sm"  onclick="nextPage(-1)"><</button>
-                <button id = "b1" type="button" class="btn btn-outline-dark btn-sm active" onclick="gotoPage(1)">1</button>
-                <button id = "b2" type="button" class="btn btn-outline-dark btn-sm " onclick="gotoPage(2)">2</button>
-                <button id = "b3" type="button" class="btn btn-outline-dark btn-sm " onclick="gotoPage(3)">3</button>
-                <button id = "nb" type="button" class="btn btn-outline-dark btn-sm " onclick="nextPage(1)">></button>
+             <div id = "page_button">
+                    <button id = "bn" type="button" class="btn btn-outline-dark btn-sm"  onclick="nextPage(-1)"><</button>
+                    <button id = "b1" type="button" class="btn btn-outline-dark btn-sm active" onclick="gotoPage(1)">1</button>
+                    <button id = "b2" type="button" class="btn btn-outline-dark btn-sm " onclick="gotoPage(2)">2</button>
+                    <button id = "b3" type="button" class="btn btn-outline-dark btn-sm " onclick="gotoPage(3)">3</button>
+                    <button id = "nb" type="button" class="btn btn-outline-dark btn-sm " onclick="nextPage(1)">></button>
             </div>
-            <div id = "graph_title">
-            </div>
+
+            
+            <div id = "graph_title"></div>
         </div>
         
         <div id = "main">
             <!-- <div id = "leftspace"></div> -->
-            <div id = "leftbox"></div>
+            <div id = "leftbox">
+                
+                <div id ="highlight"></div>
+                <div id ="author">
+                    <p>Cindy Tseng</p>
+                </div>
+            </div>
             <div id = "middlebox"></div>
             <!-- <div id = "rightspace"></div> -->
         </div>
@@ -269,7 +291,7 @@ body{
         function clear_graph() {
             svg.selectAll("*").remove();
             d3.selectAll("#graph_title > *").remove();
-            d3.selectAll("#leftbox > *").remove();     
+            d3.selectAll("#highlight > *").remove();     
         }
         
         // Page Control Logic
@@ -382,12 +404,12 @@ body{
                     .attr("align", "center");
 
                 // Add information to the graph to guide use
-                var header = d3.select("#leftbox").append("h4")
+                var header = d3.select("#highlight").append("h4")
                     .text("Which Sex Has The Highest Suicide Rate?")
-                    .attr("align", "left")
-                var info = d3.select("#leftbox").append("p")
+                    .attr("align", "left");
+                var info = d3.select("#highlight").append("p")
                     .text("\n \n Men account for at least 70% of the suicide rate. This trend is the same in all years. ")
-                    .attr("align", "left")
+                    .attr("align", "left");
                 
                 // Process Data
                 console.log(data);
@@ -538,10 +560,10 @@ body{
                     .attr("align", "center");
 
                 // Add information to the graph to guide use
-                var header = d3.select("#leftbox").append("h4")
+                var header = d3.select("#highlight").append("h4")
                     .text("What Year Has The Highest Suicide Rate?")
                     .attr("align", "left")
-                var info = d3.select("#leftbox").append("p")
+                var info = d3.select("#highlight").append("p")
                     .text("\n \n The average suicide rate slowly climbs up from 1985 to 1995. In 1995 it has the highest suicide rate followed by a slow steady decline. However notice the inflection point in 2015. In 2016 the suicide rate again climbs back up")
                     .attr("align", "left")
                 
@@ -723,10 +745,10 @@ body{
                     .attr("align", "center");
 
                 // Add information to the graph to guide use
-                var header = d3.select("#leftbox").append("h4")
+                var header = d3.select("#highlight").append("h4")
                     .text("What Age Group Has The Highest Suicide Rate?")
                     .attr("align", "left")
-                var info = d3.select("#leftbox").append("p")
+                var info = d3.select("#highlight").append("p")
                     .text("Age group 75+ has the highest suicide rate amonst all age groups. However note that in 1995 there's a bump in suicide rate across all age groups")
                     .attr("align", "left")
                     
