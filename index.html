@@ -23,14 +23,9 @@
         }
 
     #main {
-        height:70vh;
+        height:60vh;
     }
     
-        /*#leftspace {
-            float:left;
-            width:5%;
-            height:70vh;
-        }*/
         #leftbox { 
             float:left;  
             width:20%; 
@@ -51,7 +46,62 @@
             height: inherit;
             /*height:70vh; */
         } 
-       
+    #bottom {
+          height:5vh;
+          /*width:70%;
+          padding: 10px;
+          text-align: center;
+          margin: 0 auto;
+          display: inline-block;*/
+    }
+        #bt_left {
+            float:left;
+            height:inherit;
+            width:20%;
+            padding: 10px;
+        }
+        #bt_middle {
+            float:left;  
+            width:70%; 
+            height: inherit;
+            padding: 20px;
+            text-align: center
+        }
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;
+  width: 80%;
+  height: 25px;
+  background: #d3d3d3;
+  border-radius: 5px; 
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 30%; 
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 30%; 
+  background: #4CAF50;
+  cursor: pointer;
+}
 
 /* 13. Basic Styling with CSS */
 .tooltip {
@@ -59,8 +109,7 @@
   text-align: left;
   width: 200px;
   height: 40px;
-  padding: 8px;
-  margin-top: -20px;
+  padding: 10px;
   font: 15px sans-serif;
   pointer-events: none;
   background: rgba(255, 255, 255, .8);
@@ -167,24 +216,14 @@ body{
 </style>
 <html>
 <script src="https://d3js.org/d3.v5.min.js"></script>
-<!-- annotation, but built on d3/d4-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.3.2/d3-annotation.js"></script>
 
 <!-- bootstrap-->
  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.2/bootstrap-slider.js"></script> -->
+<script src="https://unpkg.com/topojson-client@3"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.js"></script>
 
-<script src="https://d3js.org/d3-time.v1.min.js"></script>
-<script src="https://d3js.org/d3-time-format.v2.min.js"></script>
-
-<script src="https://d3js.org/d3-color.v1.min.js"></script>
-<script src="https://d3js.org/d3-dispatch.v1.min.js"></script>
-<script src="https://d3js.org/d3-ease.v1.min.js"></script>
-<script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
-<script src="https://d3js.org/d3-selection.v1.min.js"></script>
-<script src="https://d3js.org/d3-timer.v1.min.js"></script>
-<script src="https://d3js.org/d3-transition.v1.min.js"></script>
 
   <head>
     <title>World Suicide Rate 1985~2016</title>
@@ -208,7 +247,6 @@ body{
         </div>
         
         <div id = "main">
-            <!-- <div id = "leftspace"></div> -->
             <div id = "leftbox">
                 
                 <div id ="highlight"></div>
@@ -217,9 +255,14 @@ body{
                 </div>
             </div>
             <div id = "middlebox"></div>
-            <!-- <div id = "rightspace"></div> -->
         </div>
-        
+        <div id="bottom">
+            <div id = "bt_left"></div>
+            <div id = "bt_middle">
+                <input id = "year_slider" type="range" min="1985" max="2016" step="1" value="2015" class="slider" onclick="updateYear(this.value)">    
+            </div>
+
+        </div>
     
     <script type="text/javascript">
 		// Set the dimensions of the canvas / graph
@@ -316,7 +359,7 @@ body{
 
             switch(page_num) {
                 case 1:
-                    load_suicides_year();
+                    load_master();
                     break;
                 case 2:
                     load_suicides_age_year();
@@ -345,9 +388,157 @@ body{
             
         }
 
+        
+        async function load_master() {
+
+            // Load data needed to generate world map
+            var world = await d3.json("https://unpkg.com/world-atlas@1/world/110m.json");
+            var countryCode = await d3.json("data/ISO-3166-Countries-with-Regional-Codes/slim-2/slim-2.json");
+            // var data = await d3.csv("data/suicides_country_2015.csv");
+            var data = await d3.csv("data/suicides_country.csv");
+
+            // Set title
+            var title = d3.select("#graph_title").append("h2")
+                    .attr("class", "text-info")
+                    .text("Suicide Rates Per Country")
+                    .attr("align", "center");
+
+                // Add information to the graph to guide use
+                var header = d3.select("#highlight").append("h4")
+                    // .attr("class", "text-primary")
+                    .text("Which Country Has The Highest Suicide Rate?")
+                    .attr("align", "left");
+                var info = d3.select("#highlight").append("p")
+                    .text("Former soviet countries on average has the highest suicide rate, except for South Korea in 2015")
+                    .attr("align", "left");
+
+            // Add Slider
+
+            // Process Data
+            console.log('world', world);
+            // convert country code to map
+            var codeMap = new Map();
+            var transName  = new Map([
+                ['Czechia', 'Czech Republic'],
+                ["Macao", "Macau"],
+                ["Korea, Republic of", "Republic of Korea"] ,
+                ["United Kingdom of Great Britain and Northern Ireland", "United Kingdom"] ,
+                ["United States of America", "United States"]
+            ]);
+
+            countryCode.forEach(function(d) {
+                if (transName.has(d.name)) {
+                    d.name = transName.get(d.name);
+                }
+                codeMap.set(d['country-code'], d.name);
+            })
+
+            var dmap = new Map();
+            data.forEach(function(d) {
+                console.log('data for each', d);
+                var tmpMap = new Map();
+
+                
+                if (dmap.has(d.Year)) {
+                    tmpMap = dmap.get(d.Year);
+                }
+                tmpMap.set(d.Country, +d.Suicide_Rate);
+                dmap.set(d.Year, tmpMap);
+            });
+
+            console.log('dmap', dmap)
+            var beginYear = "2015";
+            var yearVal = Array.from( dmap.get(beginYear).values())
+            console.log('year data',yearVal);
+            // Draw Map
+            var path = d3.geoPath().projection(d3.geoMercator());
+            
+            var mapColors = d3.scaleQuantize()
+                            .domain(d3.extent(yearVal))
+                            .range(d3.schemeYlOrBr[5])
+
+            
+
+            svg.selectAll("path")
+                .data(topojson.feature(world,world.objects.countries).features)
+            .enter().append("path")
+                .attr("stroke", "black")
+                .attr("stroke-linejoin", "round")
+                .attr("d", path)
+                .attr("fill", function(d) {
+                    var country = codeMap.get(d.id);
+                    var tmpMap = dmap.get(beginYear);
+                    if (tmpMap.has(country)) {
+                        var val = tmpMap.get(country);
+                        return mapColors(val);
+                    }
+                    else {
+                        return "white";
+                    }
+                    
+                })
+                .attr("data-legend",function(d) { 
+                    var country = codeMap.get(d.id);
+                    
+                    var tmpMap = dmap.get(beginYear);
+                    if (tmpMap.has(country)) {
+                        var val = tmpMap.get(country);
+                        return val;
+                    }
+                    return 0;
+                })
+                .on("mouseover", function(d) { 
+                        d3.select(this).style("stroke", "grey");
+                        var country = codeMap.get(d.id);
+                        console.log('country', country);
+                        var tmpMap = dmap.get(beginYear);
+                        if (tmpMap.has(country)) {
+                            var val = tmpMap.get(country);
+                            console.log('country', country, 'val', val)
+                            tooltip.html("Country: " + country +  "<br>Suicide Rate: " + val.toFixed(2))
+                                .style("height", "70px")
+                                .style("width", "150px")
+                                .style("display", "inline")
+                                .style("left", d3.event.pageX + 10 + "px")
+                                .style("top", d3.event.pageY +20 + "px");
+                            return mouseover();
+                        }
+                        
+                    })
+                    .on("mouseout", function(d) { 
+                        d3.select(this).style("stroke", "black");
+                        d3.select(this).style("stroke-wdth", 3);
+                        var country = codeMap.get(d.id);
+                        var tmpMap = dmap.get(beginYear);
+                        if (tmpMap.has(country)) {
+                            return mouseout();
+                        }
+                    })
+
+            // Draw legends
+            function updateYear(year) {
+                console.log('update year', year);
+            }
+
+            var colorLegend = d3.legendColor()
+                .labelFormat(d3.format(".0f"))
+                .scale(mapColors)
+                .title("Suicide Rate Color Scale")
+                .shapePadding(5)
+                .shapeWidth(50)
+                .shapeHeight(20)
+                .labelOffset(12);
+
+            svg.append("g")
+                .attr("transform", "translate(50, 300)")
+                .call(colorLegend);
+
+
+        }
+
+
         // load suicde_country dadta
         function load_suicides_country() {
-            d3.select("#middlebox").html = "";
             d3.csv("data/suicides_country.csv").then(function(data) {
                 console.log(data);
                 data = data.reverse();
@@ -499,55 +690,6 @@ body{
                 var yaxis = svg.append("g")
                     .attr("class", "y axis")
                     .call(d3.axisLeft(ys)); 
-
-                // annotations
-            //     const annotations = [{
-            //         note: { label: "70%+ Suicides Are Men ", wrap: 100},
-            //         disable: ["connector"],
-            //         data: {Avg_Suicides_per_100K_Pop: dataMap.get('1985').male},
-            //         subject: {
-            //           x1: xs(parseTime("1985")),
-            //           x2: xs(parseTime("2000"))
-            //         },
-            //         x : xs(parseTime("1985")) + margin.left,
-            //         dx: 0, dy:0,
-            //         }
-            //     ]
-
-            //     const type = d3.annotationCustomType(
-            //         d3.annotationXYThreshold, 
-            //         {"note":{
-            //             "lineType":"none",
-            //             "orientation": "left",
-            //             "align":"top"
-            //             // "background-color": "whitesmoke"
-            //             }
-            //         }
-            //       )
-            //     d3.annotation().annotations(annotations);
-            //     const makeAnnotations = d3.annotation()
-            //                 .type(type)
-            //                 // .type(d3.annotationXYThreshold)
-            //                 //Gives you access to any data objects in the annotations array
-            //                 .accessors({ 
-            //                   x: function(d){ return xs(parseTime(d.Year))},
-            //                   y: function(d){ return ys(d.Avg_Suicides_per_100K_Pop ) }
-            //                 })
-            //                 .accessorsInverse({
-            //                      year: d => timeFormat(xs.invert(d.Year)),
-            //                      rate: d => ys.invert(d.Avg_Suicides_per_100K_Pop)
-            //                   })
-            //                 .annotations(annotations)
-            //                 // .textWrap(60)
-
-            //     var anno = svg.append("g")
-            //         .call(makeAnnotations);
-            //     anno
-            //         .transition()
-            //             .style("display", "none")
-            //         .transition()
-            //             .delay(t)
-            //             .style("display", "inline");
 
             })
         }
