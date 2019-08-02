@@ -137,6 +137,43 @@
   fill: none;
   stroke: steelblue;
 }
+
+
+.ticks {
+  font: 10px sans-serif;
+}
+
+.track,
+.track-inset,
+.track-overlay {
+  stroke-linecap: round;
+}
+
+.track {
+  stroke: #000;
+  stroke-opacity: 0.3;
+  stroke-width: 10px;
+}
+
+.track-inset {
+  stroke: #ddd;
+  stroke-width: 8px;
+}
+
+.track-overlay {
+  pointer-events: stroke;
+  stroke-width: 50px;
+  stroke: transparent;
+  cursor: crosshair;
+}
+
+.handle {
+  fill: #fff;
+  stroke: #000;
+  stroke-opacity: 0.5;
+  stroke-width: 1.25px;
+}
+
 body{
         background-color: whitesmoke;
      }
@@ -224,7 +261,6 @@ body{
 <script src="https://unpkg.com/topojson-client@3"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.js"></script>
 
-
   <head>
     <title>World Suicide Rate 1985~2016</title>
   </head>
@@ -239,6 +275,7 @@ body{
                     <button id = "b1" type="button" class="btn btn-outline-dark btn-sm active" onclick="gotoPage(1)">1</button>
                     <button id = "b2" type="button" class="btn btn-outline-dark btn-sm " onclick="gotoPage(2)">2</button>
                     <button id = "b3" type="button" class="btn btn-outline-dark btn-sm " onclick="gotoPage(3)">3</button>
+                    <button id = "b4" type="button" class="btn btn-outline-dark btn-sm " onclick="gotoPage(4)">4</button>
                     <button id = "nb" type="button" class="btn btn-outline-dark btn-sm " onclick="nextPage(1)">></button>
             </div>
 
@@ -256,17 +293,17 @@ body{
             </div>
             <div id = "middlebox"></div>
         </div>
-        <div id="bottom">
+       <!--  <div id="bottom">
             <div id = "bt_left"></div>
             <div id = "bt_middle">
-                <input id = "year_slider" type="range" min="1985" max="2016" step="1" value="2015" class="slider" onclick="updateYear(this.value)">    
+                
             </div>
 
-        </div>
+        </div> -->
     
     <script type="text/javascript">
 		// Set the dimensions of the canvas / graph
-        var margin = {top:80, right: 80, bottom: 50, left:180}
+        var margin = {top:80, right: 80, bottom: 100, left:180}
             , width = document.getElementById('middlebox').clientWidth - margin.left - margin.right
             , height = document.getElementById('middlebox').clientHeight - margin.top - margin.bottom;
         
@@ -339,11 +376,13 @@ body{
         
         // Page Control Logic
         var page_num = 1;
-        var pages = 3;
+        var pages = 4;
         gotoPage(page_num);
 
         // go to specific page based on the page number
         function gotoPage(num) {
+            // Select active page
+            // var old_button = document.getElementById("b" + page_num.toString());
             // Clear graphs, deselect button
             var old_button = document.getElementById("b" + page_num.toString());
             old_button.className = old_button.className.replace(" active", "")
@@ -359,12 +398,15 @@ body{
 
             switch(page_num) {
                 case 1:
-                    load_master();
+                    load_suicides_year();
                     break;
                 case 2:
-                    load_suicides_age_year();
+                    load_master();
                     break;
                 case 3:
+                    load_suicides_age_year();
+                    break;
+                case 4:
                     load_suicide_sex();
                     break;
                 default:
@@ -435,90 +477,31 @@ body{
 
             var dmap = new Map();
             data.forEach(function(d) {
-                console.log('data for each', d);
-                var tmpMap = new Map();
-
-                
+                var tmpMap = new Map();  
+                d.Suicide_Rate = +d.Suicide_Rate;
                 if (dmap.has(d.Year)) {
                     tmpMap = dmap.get(d.Year);
                 }
-                tmpMap.set(d.Country, +d.Suicide_Rate);
+                tmpMap.set(d.Country, d.Suicide_Rate);
                 dmap.set(d.Year, tmpMap);
             });
 
             console.log('dmap', dmap)
-            var beginYear = "2015";
-            var yearVal = Array.from( dmap.get(beginYear).values())
-            console.log('year data',yearVal);
+            xs.domain(d3.extent(Array.from(dmap.keys()), function(d) {return parseTime(d)}));
+            console.log('xs domain', xs.domain())
+
+        
             // Draw Map
             var path = d3.geoPath().projection(d3.geoMercator());
-            
+            // Add world map colors
+            console.log('data values', Array.from(data.values()))
             var mapColors = d3.scaleQuantize()
-                            .domain(d3.extent(yearVal))
-                            .range(d3.schemeYlOrBr[5])
+                            .domain(d3.extent(data, function(d) {
+                                return d.Suicide_Rate;}))
+                            .range(d3.schemeYlOrBr[5]);
 
             
-
-            svg.selectAll("path")
-                .data(topojson.feature(world,world.objects.countries).features)
-            .enter().append("path")
-                .attr("stroke", "black")
-                .attr("stroke-linejoin", "round")
-                .attr("d", path)
-                .attr("fill", function(d) {
-                    var country = codeMap.get(d.id);
-                    var tmpMap = dmap.get(beginYear);
-                    if (tmpMap.has(country)) {
-                        var val = tmpMap.get(country);
-                        return mapColors(val);
-                    }
-                    else {
-                        return "white";
-                    }
-                    
-                })
-                .attr("data-legend",function(d) { 
-                    var country = codeMap.get(d.id);
-                    
-                    var tmpMap = dmap.get(beginYear);
-                    if (tmpMap.has(country)) {
-                        var val = tmpMap.get(country);
-                        return val;
-                    }
-                    return 0;
-                })
-                .on("mouseover", function(d) { 
-                        d3.select(this).style("stroke", "grey");
-                        var country = codeMap.get(d.id);
-                        console.log('country', country);
-                        var tmpMap = dmap.get(beginYear);
-                        if (tmpMap.has(country)) {
-                            var val = tmpMap.get(country);
-                            console.log('country', country, 'val', val)
-                            tooltip.html("Country: " + country +  "<br>Suicide Rate: " + val.toFixed(2))
-                                .style("height", "70px")
-                                .style("width", "150px")
-                                .style("display", "inline")
-                                .style("left", d3.event.pageX + 10 + "px")
-                                .style("top", d3.event.pageY +20 + "px");
-                            return mouseover();
-                        }
-                        
-                    })
-                    .on("mouseout", function(d) { 
-                        d3.select(this).style("stroke", "black");
-                        d3.select(this).style("stroke-wdth", 3);
-                        var country = codeMap.get(d.id);
-                        var tmpMap = dmap.get(beginYear);
-                        if (tmpMap.has(country)) {
-                            return mouseout();
-                        }
-                    })
-
             // Draw legends
-            function updateYear(year) {
-                console.log('update year', year);
-            }
 
             var colorLegend = d3.legendColor()
                 .labelFormat(d3.format(".0f"))
@@ -533,7 +516,122 @@ body{
                 .attr("transform", "translate(50, 300)")
                 .call(colorLegend);
 
+            // Add slider
 
+            var slider = svg.append("g")
+                .attr("class", "slider")
+                .attr("transform", "translate(0," + (height + margin.top) + ")");
+
+            slider.append("line")
+                .attr("class", "track")
+                .attr("x1", xs.range()[0])
+                .attr("x2", xs.range()[1])
+              .select(function() { return this.parentNode.appendChild(this.cloneNode(true)); })
+                .attr("class", "track-inset")
+              .select(function() { return this.parentNode.appendChild(this.cloneNode(true)); })
+                .attr("class", "track-overlay")
+                .call(d3.drag()
+                    .on("start.interrupt", function() { slider.interrupt(); })
+                    .on("start drag", function() { 
+                        update(xs.invert(d3.event.x)); 
+                    }));
+
+            slider.insert("g", ".track-overlay")
+                .attr("class", "ticks")
+                .attr("transform", "translate(0," + 18 + ")")
+              .selectAll("text")
+              .data(xs.ticks(50))
+              .enter().append("text")
+                .attr("x", xs)
+                .attr("text-anchor", "middle")
+                .text(function(d) { 
+                    return formatTime(d); });
+
+            var handle = slider.insert("circle", ".track-overlay")
+                .attr("class", "handle")
+                .attr("r", 9);
+
+            var label = slider.append("text")  
+                .attr("class", "label")
+                .attr("text-anchor", "middle")
+                .text(formatTime(xs.domain()[0]))
+                .attr("transform", "translate(0," + (-25) + ")")
+
+            var worldMap = svg.selectAll("path")
+                    .data(topojson.feature(world,world.objects.countries).features);
+
+            function drawCountry(year) {
+                console.log("redraw country with year", year)
+                
+                worldMap.enter().append("path")
+                    .attr("stroke", "black")
+                    .attr("stroke-linejoin", "round")
+                    .attr("d", path)
+                    .attr("fill", function(d) {
+                        var country = codeMap.get(d.id);
+                        var tmpMap = dmap.get(year);
+                        if (tmpMap.has(country)) {
+                            var val = tmpMap.get(country);
+                            return mapColors(val);
+                        }
+                        else {
+                            return "white";
+                        }
+                    })
+                    .attr("data-legend",function(d) { 
+                        var country = codeMap.get(d.id);
+                        
+                        var tmpMap = dmap.get(year);
+                        if (tmpMap.has(country)) {
+                            var val = tmpMap.get(country);
+                            return val;
+                        }
+                        return 0;
+                    })
+                    .on("mouseover", function(d) { 
+                            d3.select(this).style("stroke", "grey");
+                            var country = codeMap.get(d.id);
+                            var tmpMap = dmap.get(year);
+                            if (tmpMap.has(country)) {
+                                var val = tmpMap.get(country);
+                                tooltip.html("Year: " + year + "<br>Country: " + country +  "<br>Suicide Rate: " + val.toFixed(2))
+                                    .style("height", "70px")
+                                    .style("width", "200px")
+                                    .style("display", "inline")
+                                    .style("left", d3.event.pageX + 10 + "px")
+                                    .style("top", d3.event.pageY +20 + "px");
+                                return mouseover();
+                            }
+                            
+                        })
+                        .on("mouseout", function(d) { 
+                            d3.select(this).style("stroke", "black");
+                            d3.select(this).style("stroke-wdth", 3);
+                            var country = codeMap.get(d.id);
+                            var tmpMap = dmap.get(year);
+                            if (tmpMap.has(country)) {
+                                return mouseout();
+                            }
+                        })
+
+                // new data has less countries?
+                worldMap.exit().remove();
+
+            }
+            drawCountry("1985");
+
+            function update(y) {
+                // check that the newYear did not exceed our boundary
+                y = Math.max(y, xs.domain()[0]);
+                y = Math.min(y, xs.domain()[1]);
+
+                handle.attr("cx", xs(y));
+                label.attr("x", xs(y))
+                    .text(formatTime(y));
+                drawCountry(formatTime(y));
+            }
+
+        
         }
 
 
@@ -716,7 +814,7 @@ body{
 
                 data.forEach(function(d) {
                     d.Year = parseTime(d.Year);
-                    d.Avg_Suicides_per_100K_Pop = +d.Avg_Suicides_per_100K_Pop;
+                    d.Suicide_Rate = +d.Suicide_Rate;
                 });
                 console.log(data);
 
@@ -735,7 +833,7 @@ body{
                   .enter().append("circle") // Uses the enter().append() method
                     .attr("class", "dot") // Assign a class for styling
                     .attr("cx", function(d, i) { return xs((d.Year)) })
-                    .attr("cy", function(d) { return ys(d.Avg_Suicides_per_100K_Pop) })
+                    .attr("cy", function(d) { return ys(d.Suicide_Rate) })
                     .attr("fill", "steelblue")
                     .attr("r", 5)
                      .on("mouseout", function() {
@@ -746,7 +844,7 @@ body{
                       .on("mouseover", function(d) {
                             d3.select(this)
                                 .style("stroke", "black");
-                                tooltip.html("Year: " + formatTime(d.Year) +  "<br>Suicide Rate: " + d['Avg_Suicides_per_100K_Pop'].toFixed(2))
+                                tooltip.html("Year: " + formatTime(d.Year) +  "<br>Suicide Rate: " + d['Suicide_Rate'].toFixed(2))
                                 .style("display", "inline")
                                 .style("left", d3.event.pageX + 10 + "px")
                                 .style("top", d3.event.pageY +20 + "px");
@@ -755,7 +853,7 @@ body{
                         });;
 
                 // transition after
-                ys.domain([0, 10 + d3.max(data, function(d) {return d.Avg_Suicides_per_100K_Pop;})]);
+                ys.domain([0, 10 + d3.max(data, function(d) {return d.Suicide_Rate;})]);
 
                 paths.transition().duration(t)
                     .attr("class", "line")
@@ -763,7 +861,7 @@ body{
 
                 circle.transition().duration(t)
                     .attr("class", "dot")
-                    .attr("cy", function(d) { return ys(d.Avg_Suicides_per_100K_Pop) })
+                    .attr("cy", function(d) { return ys(d.Suicide_Rate) })
             
                 // Create an axis component with d3.axisBottom
                 var xaxis = svg.append("g")
@@ -856,11 +954,11 @@ body{
                             //Gives you access to any data objects in the annotations array
                             .accessors({ 
                               x: function(d){ return xs(parseTime(d.Year))},
-                              y: function(d){ return ys(d.Avg_Suicides_per_100K_Pop ) }
+                              y: function(d){ return ys(d.Suicide_Rate ) }
                             })
                             .accessorsInverse({
                                  year: d => timeFormat(xs.invert(d.Year)),
-                                 rate: d => ys.invert(d.Avg_Suicides_per_100K_Pop)
+                                 rate: d => ys.invert(d.Suicide_Rate)
                               })
                             .annotations(annotations)
                             .textWrap(100)
