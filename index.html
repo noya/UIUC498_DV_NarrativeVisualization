@@ -3,23 +3,23 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <style type="text/css">
     #title {
-        height:10vh;
+        height:5vh;
         padding: 8px;
     }
     #top {
-        height:10vh;
+        height:5vh;
     }
     #page_button {
                 float:left;  
                 width:20%; 
-                height:10vh; 
+                height:inherit; 
                 padding: 8px;
             }
         
         #graph_title {
             float:left;  
             width:70%; 
-            padding: 10px;
+            padding: inherit;
         }
 
     #main {
@@ -276,6 +276,7 @@ body{
                     <button id = "b2" type="button" class="btn btn-outline-dark btn-sm " onclick="gotoPage(2)">2</button>
                     <button id = "b3" type="button" class="btn btn-outline-dark btn-sm " onclick="gotoPage(3)">3</button>
                     <button id = "b4" type="button" class="btn btn-outline-dark btn-sm " onclick="gotoPage(4)">4</button>
+                    <button id = "b5" type="button" class="btn btn-outline-dark btn-sm " onclick="gotoPage(5)">5</button>
                     <button id = "nb" type="button" class="btn btn-outline-dark btn-sm " onclick="nextPage(1)">></button>
             </div>
 
@@ -303,7 +304,7 @@ body{
     
     <script type="text/javascript">
 		// Set the dimensions of the canvas / graph
-        var margin = {top:80, right: 80, bottom: 100, left:180}
+        var margin = {top:60, right: 80, bottom: 100, left:180}
             , width = document.getElementById('middlebox').clientWidth - margin.left - margin.right
             , height = document.getElementById('middlebox').clientHeight - margin.top - margin.bottom;
         
@@ -328,7 +329,7 @@ body{
         // draw lines for each group
         var line = d3.line()
             .x(function(d) {return xs(d.Year);})
-            .y(function(d) {return ys(d.Avg_Suicides_per_100K_Pop);})
+            .y(function(d) {return ys(d.Suicide_Rate);})
             .curve(d3.curveMonotoneX);
         
         // transition parameter
@@ -365,7 +366,7 @@ body{
               .attr("x", 0 - (height/2))
               .attr("dy", "1em")
               .style("text-anchor", "middle")
-              .text("Avg Suicides Per 100K Pop");
+              .text("Suicides Per 100K Pop");
         }
 
         function clear_graph() {
@@ -376,8 +377,39 @@ body{
         
         // Page Control Logic
         var page_num = 1;
-        var pages = 4;
+        var pages = 5;
         gotoPage(page_num);
+        
+        function load_countrymap(countryCode) {
+            
+            var transName  = new Map([
+                ['Czechia', 'Czech Republic'],
+                ["Macao", "Macau"],
+                ["Korea, Republic of", "Republic of Korea"] ,
+                ["United Kingdom of Great Britain and Northern Ireland", "United Kingdom"] ,
+                ["United States of America", "United States"],
+                ["Saint Vincent and the Grenadines", "Saint Vincent and Grenadines"]
+            ]);
+
+            var countryMap = new Map();
+            countryCode.forEach(function(d) {
+                if (transName.has(d.name)) {
+                    d.name = transName.get(d.name);
+                }
+                countryMap.set(d.name, d);
+            })
+            console.log('innder countryMap', countryMap)
+
+            return countryMap;
+        
+            
+        }
+
+        // var countryMap = load_countrymap();
+        // var countryCode = await d3.json("data/ISO-3166-Countries-with-Regional-Codes/all/all.json");
+        // console.log('countryCode', countryCode);
+
+        // console.log('countryMap', countryMap)
 
         // go to specific page based on the page number
         function gotoPage(num) {
@@ -399,21 +431,29 @@ body{
             switch(page_num) {
                 case 1:
                     load_suicides_year();
+                    label_axes();
                     break;
                 case 2:
-                    load_master();
+                    load_suicides_country();
                     break;
                 case 3:
-                    load_suicides_age_year();
+                    load_suicides_gdp();
+                    label_axes();
                     break;
                 case 4:
+                    load_suicides_age_year();
+                    label_axes();
+                    break;
+                case 5:
                     load_suicide_sex();
+                    label_axes();
                     break;
                 default:
                     load_suicides_year();
+                    label_axes();
                     break;
             }
-            label_axes();
+            
         }
         function nextPage(offset) {
             prev_page_num = page_num
@@ -431,18 +471,17 @@ body{
         }
 
         
-        async function load_master() {
+        async function load_suicides_country() {
 
             // Load data needed to generate world map
             var world = await d3.json("https://unpkg.com/world-atlas@1/world/110m.json");
             var countryCode = await d3.json("data/ISO-3166-Countries-with-Regional-Codes/slim-2/slim-2.json");
-            // var data = await d3.csv("data/suicides_country_2015.csv");
             var data = await d3.csv("data/suicides_country.csv");
 
             // Set title
             var title = d3.select("#graph_title").append("h2")
                     .attr("class", "text-info")
-                    .text("Suicide Rates Per Country")
+                    .text("Suicides Per 100k ppl By Country")
                     .attr("align", "center");
 
                 // Add information to the graph to guide use
@@ -451,7 +490,7 @@ body{
                     .text("Which Country Has The Highest Suicide Rate?")
                     .attr("align", "left");
                 var info = d3.select("#highlight").append("p")
-                    .text("Former soviet countries on average has the highest suicide rate, except for South Korea in 2015")
+                    .text("Former soviet countries on average has the highest suicide rate. In 2015, Lithuania was ranked number one in suicide rate, with 32.54 people commiting suicide per 100,000 population. Keep note that starting from 2009 South Korea's Suicide Rate exceeds most of former soviet union countries")
                     .attr("align", "left");
 
             // Add Slider
@@ -487,14 +526,14 @@ body{
             });
 
             console.log('dmap', dmap)
-            xs.domain(d3.extent(Array.from(dmap.keys()), function(d) {return parseTime(d)}));
-            console.log('xs domain', xs.domain())
+            var sortMap = new Map([...dmap.entries()].sort())
+            var years = Array.from(sortMap.keys())
+            xs.domain([parseTime(years[0]), parseTime(years[years.length-1])]);
 
         
             // Draw Map
             var path = d3.geoPath().projection(d3.geoMercator());
             // Add world map colors
-            console.log('data values', Array.from(data.values()))
             var mapColors = d3.scaleQuantize()
                             .domain(d3.extent(data, function(d) {
                                 return d.Suicide_Rate;}))
@@ -506,7 +545,7 @@ body{
             var colorLegend = d3.legendColor()
                 .labelFormat(d3.format(".0f"))
                 .scale(mapColors)
-                .title("Suicide Rate Color Scale")
+                .title("Suicide Rate/100k")
                 .shapePadding(5)
                 .shapeWidth(50)
                 .shapeHeight(20)
@@ -544,8 +583,12 @@ body{
               .enter().append("text")
                 .attr("x", xs)
                 .attr("text-anchor", "middle")
-                .text(function(d) { 
-                    return formatTime(d); });
+                .text(function(d, i) { 
+                    // Only return even years
+                    if (i % 2) {
+                        return formatTime(d);
+                    }
+                });
 
             var handle = slider.insert("circle", ".track-overlay")
                 .attr("class", "handle")
@@ -557,9 +600,10 @@ body{
                 .text(formatTime(xs.domain()[0]))
                 .attr("transform", "translate(0," + (-25) + ")")
 
-            var worldMap = svg.selectAll("path")
+            var worldMap = svg.selectAll(".world")
                     .data(topojson.feature(world,world.objects.countries).features);
 
+            // todo: instead of passing year, could pass through map[year]
             function drawCountry(year) {
                 console.log("redraw country with year", year)
                 
@@ -618,79 +662,137 @@ body{
                 worldMap.exit().remove();
 
             }
-            drawCountry("1985");
+
+            // years.forEach(function (year) {
+            //     var y = parseTime(year)
+            //     update(y);
+            // })
+               
+
+            drawCountry(formatTime(xs.domain()[0]));
 
             function update(y) {
+                console.log('update', y)
                 // check that the newYear did not exceed our boundary
                 y = Math.max(y, xs.domain()[0]);
                 y = Math.min(y, xs.domain()[1]);
 
-                handle.attr("cx", xs(y));
-                label.attr("x", xs(y))
+                handle//.transition().duration(1500)
+                    .attr("cx", xs(y));
+                label//.transition().duration(1500)
+                    .attr("x", xs(y))
                     .text(formatTime(y));
                 drawCountry(formatTime(y));
             }
 
         
         }
-
-
-        // load suicde_country dadta
-        function load_suicides_country() {
-            d3.csv("data/suicides_country.csv").then(function(data) {
+ 
+        async function load_suicides_gdp() {
+            var countryCode = await d3.json("data/ISO-3166-Countries-with-Regional-Codes/all/all.json");
+            var data = await d3.csv("data/suicides_gdp_2015.csv");
                 console.log(data);
-                data = data.reverse();
-                var maxdata = data[0]['Avg. Suicides_per_100K_Pop'];
-                var textlen = 200;
-                var margin = 50;
-                console.log('max country', data[0].Country)
-                var xs = d3.scaleLinear().domain([0, parseFloat(maxdata)]).range([0, width-textlen-margin]);
-                var height = 20 * data.length;
 
-                svg.attr("height", height + 30)
+                // Set title
+                var title = d3.select("#graph_title").append("h2")
+                        .attr("class", "text-info")
+                        .text("Suicides Per 100k ppl By GDP per Capita")
+                        .attr("align", "center");
 
-                svg.selectAll("rect")
-                    .data(data)
-                    .enter()
-                    .append("rect")
-                        .attr("x", textlen)
-                        .attr("y", function(d, i) {return i * 20 + 20;})
-                        .attr("width", function(d) {return xs(d['Avg. Suicides_per_100K_Pop']) ;})
-                        .attr("height", 18)
-                        .attr("fill", d3.color("steelblue"))
-                        .on("mouseover", function(d) {
-                            d3.select(this).attr("stroke", "black");
-                            // tooltip.transition().duration(300).style("opacity", 0.9).style("display", "inline");
-                            tooltip.html(d.Country + " Suicide Rate:" + d['Avg. Suicides_per_100K_Pop'] + " pp")
-                                .style("display", "inline")
-                                .style("left", d3.event.pageX + 50 + "px")
-                                .style("top", d3.event.pageY +20 + "px");
-                            return mouseover();
-                        })
-                        .on("mouseout", function(d) {   
-                            d3.select(this).attr("stroke", "none"); 
-                            return mouseout();
-                        });
+                // Add information to the graph to guide use
+                var header = d3.select("#highlight").append("h4")
+                    // .attr("class", "text-primary")
+                    .text("What GDP Bucket Has The Highest Suicide Rate?")
+                    .attr("align", "left");
+                var info = d3.select("#highlight").append("p")
+                    .text("We see the lower the gdp, the higher the overall suicide rate")
+                    .attr("align", "left");
+
+            // // Add Slider
+            
+            var countryMap = load_countrymap(countryCode);
+            console.log('country map', countryMap);
+            data.forEach(function(d) {
+                d.gdp = +d['Gdp Per Capita ($)'];
+                d.Suicide_Rate = +d.Suicide_Rate;
+                if (countryMap.has(d.Country)) {
+                    var subRegion = countryMap.get(d.Country);
+                    console.log('region', subRegion)
+                    d.SubRegion = subRegion['sub-region'];
+                }
+                else {
+                    d.SubRegion = "undef";
+                }
                 
-                svg.selectAll("text")
-                    .data(data)
-                    .enter()
-                    .append("text")
-                        .attr("x", 10)
-                        .attr("y", function(d, i) {return i * 20 + 35;})
-                        .text(function(d) {return d.Country;})
-                        .attr("font-size", "17px")
-                        .attr("fill", "black");
             });
+
+            var xscale = d3.scaleLinear()
+                        .domain(d3.extent(data, function(d) {return d.gdp}))
+                        .range([0, width]);
+            ys.domain(d3.extent(data, function(d) {return d.Suicide_Rate}));
+
+            colors.domain(countryMap, function(d) {return d['sub-region']});
+            // draw dots
+            svg.selectAll(".dot")
+                .data(data)
+            .enter().append("circle")
+                .attr("class", "dot")
+                .attr("r", 8)
+                .attr("cx", function(d) {return xscale(d.gdp)})
+                .attr("cy", function(d) {return ys(d.Suicide_Rate)})
+                .attr("data-legend", function(d) {return d.SubRegion;})
+                .style("fill", function(d) { return colors(d.SubRegion);}) 
+                .on("mouseover", function(d) {
+                    console.log('tooltip', d);
+
+                   d3.select(this).style("stroke", "black");
+                    tooltip.html("GDP per Capita: " + d.gdp + "<br/>Suicide Rate: " + d.Suicide_Rate.toFixed(2)
+                    + "<br>Country: " + d.Country + "<br>Sub-Region: " + d.SubRegion)
+                        .style("height", "70px")
+                        .style("width", "200px")
+                        .style("display", "inline")
+                        .style("left", d3.event.pageX + 10 + "px")
+                        .style("top", d3.event.pageY +20 + "px");
+                    return mouseover();
+
+                })
+                .on("mouseout", function(d) {
+                    d3.select(this).style("stroke", "none");
+                    mouseout();
+                   })
+
+            // Create an axis component with d3.axisBottom
+            var xaxis = svg.append("g")
+                .attr("class", "x axis")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(xscale)); 
+            // Create an axis component with d3.axisLeft
+            var yaxis = svg.append("g")
+                .attr("class", "y axis")
+                .call(d3.axisLeft(ys)); 
+
+            // Draw Legend
+            var colorLegend = d3.legendColor()
+                .scale(colors)
+                .title("Suicide Rate/100k")
+                .shapePadding(5)
+                .shapeWidth(20)
+                .labelWrap(150)
+                .shapeHeight(20)
+                .labelOffset(5);
+
+            svg.append("g")
+                .attr("transform", "translate("+ (width*5/6) +"," + (20)+")")
+                .call(colorLegend);
+            
         }
-       
         function load_suicide_sex() {
             d3.csv("data/suicides_sex_year.csv").then(function(data) {      
             // d3.csv("data/suicides_sex_year.csv", function(data) {      
                 // write title of graph
                 var title = d3.select("#graph_title").append("h2")
                     .attr("class", "text-info")
-                    .text("Avereage Suicide Rates Per Sex Per Year")
+                    .text("Suicide Rates Per Sex Per Year")
                     .attr("align", "center");
 
                 // Add information to the graph to guide use
@@ -756,6 +858,13 @@ body{
                     .attr("y", function(d) { return ys(d[1]) ; })
                     .attr("height", function(d) { return  height - ys(d[1] - d[0]); })
                     .attr("width", width/dataObj.length - 5)
+                    .attr("data-legend", function(d) {
+                        var sex = "Female";
+                        if (d[0] == 0) {
+                            sex = "Male";
+                        }
+                        return sex;
+                    })
                     .on("mouseover", function(d) { 
                         d3.select(this).style("stroke", "black");
                         var sex = "Female";
@@ -789,6 +898,21 @@ body{
                     .attr("class", "y axis")
                     .call(d3.axisLeft(ys)); 
 
+                // legend
+                var colorLegend = d3.legendColor()
+                    .labelFormat(d3.format(".0f"))
+                    .scale(colors)
+                    .title("Suicide Rate/100k")
+                    .shapePadding(5)
+                    .shapeWidth(20)
+                    .shapeHeight(20)
+                    .labelOffset(12);
+
+                svg.append("g")
+                    .attr("transform", "translate("+width*5/6+"," + 0 + ")")
+                    .call(colorLegend);
+
+
             })
         }
         // load suicides_year data
@@ -799,7 +923,7 @@ body{
                 // write title of graph
                 var title = d3.select("#graph_title").append("h2")
                     .attr("class", "text-info")
-                    .text("Avereage Suicide Rates Per Year")
+                    .text("Suicides Per 100,000 ppl Per Year")
                     .attr("align", "center");
 
                 // Add information to the graph to guide use
@@ -925,18 +1049,6 @@ body{
                     data: { Year: "2011"}, //position the x based on an x scale
                     dy: 0
                 },
-                // {
-                //     note: { label: "1995 Highest Suicide Rate"},
-                //     data: {Year: "1995", Avg_Suicides_per_100K_Pop: ys.domain()[1]},
-                //     dx: 50, dy:50,
-                //     subject: { radius: 30, radiusPadding: 10 }
-                // },
-                // {
-                //     note: { label: "2015 Lowest Suicide Rate"},
-                //     data: {Year: "2015", Avg_Suicides_per_100K_Pop: 11.09},
-                //     dx: -50, dy:50,
-                //     subject: { radius: 30, radiusPadding: 10 }
-                // }
                 ]
 
                 const type = d3.annotationCustomType(
@@ -985,7 +1097,7 @@ body{
                 // write title of graph
                 var title = d3.select("#graph_title").append("h2")
                     .attr("class", "text-info")
-                    .text("Avereage Suicide Rates Per Age Per Year")
+                    .text("Suicide Rates per 100,000 ppl By Age")
                     .attr("align", "center");
 
                 // Add information to the graph to guide use
@@ -996,10 +1108,12 @@ body{
                     .text("Age group 75+ has the highest suicide rate amonst all age groups. However note that in 1995 there's a bump in suicide rate across all age groups")
                     .attr("align", "left")
                     
+                console.log('data', data)
                 // create separate lines for each age bucket
                 data.forEach(function(d) {
                     d.Year = parseTime(d.Year);
-                    d.Avg_Suicides_per_100K_Pop = +d.Avg_Suicides_per_100K_Pop;
+                    // d.Suicide_Rate = +d.Suicide_Rate;
+                    d.Suicide_Rate = +d.Avg_Suicides_per_100K_Pop;
                 });
                 
                 // sort data using Age
@@ -1013,7 +1127,7 @@ body{
 
                 xs.domain(d3.extent(data, function(d) {return d.Year;}));
                 ys.domain([0, 0]);
-                console.log('extend', d3.extent(dataByAge, function(d) {return d.key;}))
+                console.log('extent', d3.extent(dataByAge, function(d) {return d.key;}))
                 colors.domain(d3.extent(dataByAge, function(d) {return d.key;}))
                 // transition before
                 // draw line using a different color using Age 
@@ -1026,7 +1140,9 @@ body{
                 var lines = ageGroups
                     .append("path")
                         .attr("class", "line")
-                        .attr('d', function(d) {return line(d.values)})
+                        .attr('d', function(d) {
+                            console.log('line', d);
+                            return line(d.values)})
                 
                 // Appends a circle for each datapoint 
                 var circles = ageGroups.selectAll(".circle")
@@ -1037,9 +1153,10 @@ body{
                     .append("circle")
                         .attr("class", "dot") // Assign a class for styling
                         .attr("cx", function(d) { return xs(d.Year); })
-                        .attr("cy", function(d) { return ys(d.Avg_Suicides_per_100K_Pop); })
+                        .attr("cy", function(d) { return ys(d.Suicide_Rate); })
                         .attr("fill", function(d) {return colors(d.Age);})
                         .attr("r", 5)
+                        .attr("data-legend", function(d) {return d.Age})
                           // .on("mouseout", mouseout)
                           .on("mouseout", function() {
                             d3.select(this)
@@ -1049,7 +1166,7 @@ body{
                           .on("mouseover", function(d) {
                             d3.select(this)
                             .style("stroke", "black");
-                            tooltip.html("Year: " + formatTime(d.Year) + "<br>Age: " + d.Age +  "<br>Suicide Rate: " + d['Avg_Suicides_per_100K_Pop'].toFixed(2))
+                            tooltip.html("Year: " + formatTime(d.Year) + "<br>Age: " + d.Age +  "<br>Suicide Rate: " + d['Suicide_Rate'].toFixed(2))
                             .style("display", "inline")
                             .style("left", d3.event.pageX + 10 + "px")
                             .style("top", d3.event.pageY +20 + "px");
@@ -1058,11 +1175,11 @@ body{
                             });
 
                 // transition after
-                ys.domain([0, d3.max(data, function(d) {return d.Avg_Suicides_per_100K_Pop;})]);
+                ys.domain([0, d3.max(data, function(d) {return d.Suicide_Rate;})]);
                 lines.transition().duration(t)
                     .attr("d", function(d) {return line(d.values)});
                 circles.transition().duration(t)
-                    .attr("cy", function(d) { return ys(d.Avg_Suicides_per_100K_Pop); });
+                    .attr("cy", function(d) { return ys(d.Suicide_Rate); });
 
                 // Create an axis component with d3.axisBottom
                 var xaxis = svg.append("g")
@@ -1075,38 +1192,51 @@ body{
                     .call(d3.axisLeft(ys)); 
 
                 // Create legend for graph
-                var legendSpacing = 3;
-                var legendRectSize = 20;
+                var colorLegend = d3.legendColor()
+                    .labelFormat(d3.format(".0f"))
+                    .scale(colors)
+                    .title("Suicide Rate/100k")
+                    .shapePadding(5)
+                    .shapeWidth(18)
+                    .shapeHeight(20)
+                    .labelOffset(12);
 
-                var legend = svg.selectAll('.legend')
-                    .data(colors.domain())
-                    .enter()
-                    .append('g')
-                    .attr('class', 'legend')
-                    .attr('transform', function(d, i) {
-                        var legendHeight = legendRectSize + legendSpacing;       
-                        var offset =  legendHeight * colors.domain().length / 2;    
-                        var horz = - margin.left;                       
-                        var vert = i * legendHeight - offset + height/2;                      
-                        return 'translate(' + horz + ',' + vert + ')';
-                });
+            svg.append("g")
+                .attr("transform", "translate("+(width*5/6)+"," + 20 +")")
+                .call(colorLegend);
 
-                legend.append('rect')
-                    .attr('width', legendRectSize)
-                    .attr('height', legendRectSize)
-                    .style('fill', colors)
-                    .style('stroke', colors);
+                // var legendSpacing = 3;
+                // var legendRectSize = 20;
 
-                legend.append('text')
-                        .attr("x", legendRectSize + legendSpacing)
-                        .attr('y', legendRectSize + legendSpacing)
-                        .text(function(d) {return d;});
+                // var legend = svg.selectAll('.legend')
+                //     .data(colors.domain())
+                //     .enter()
+                //     .append('g')
+                //     .attr('class', 'legend')
+                //     .attr('transform', function(d, i) {
+                //         var legendHeight = legendRectSize + legendSpacing;       
+                //         var offset =  legendHeight * colors.domain().length / 2;    
+                //         var horz = - margin.left;                       
+                //         var vert = i * legendHeight - offset + height/2;                      
+                //         return 'translate(' + horz + ',' + vert + ')';
+                // });
+
+                // legend.append('rect')
+                //     .attr('width', legendRectSize)
+                //     .attr('height', legendRectSize)
+                //     .style('fill', colors)
+                //     .style('stroke', colors);
+
+                // legend.append('text')
+                //         .attr("x", legendRectSize + legendSpacing)
+                //         .attr('y', legendRectSize + legendSpacing)
+                //         .text(function(d) {return d;});
 
                 // annotations
                 // make annotations
                 const annotations = [{
                     note: { label: "Age 75+ Highest Suicide Rate"},
-                    data: {Year: "1995", Avg_Suicides_per_100K_Pop: ys.domain()[1]},
+                    data: {Year: "1995", Suicide_Rate: ys.domain()[1]},
                     dx: 200, dy:0,
                     subject: { radius: 30, radiusPadding: 10 }
                 }]
@@ -1118,11 +1248,11 @@ body{
                             //Gives you access to any data objects in the annotations array
                             .accessors({ 
                               x: function(d){ return xs(parseTime(d.Year))},
-                              y: function(d){ return ys(d.Avg_Suicides_per_100K_Pop ) }
+                              y: function(d){ return ys(d.Suicide_Rate ) }
                             })
                             .accessorsInverse({
                                  year: d => timeFormat(xs.invert(d.Year)),
-                                 rate: d => ys.invert(d.Avg_Suicides_per_100K_Pop)
+                                 rate: d => ys.invert(d.Suicide_Rate)
                               })
                             .annotations(annotations)
                             // .textWrap(60)
