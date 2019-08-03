@@ -1,0 +1,2322 @@
+﻿Country,Gdp Per Capita ($),Sub-Region,Year,Suicide_Rate
+Netherlands,10428,Western Europe,1985,12.027933002
+Luxembourg,13743,Western Europe,1985,15.951276102
+France,10765,Western Europe,1985,24.329247644
+Belgium,9356,Western Europe,1985,24.607318547
+Austria,9759,Western Europe,1985,29.408807031
+Kuwait,14607,Western Asia,1985,1.158038147
+Israel,7325,Western Asia,1985,6.234181431
+Bahrain,9980,Western Asia,1985,3.006285870
+Seychelles,2947,Sub-Saharan Africa,1985,13.961605585
+Mauritius,1223,Sub-Saharan Africa,1985,11.772696400
+Spain,5009,Southern Europe,1985,6.983915326
+Portugal,2912,Southern Europe,1985,10.554084044
+Malta,3639,Southern Europe,1985,0.651041667
+Italy,8329,Southern Europe,1985,8.794283254
+Greece,5156,Southern Europe,1985,4.366388512
+Sri Lanka,431,Southern Asia,1985,40.903514469
+Thailand,840,South-eastern Asia,1985,6.440125846
+Singapore,8142,South-eastern Asia,1985,13.784301213
+Ireland,6638,Northern Europe,1985,8.602954928
+Iceland,13357,Northern Europe,1985,14.538845979
+Canada,15522,Northern America,1985,13.863888783
+Uruguay,1729,Latin America and the Caribbean,1985,10.484401257
+Trinidad and Tobago,7317,Latin America and the Caribbean,1985,2.876984127
+Suriname,2706,Latin America and the Caribbean,1985,24.790827394
+Puerto Rico,6582,Latin America and the Caribbean,1985,8.726682887
+Paraguay,964,Latin America and the Caribbean,1985,2.047239898
+Panama,3443,Latin America and the Caribbean,1985,2.947833869
+Mexico,2730,Latin America and the Caribbean,1985,2.285173016
+Jamaica,1032,Latin America and the Caribbean,1985,0.393120393
+Grenada,1965,Latin America and the Caribbean,1985,1.171303075
+Ecuador,2238,Latin America and the Caribbean,1985,5.129342974
+Dominica,1485,Latin America and the Caribbean,1985,0
+Costa Rica,2145,Latin America and the Caribbean,1985,5.723996065
+Colombia,1393,Latin America and the Caribbean,1985,3.995625170
+Chile,1658,Latin America and the Caribbean,1985,6.397886730
+Brazil,1898,Latin America and the Caribbean,1985,3.598944151
+Barbados,6137,Latin America and the Caribbean,1985,3.030303030
+Bahamas,11393,Latin America and the Caribbean,1985,0.490918017
+Argentina,3264,Latin America and the Caribbean,1985,7.338284584
+Antigua and Barbuda,3850,Latin America and the Caribbean,1985,0
+Bulgaria,2044,Eastern Europe,1985,17.348823354
+Japan,12401,Eastern Asia,1985,20.616226336
+New Zealand,8246,Australia and New Zealand,1985,11.170599511
+Australia,12374,Australia and New Zealand,1985,12.779399142
+United States,19693,,1985,13.340703053
+United Kingdom,9231,,1985,9.630887965
+Saint Vincent and Grenadines,1622,,1985,2.227171492
+Republic of Korea,2731,,1985,10.047199231
+Netherlands,14479,Western Europe,1986,11.711876164
+Luxembourg,20004,Western Europe,1986,14.739884393
+France,14940,Western Europe,1986,24.263327498
+Belgium,12992,Western Europe,1986,23.710307846
+Austria,13911,Western Europe,1986,30.045725971
+Kuwait,11661,Western Asia,1986,1.042141601
+Israel,8938,Western Asia,1986,7.289891176
+Seychelles,3621,Sub-Saharan Africa,1986,1.742160279
+Mauritius,1636,Sub-Saharan Africa,1986,3.117692907
+Spain,6919,Southern Europe,1986,7.605664909
+Portugal,4145,Southern Europe,1986,10.064980627
+Malta,4544,Southern Europe,1986,0.316656111
+Italy,11762,Southern Europe,1986,8.644216151
+Greece,6040,Southern Europe,1986,4.210413542
+Sri Lanka,454,Southern Asia,1986,37.904037897
+Thailand,911,South-eastern Asia,1986,5.911500943
+Singapore,7805,South-eastern Asia,1986,13.701508847
+Norway,20117,Northern Europe,1986,14.801748600
+Ireland,8937,Northern Europe,1986,8.766748531
+Iceland,17681,Northern Europe,1986,16.644174539
+Canada,16062,Northern America,1986,15.617619398
+Uruguay,2132,Latin America and the Caribbean,1986,9.501015376
+Trinidad and Tobago,4516,Latin America and the Caribbean,1986,9.796533534
+Suriname,2731,Latin America and the Caribbean,1986,12.871827248
+Saint Lucia,2634,Latin America and the Caribbean,1986,4.545454545
+Puerto Rico,7002,Latin America and the Caribbean,1986,9.862560448
+Paraguay,1086,Latin America and the Caribbean,1986,1.767936266
+Panama,3504,Latin America and the Caribbean,1986,4.227022011
+Mexico,1873,Latin America and the Caribbean,1986,2.479619811
+Jamaica,1342,Latin America and the Caribbean,1986,0.048720336
+Guatemala,1044,Latin America and the Caribbean,1986,2.931751709
+Ecuador,1943,Latin America and the Caribbean,1986,4.783474807
+Costa Rica,2389,Latin America and the Caribbean,1986,5.713288848
+Colombia,1366,Latin America and the Caribbean,1986,3.744293665
+Chile,1728,Latin America and the Caribbean,1986,5.982601059
+Brazil,2257,Latin America and the Caribbean,1986,3.595832169
+Belize,1552,Latin America and the Caribbean,1986,2.043596730
+Barbados,6720,Latin America and the Caribbean,1986,3.454231434
+Argentina,4072,Latin America and the Caribbean,1986,8.383374198
+Antigua and Barbuda,4740,Latin America and the Caribbean,1986,0
+Bulgaria,2413,Eastern Europe,1986,16.778883394
+Japan,18288,Eastern Asia,1986,22.417508951
+New Zealand,10114,Australia and New Zealand,1986,13.680975513
+Australia,12288,Australia and New Zealand,1986,13.801671866
+United States,20588,,1986,13.855835086
+United Kingdom,11323,,1986,9.109643340
+Saint Vincent and Grenadines,1771,,1986,0
+Republic of Korea,3078,,1986,9.211409575
+Netherlands,17560,Western Europe,1987,11.729694418
+Luxembourg,24654,Western Europe,1987,21.179164282
+France,17999,Western Europe,1987,23.431238054
+Belgium,16165,Western Europe,1987,24.087049175
+Austria,17415,Western Europe,1987,29.018208400
+Kuwait,13924,Western Asia,1987,0.996077943
+Israel,10558,Western Asia,1987,6.987958021
+Bahrain,9321,Western Asia,1987,2.473206925
+Seychelles,4276,Sub-Saharan Africa,1987,5.145797599
+Mauritius,2073,Sub-Saharan Africa,1987,15.362668715
+Spain,8727,Southern Europe,1987,7.697861675
+Portugal,5138,Southern Europe,1987,10.235644801
+Malta,5517,Southern Europe,1987,0.315059861
+Italy,14756,Southern Europe,1987,8.297794543
+Greece,6994,Southern Europe,1987,4.367556512
+Albania,796,Southern Europe,1987,2.694124594
+Thailand,1045,South-eastern Asia,1987,6.273718947
+Singapore,8679,South-eastern Asia,1987,12.501038292
+Sweden,22813,Northern Europe,1987,19.484132002
+Norway,23980,Northern Europe,1987,16.516096195
+Ireland,10515,Northern Europe,1987,7.585843886
+Iceland,24107,Northern Europe,1987,15.957446809
+Finland,19861,Northern Europe,1987,29.539888602
+Canada,18124,Northern America,1987,15.089439913
+Uruguay,2651,Latin America and the Caribbean,1987,9.284249163
+Trinidad and Tobago,4449,Latin America and the Caribbean,1987,11.035889827
+Suriname,2951,Latin America and the Caribbean,1987,15.662037330
+Saint Lucia,2875,Latin America and the Caribbean,1987,9.883198562
+Puerto Rico,7533,Latin America and the Caribbean,1987,8.528249828
+Paraguay,1158,Latin America and the Caribbean,1987,1.900689000
+Panama,3447,Latin America and the Caribbean,1987,4.291195477
+Mexico,2064,Latin America and the Caribbean,1987,2.503381257
+Jamaica,1587,Latin America and the Caribbean,1987,0.627788831
+Guatemala,997,Latin America and the Caribbean,1987,3.390192917
+Ecuador,1669,Latin America and the Caribbean,1987,4.666858128
+Costa Rica,2433,Latin America and the Caribbean,1987,4.956887574
+Colombia,1299,Latin America and the Caribbean,1987,3.395284845
+Chile,1985,Latin America and the Caribbean,1987,6.182531894
+Brazil,2394,Latin America and the Caribbean,1987,3.803864321
+Belize,1920,Latin America and the Caribbean,1987,2.776447397
+Barbados,7333,Latin America and the Caribbean,1987,2.567394095
+Bahamas,12286,Latin America and the Caribbean,1987,1.358080579
+Argentina,4026,Latin America and the Caribbean,1987,8.282788756
+Antigua and Barbuda,5595,Latin America and the Caribbean,1987,0
+Ukraine,1353,Eastern Europe,1987,21.214078549
+Bulgaria,3355,Eastern Europe,1987,17.814074552
+Japan,22137,Eastern Asia,1987,20.681548035
+Turkmenistan,815,Central Asia,1987,9.513483264
+New Zealand,13238,Australia and New Zealand,1987,15.194775360
+Australia,12564,Australia and New Zealand,1987,14.382082212
+United States,21631,,1987,13.672339972
+United Kingdom,13996,,1987,8.628904297
+Saint Vincent and Grenadines,1908,,1987,0
+Republic of Korea,3834,,1987,8.660655019
+Netherlands,18661,Western Europe,1988,10.991866163
+Luxembourg,27676,Western Europe,1988,19.585580471
+France,19534,Western Europe,1988,22.238369864
+Belgium,17509,Western Europe,1988,21.417917655
+Austria,18663,Western Europe,1988,25.908367521
+Israel,12687,Western Asia,1988,7.676133053
+Bahrain,9501,Western Asia,1988,3.592507057
+Mauritius,2317,Sub-Saharan Africa,1988,18.054054054
+Spain,10250,Southern Europe,1988,8.088028352
+Portugal,5995,Southern Europe,1988,8.712320146
+Malta,6295,Southern Europe,1988,2.805486284
+Italy,16282,Southern Europe,1988,8.026793845
+Greece,8070,Southern Europe,1988,4.264550265
+Albania,769,Southern Europe,1988,2.279057989
+Singapore,10586,South-eastern Asia,1988,15.292053146
+Sweden,25731,Northern Europe,1988,20.048166034
+Norway,25820,Northern Europe,1988,17.939492221
+Ireland,11696,Northern Europe,1988,8.226380084
+Iceland,26249,Northern Europe,1988,15.270506108
+Finland,23546,Northern Europe,1988,30.257251381
+Canada,21069,Northern America,1988,14.576048770
+Uruguay,2934,Latin America and the Caribbean,1988,9.572796114
+Trinidad and Tobago,4104,Latin America and the Caribbean,1988,14.968966776
+Suriname,3418,Latin America and the Caribbean,1988,14.428272347
+Saint Lucia,3244,Latin America and the Caribbean,1988,8.849557522
+Puerto Rico,8155,Latin America and the Caribbean,1988,9.704537026
+Panama,2859,Latin America and the Caribbean,1988,4.214483290
+Mexico,2630,Latin America and the Caribbean,1988,2.445222985
+Jamaica,1831,Latin America and the Caribbean,1988,0.239165447
+Guyana,632,Latin America and the Caribbean,1988,8.551002147
+Guatemala,1074,Latin America and the Caribbean,1988,2.383536829
+Grenada,2707,Latin America and the Caribbean,1988,4.581901489
+Ecuador,1519,Latin America and the Caribbean,1988,5.422892520
+Costa Rica,2460,Latin America and the Caribbean,1988,5.597923089
+Colombia,1369,Latin America and the Caribbean,1988,3.183301517
+Chile,2303,Latin America and the Caribbean,1988,6.164868212
+Brazil,2628,Latin America and the Caribbean,1988,3.552867165
+Barbados,7763,Latin America and the Caribbean,1988,5.110732538
+Argentina,4458,Latin America and the Caribbean,1988,8.315670482
+Antigua and Barbuda,6693,Latin America and the Caribbean,1988,0
+Ukraine,1571,Eastern Europe,1988,20.506878038
+Bulgaria,2688,Eastern Europe,1988,17.306729600
+Japan,26687,Eastern Asia,1988,19.700958289
+Turkmenistan,1029,Central Asia,1988,9.226668489
+New Zealand,14890,Australia and New Zealand,1988,15.841843415
+Australia,15393,Australia and New Zealand,1988,14.184860339
+United States,23103,,1988,13.365999129
+United Kingdom,17072,,1988,9.324568127
+Republic of Korea,5089,,1988,7.620056588
+Netherlands,18310,Western Europe,1989,10.912249718
+Luxembourg,29239,Western Europe,1989,20.540236353
+France,19558,Western Europe,1989,22.349235662
+Belgium,17659,Western Europe,1989,20.536516493
+Austria,18544,Western Europe,1989,26.443136251
+Israel,12405,Western Asia,1989,8.778692398
+Mauritius,2349,Sub-Saharan Africa,1989,15.435738021
+Spain,11258,Southern Europe,1989,8.130014915
+Portugal,6436,Southern Europe,1989,7.933920111
+Malta,6539,Southern Europe,1989,7.098765432
+Italy,16922,Southern Europe,1989,7.938249124
+Greece,8310,Southern Europe,1989,4.019942272
+Albania,833,Southern Europe,1989,2.425885627
+Singapore,12514,South-eastern Asia,1989,16.206655423
+Sweden,26978,Northern Europe,1989,19.824728807
+Norway,25945,Northern Europe,1989,16.684362202
+Ireland,12188,Northern Europe,1989,8.624968975
+Iceland,24089,Northern Europe,1989,9.482758621
+Finland,25582,Northern Europe,1989,30.359022839
+Canada,23188,Northern America,1989,14.325930303
+Uruguay,2992,Latin America and the Caribbean,1989,12.195554295
+Trinidad and Tobago,4040,Latin America and the Caribbean,1989,16.168224299
+Suriname,1560,Latin America and the Caribbean,1989,15.242017353
+Saint Lucia,3505,Latin America and the Caribbean,1989,6.747296864
+Puerto Rico,8576,Latin America and the Caribbean,1989,9.957975516
+Paraguay,1330,Latin America and the Caribbean,1989,1.936877453
+Panama,2802,Latin America and the Caribbean,1989,3.313642408
+Mexico,3125,Latin America and the Caribbean,1989,2.613545593
+Jamaica,2087,Latin America and the Caribbean,1989,0
+Guyana,581,Latin America and the Caribbean,1989,14.370803420
+Guatemala,1122,Latin America and the Caribbean,1989,2.028530751
+Grenada,3268,Latin America and the Caribbean,1989,4.889676670
+Ecuador,1619,Latin America and the Caribbean,1989,5.024118684
+Costa Rica,2686,Latin America and the Caribbean,1989,6.533646322
+Colombia,1350,Latin America and the Caribbean,1989,2.837162347
+Chile,2599,Latin America and the Caribbean,1989,6.303799670
+Brazil,3310,Latin America and the Caribbean,1989,3.471252476
+Belize,2372,Latin America and the Caribbean,1989,0.653219064
+Barbados,8541,Latin America and the Caribbean,1989,6.779661017
+Argentina,2670,Latin America and the Caribbean,1989,7.828722737
+Antigua and Barbuda,7407,Latin America and the Caribbean,1989,0
+Ukraine,1732,Eastern Europe,1989,22.794414772
+Russian Federation,3740,Eastern Europe,1989,27.997590144
+Romania,1973,Eastern Europe,1989,11.848485558
+Bulgaria,2617,Eastern Europe,1989,17.374333587
+Japan,26389,Eastern Asia,1989,18.151270667
+Turkmenistan,1003,Central Asia,1989,8.436145382
+New Zealand,14417,Australia and New Zealand,1989,15.177230890
+Australia,19223,Australia and New Zealand,1989,13.268595944
+United States,24654,,1989,13.167630410
+United Kingdom,17349,,1989,8.162825400
+Republic of Korea,6217,,1989,7.717345519
+Netherlands,22425,Western Europe,1990,10.346574570
+Luxembourg,36871,Western Europe,1990,18.952062430
+Germany,23546,Western Europe,1990,18.575537495
+France,23968,Western Europe,1990,21.534231364
+Belgium,22032,Western Europe,1990,20.224767068
+Austria,23020,Western Europe,1990,25.237324191
+Israel,14193,Western Asia,1990,7.314549698
+Georgia,1555,Western Asia,1990,3.930691481
+Azerbaijan,1439,Western Asia,1990,1.851611227
+Armenia,756,Western Asia,1990,3.116935349
+Mauritius,2820,Sub-Saharan Africa,1990,15.620019127
+Spain,14517,Southern Europe,1990,7.973110083
+Portugal,8356,Southern Europe,1990,9.234870787
+Malta,7780,Southern Europe,1990,2.443494197
+Italy,21472,Southern Europe,1990,8.028202664
+Greece,10179,Southern Europe,1990,3.628990330
+Thailand,1666,South-eastern Asia,1990,7.325976151
+Singapore,14393,South-eastern Asia,1990,14.093478780
+Sweden,32246,Northern Europe,1990,18.374408234
+Norway,30240,Northern Europe,1990,16.635952844
+Ireland,15312,Northern Europe,1990,10.359801489
+Iceland,27316,Northern Europe,1990,17.145306472
+Finland,30271,Northern Europe,1990,32.341554191
+Canada,24041,Northern America,1990,13.673677564
+Uruguay,3281,Latin America and the Caribbean,1990,11.115031757
+Trinidad and Tobago,4656,Latin America and the Caribbean,1990,15.617822692
+Suriname,1114,Latin America and the Caribbean,1990,7.456266131
+Saint Lucia,4015,Latin America and the Caribbean,1990,2.488862341
+Saint Kitts and Nevis,5339,Latin America and the Caribbean,1990,0
+Puerto Rico,9552,Latin America and the Caribbean,1990,11.579275905
+Paraguay,1600,Latin America and the Caribbean,1990,2.780720004
+Mexico,3595,Latin America and the Caribbean,1990,2.635579780
+Jamaica,2155,Latin America and the Caribbean,1990,0.140776268
+Guyana,607,Latin America and the Caribbean,1990,13.620517090
+Guatemala,996,Latin America and the Caribbean,1990,2.056222859
+Grenada,3391,Latin America and the Caribbean,1990,2.439024390
+El Salvador,1068,Latin America and the Caribbean,1990,12.659204461
+Ecuador,1732,Latin America and the Caribbean,1990,5.090369396
+Costa Rica,2817,Latin America and the Caribbean,1990,5.974579496
+Colombia,1346,Latin America and the Caribbean,1990,2.889982895
+Chile,2828,Latin America and the Caribbean,1990,6.345546161
+Brazil,3516,Latin America and the Caribbean,1990,3.655597422
+Belize,2614,Latin America and the Caribbean,1990,1.898734177
+Barbados,8537,Latin America and the Caribbean,1990,6.751054852
+Argentina,4859,Latin America and the Caribbean,1990,7.356201725
+Antigua and Barbuda,7744,Latin America and the Caribbean,1990,1.685374322
+Ukraine,1698,Eastern Europe,1990,22.190212542
+Russian Federation,3789,Eastern Europe,1990,28.613280820
+Romania,1822,Eastern Europe,1990,9.714090805
+Poland,1876,Eastern Europe,1990,14.133451633
+Bulgaria,2451,Eastern Europe,1990,15.715388727
+Belarus,2301,Eastern Europe,1990,22.160105433
+Japan,26949,Eastern Asia,1990,17.205814296
+Uzbekistan,778,Central Asia,1990,8.499507739
+Turkmenistan,1036,Central Asia,1990,9.675952984
+Kyrgyzstan,715,Central Asia,1990,14.636234715
+Kazakhstan,1823,Central Asia,1990,21.470295589
+New Zealand,14734,Australia and New Zealand,1990,14.727778857
+Australia,19665,Australia and New Zealand,1990,13.930537104
+United States,26004,,1990,13.435400922
+United Kingdom,20411,,1990,8.669130022
+Saint Vincent and Grenadines,2553,,1990,5.311182163
+Republic of Korea,7056,,1990,7.979388474
+Czech Republic,4168,,1990,20.564520281
+Netherlands,22906,Western Europe,1991,11.413551733
+Luxembourg,39465,Western Europe,1991,21.217966382
+Germany,24662,Western Europe,1991,18.557299138
+France,23821,Western Europe,1991,21.586662888
+Belgium,22523,Western Europe,1991,19.209075623
+Austria,23808,Western Europe,1991,24.233779670
+Israel,15267,Western Asia,1991,8.116295894
+Georgia,1267,Western Asia,1991,3.467136922
+Azerbaijan,1398,Western Asia,1991,2.130162465
+Armenia,640,Western Asia,1991,2.476166894
+Mauritius,3045,Sub-Saharan Africa,1991,14.603986782
+Spain,15574,Southern Europe,1991,7.890015991
+Portugal,9483,Southern Europe,1991,10.010087661
+Malta,8313,Southern Europe,1991,3.022974607
+Italy,22805,Southern Europe,1991,8.175817719
+Greece,10816,Southern Europe,1991,3.919291804
+Thailand,1891,South-eastern Asia,1991,6.851122340
+Singapore,17768,South-eastern Asia,1991,11.565662486
+Sweden,33623,Northern Europe,1991,18.442750370
+Norway,30678,Northern Europe,1991,16.991391029
+Ireland,15328,Northern Europe,1991,10.608529873
+Iceland,28857,Northern Europe,1991,15.684612124
+Finland,27214,Northern Europe,1991,31.776098755
+Canada,24038,Northern America,1991,14.151017707
+Kiribati,768,Micronesia,1991,16.166841807
+Trinidad and Tobago,4817,Latin America and the Caribbean,1991,13.430127042
+Suriname,1235,Latin America and the Caribbean,1991,15.699062738
+Saint Lucia,4194,Latin America and the Caribbean,1991,4.898119122
+Saint Kitts and Nevis,5368,Latin America and the Caribbean,1991,0
+Puerto Rico,9974,Latin America and the Caribbean,1991,10.966267144
+Paraguay,1907,Latin America and the Caribbean,1991,2.047607139
+Mexico,4204,Latin America and the Caribbean,1991,2.811636404
+Jamaica,1889,Latin America and the Caribbean,1991,0.046407266
+Guyana,514,Latin America and the Caribbean,1991,16.039839907
+Guatemala,1194,Latin America and the Caribbean,1991,1.979528377
+Grenada,3650,Latin America and the Caribbean,1991,0
+El Salvador,1148,Latin America and the Caribbean,1991,10.356162408
+Ecuador,1869,Latin America and the Caribbean,1991,5.433527283
+Costa Rica,2651,Latin America and the Caribbean,1991,4.622781065
+Colombia,1348,Latin America and the Caribbean,1991,3.302361110
+Chile,3187,Latin America and the Caribbean,1991,6.629601550
+Brazil,4490,Latin America and the Caribbean,1991,3.839684961
+Belize,2742,Latin America and the Caribbean,1991,1.233045623
+Barbados,8469,Latin America and the Caribbean,1991,7.172995781
+Argentina,6404,Latin America and the Caribbean,1991,6.586098640
+Antigua and Barbuda,7976,Latin America and the Caribbean,1991,0
+Ukraine,1607,Eastern Europe,1991,22.198893790
+Russian Federation,3773,Eastern Europe,1991,28.613156764
+Romania,1351,Eastern Europe,1991,10.070836052
+Poland,2416,Eastern Europe,1991,15.018518885
+Hungary,3561,Eastern Europe,1991,40.921251852
+Bulgaria,1298,Eastern Europe,1991,16.413856901
+Belarus,1899,Eastern Europe,1991,22.888921720
+Japan,30688,Eastern Asia,1991,16.934641530
+Uzbekistan,788,Central Asia,1991,8.029836636
+Turkmenistan,1014,Central Asia,1991,8.632411067
+Kyrgyzstan,677,Central Asia,1991,14.302647175
+Kazakhstan,1664,Central Asia,1991,20.611524263
+New Zealand,13345,Australia and New Zealand,1991,14.794469241
+Australia,20320,Australia and New Zealand,1991,14.289193797
+United States,26503,,1991,13.217144942
+United Kingdom,21201,,1991,8.435456247
+Republic of Korea,8145,,1991,7.673708609
+Czech Republic,3070,,1991,19.694853892
+Netherlands,25205,Western Europe,1992,11.162771068
+Luxembourg,43740,Western Europe,1992,16.063163626
+Germany,27888,Western Europe,1992,17.677261903
+France,26136,Western Europe,1992,21.714846249
+Belgium,25036,Western Europe,1992,19.919177777
+Austria,26450,Western Europe,1992,23.849657400
+Israel,16469,Western Asia,1992,8.302643335
+Georgia,740,Western Asia,1992,4.089241686
+Azerbaijan,784,Western Asia,1992,2.260454603
+Armenia,385,Western Asia,1992,2.508538097
+Mauritius,3400,Sub-Saharan Africa,1992,15.395971739
+Spain,17005,Southern Europe,1992,7.529546579
+Portugal,11445,Southern Europe,1992,9.211240223
+Malta,9040,Southern Europe,1992,5.384385283
+Italy,24297,Southern Europe,1992,8.388899560
+Greece,11818,Southern Europe,1992,3.569193286
+Albania,251,Southern Europe,1992,1.665190434
+Thailand,2120,South-eastern Asia,1992,6.752844374
+Singapore,20029,South-eastern Asia,1992,10.637480799
+Philippines,958,South-eastern Asia,1992,0.627433293
+Sweden,34721,Northern Europe,1992,16.783927067
+Norway,32793,Northern Europe,1992,15.439370395
+Ireland,17051,Northern Europe,1992,11.025156850
+Iceland,29311,Northern Europe,1992,11.764705882
+Finland,23857,Northern Europe,1992,30.735664810
+Canada,22393,Northern America,1992,14.016571912
+Kiribati,759,Micronesia,1992,6.363752068
+Trinidad and Tobago,4803,Latin America and the Caribbean,1992,14.391665195
+Suriname,1093,Latin America and the Caribbean,1992,12.966174492
+Saint Lucia,4564,Latin America and the Caribbean,1992,8.855042947
+Saint Kitts and Nevis,5868,Latin America and the Caribbean,1992,0
+Puerto Rico,10533,Latin America and the Caribbean,1992,9.550168801
+Mexico,4830,Latin America and the Caribbean,1992,2.971343866
+Guyana,561,Latin America and the Caribbean,1992,11.877334543
+Guatemala,1294,Latin America and the Caribbean,1992,2.143829390
+Grenada,3713,Latin America and the Caribbean,1992,0
+El Salvador,1266,Latin America and the Caribbean,1992,9.125359352
+Ecuador,1955,Latin America and the Caribbean,1992,5.457597976
+Cuba,2227,Latin America and the Caribbean,1992,23.185687200
+Costa Rica,3070,Latin America and the Caribbean,1992,5.362798733
+Colombia,1664,Latin America and the Caribbean,1992,3.667011082
+Chile,3791,Latin America and the Caribbean,1992,5.426804124
+Brazil,2924,Latin America and the Caribbean,1992,3.800535157
+Barbados,8129,Latin America and the Caribbean,1992,5.833333333
+Argentina,7615,Latin America and the Caribbean,1992,7.268999581
+Antigua and Barbuda,8087,Latin America and the Caribbean,1992,0
+Ukraine,1525,Eastern Europe,1992,24.059908471
+Slovakia,3143,Eastern Europe,1992,16.214362014
+Russian Federation,3333,Eastern Europe,1992,33.248889182
+Romania,1183,Eastern Europe,1992,12.484041626
+Poland,2650,Eastern Europe,1992,16.045318968
+Hungary,3970,Eastern Europe,1992,41.004797971
+Bulgaria,1287,Eastern Europe,1992,18.889510663
+Belarus,1780,Eastern Europe,1992,25.326771777
+Japan,33320,Eastern Asia,1992,17.693140456
+Uzbekistan,709,Central Asia,1992,7.361559950
+Turkmenistan,984,Central Asia,1992,8.331027698
+Kyrgyzstan,603,Central Asia,1992,12.788789623
+Kazakhstan,1644,Central Asia,1992,22.151668966
+New Zealand,12868,Australia and New Zealand,1992,15.236741254
+Australia,20050,Australia and New Zealand,1992,13.892060357
+United States,27760,,1992,12.935250308
+United Kingdom,21815,,1992,8.558268662
+Republic of Korea,8671,,1992,8.751288047
+Czech Republic,3573,,1992,20.564145467
+Netherlands,24385,Western Europe,1993,10.863793874
+Luxembourg,44320,Western Europe,1993,17.204301075
+Germany,26937,Western Europe,1993,16.524857605
+France,24521,Western Europe,1993,22.709999370
+Belgium,23875,Western Europe,1993,22.635767048
+Austria,25611,Western Europe,1993,22.923040063
+Kuwait,18798,Western Asia,1993,1.413316583
+Israel,16102,Western Asia,1993,7.865168539
+Azerbaijan,617,Western Asia,1993,1.847080371
+Armenia,357,Western Asia,1993,3.148577200
+Mauritius,3405,Sub-Saharan Africa,1993,14.400500887
+Spain,14106,Southern Europe,1993,8.181110444
+Portugal,10098,Southern Europe,1993,8.288981966
+Malta,8022,Southern Europe,1993,4.737933077
+Italy,19605,Southern Europe,1993,8.675571900
+Greece,10957,Southern Europe,1993,4.148874089
+Albania,437,Southern Europe,1993,2.600363338
+Singapore,22835,South-eastern Asia,1993,10.166428195
+Philippines,957,South-eastern Asia,1993,1.489920083
+Sweden,25880,Northern Europe,1993,16.924499230
+Norway,30066,Northern Europe,1993,14.711382621
+Ireland,15872,Northern Europe,1993,9.859367912
+Iceland,25474,Northern Europe,1993,10.810810811
+Finland,18826,Northern Europe,1993,29.466357309
+Canada,21421,Northern America,1993,14.114092938
+Kiribati,735,Micronesia,1993,18.794637264
+Uruguay,5180,Latin America and the Caribbean,1993,14.432565392
+Trinidad and Tobago,4066,Latin America and the Caribbean,1993,15.152834625
+Saint Lucia,4568,Latin America and the Caribbean,1993,6.356975987
+Puerto Rico,11146,Latin America and the Caribbean,1993,10.415182377
+Mexico,6518,Latin America and the Caribbean,1993,3.048415397
+Guyana,671,Latin America and the Caribbean,1993,10.928447508
+Guatemala,1381,Latin America and the Caribbean,1993,1.998798783
+Grenada,3632,Latin America and the Caribbean,1993,3.516833912
+El Salvador,1423,Latin America and the Caribbean,1993,9.032230578
+Ecuador,1996,Latin America and the Caribbean,1993,6.049439094
+Cuba,2236,Latin America and the Caribbean,1993,23.730033386
+Costa Rica,3342,Latin America and the Caribbean,1993,5.746925045
+Colombia,1845,Latin America and the Caribbean,1993,3.587701953
+Chile,4006,Latin America and the Caribbean,1993,6.013131379
+Brazil,3136,Latin America and the Caribbean,1993,3.945121356
+Belize,3278,Latin America and the Caribbean,1993,0.585480094
+Barbados,8540,Latin America and the Caribbean,1993,6.677796327
+Bahamas,12698,Latin America and the Caribbean,1993,2.874743326
+Argentina,7768,Latin America and the Caribbean,1993,7.316873103
+Antigua and Barbuda,8453,Latin America and the Caribbean,1993,1.579404564
+Ukraine,1349,Eastern Europe,1993,25.613952199
+Slovakia,3334,Eastern Europe,1993,14.953619465
+Russian Federation,3160,Eastern Europe,1993,40.558402473
+Romania,1237,Eastern Europe,1993,13.018828962
+Poland,2683,Eastern Europe,1993,15.712745093
+Hungary,4116,Eastern Europe,1993,37.895333786
+Bulgaria,1354,Eastern Europe,1993,18.372703412
+Belarus,1689,Eastern Europe,1993,29.923971331
+Japan,37832,Eastern Asia,1993,17.287127872
+Uzbekistan,708,Central Asia,1993,7.320644217
+Turkmenistan,954,Central Asia,1993,7.204827234
+Kyrgyzstan,528,Central Asia,1993,14.656878059
+Kazakhstan,1527,Central Asia,1993,26.214174831
+New Zealand,14271,Australia and New Zealand,1993,13.534156177
+Australia,19030,Australia and New Zealand,1993,12.449602932
+United States,28891,,1993,13.055441104
+United Kingdom,19553,,1993,8.219735980
+Republic of Korea,9479,,1993,10.119053461
+Czech Republic,4186,,1993,19.755961828
+Netherlands,25997,Western Europe,1994,11.001757225
+Luxembourg,48610,Western Europe,1994,19.628647215
+Germany,28588,Western Europe,1994,16.481907225
+France,25697,Western Europe,1994,22.196578250
+Belgium,25922,Western Europe,1994,22.437719797
+Austria,27274,Western Europe,1994,23.798829140
+Kuwait,17161,Western Asia,1994,2.071823204
+Israel,17814,Western Asia,1994,8.586348531
+Georgia,556,Western Asia,1994,2.721901348
+Azerbaijan,508,Western Asia,1994,0.720726247
+Armenia,387,Western Asia,1994,3.291697281
+Mauritius,3658,Sub-Saharan Africa,1994,13.260690789
+Spain,14223,Southern Europe,1994,8.523483258
+Portugal,10566,Southern Europe,1994,8.075447999
+Malta,8775,Southern Europe,1994,4.389815628
+Italy,20235,Southern Europe,1994,8.377806725
+Greece,11638,Southern Europe,1994,3.543291840
+Albania,697,Southern Europe,1994,1.754816973
+Thailand,2784,South-eastern Asia,1994,4.378356835
+Singapore,27202,South-eastern Asia,1994,11.651058182
+Sweden,27658,Northern Europe,1994,16.197501866
+Norway,31520,Northern Europe,1994,13.165398061
+Ireland,17188,Northern Europe,1994,11.846061335
+Iceland,25937,Northern Europe,1994,10.300782859
+Finland,21699,Northern Europe,1994,29.128864247
+Denmark,32034,Northern Europe,1994,20.492728056
+Canada,21219,Northern America,1994,13.756147691
+Kiribati,845,Micronesia,1994,15.415208645
+Uruguay,5984,Latin America and the Caribbean,1994,13.902700274
+Trinidad and Tobago,4254,Latin America and the Caribbean,1994,12.726803680
+Saint Lucia,4704,Latin America and the Caribbean,1994,4.703779487
+Puerto Rico,11871,Latin America and the Caribbean,1994,10.617222511
+Paraguay,1981,Latin America and the Caribbean,1994,2.718679366
+Mexico,6735,Latin America and the Caribbean,1994,3.302111284
+Guyana,819,Latin America and the Caribbean,1994,13.018822796
+Guatemala,1538,Latin America and the Caribbean,1994,1.681684584
+Grenada,3735,Latin America and the Caribbean,1994,4.595799439
+Ecuador,2335,Latin America and the Caribbean,1994,5.264643446
+Cuba,2820,Latin America and the Caribbean,1994,22.578375110
+Costa Rica,3562,Latin America and the Caribbean,1994,5.530709092
+Colombia,2646,Latin America and the Caribbean,1994,3.880212213
+Chile,4551,Latin America and the Caribbean,1994,6.394392732
+Brazil,3925,Latin America and the Caribbean,1994,4.146609658
+Belize,3399,Latin America and the Caribbean,1994,4.681812330
+Barbados,8953,Latin America and the Caribbean,1994,5.826050770
+Bahamas,13073,Latin America and the Caribbean,1994,1.203369434
+Argentina,8328,Latin America and the Caribbean,1994,7.249799425
+Antigua and Barbuda,9062,Latin America and the Caribbean,1994,0
+Ukraine,1081,Eastern Europe,1994,28.437442152
+Slovakia,4036,Eastern Europe,1994,13.889843690
+Russian Federation,2853,Eastern Europe,1994,44.354192273
+Romania,1406,Eastern Europe,1994,13.499485645
+Poland,3081,Eastern Europe,1994,15.347608454
+Hungary,4431,Eastern Europe,1994,37.214537549
+Bulgaria,1213,Eastern Europe,1994,18.310299543
+Belarus,1547,Eastern Europe,1994,32.660375599
+Japan,41563,Eastern Asia,1994,17.570131454
+Uzbekistan,674,Central Asia,1994,7.411973026
+Turkmenistan,748,Central Asia,1994,6.835908971
+Kyrgyzstan,437,Central Asia,1994,15.086598634
+Kazakhstan,1395,Central Asia,1994,26.422230393
+New Zealand,16615,Australia and New Zealand,1994,15.424009640
+Australia,19469,Australia and New Zealand,1994,13.795062057
+United States,30375,,1994,12.934819697
+United Kingdom,20927,,1994,8.037096448
+Republic of Korea,11073,,1994,10.236892185
+Macau,18081,,1994,7.791263397
+Czech Republic,4891,,1994,19.251930849
+Switzerland,51774,Western Europe,1995,21.443143181
+Netherlands,30850,Western Europe,1995,10.439408595
+Luxembourg,56499,Western Europe,1995,16.487830411
+Germany,33420,Western Europe,1995,16.619491280
+France,29363,Western Europe,1995,21.674903949
+Belgium,30394,Western Europe,1995,22.619684899
+Austria,32237,Western Europe,1995,23.913238278
+Qatar,17559,Western Asia,1995,0
+Kuwait,17995,Western Asia,1995,1.720600887
+Israel,20159,Western Asia,1995,7.232255861
+Georgia,611,Western Asia,1995,3.128648673
+Azerbaijan,462,Western Asia,1995,0.741761153
+Armenia,426,Western Asia,1995,3.775557621
+Mauritius,4115,Sub-Saharan Africa,1995,14.970974641
+Spain,16444,Southern Europe,1995,8.469415404
+Slovenia,11291,Southern Europe,1995,29.936305732
+Portugal,12469,Southern Europe,1995,8.539300415
+Malta,9974,Southern Europe,1995,4.928964917
+Italy,21625,Southern Europe,1995,8.439048937
+Greece,13550,Southern Europe,1995,3.662774490
+Croatia,4978,Southern Europe,1995,20.656379241
+Albania,835,Southern Europe,1995,3.030929255
+Thailand,3114,South-eastern Asia,1995,7.808180755
+Singapore,31783,South-eastern Asia,1995,13.163128774
+Sweden,32072,Northern Europe,1995,16.373132515
+Norway,37483,Northern Europe,1995,13.511181242
+Lithuania,2324,Northern Europe,1995,50.012562187
+Latvia,2438,Northern Europe,1995,43.121236367
+Ireland,20689,Northern Europe,1995,12.044591889
+Iceland,28680,Northern Europe,1995,11.033919085
+Finland,28068,Northern Europe,1995,29.029761780
+Estonia,3224,Northern Europe,1995,43.784289401
+Denmark,37841,Northern Europe,1995,18.899183899
+Canada,21871,Northern America,1995,14.367181418
+Kiribati,855,Micronesia,1995,3.033842513
+Uruguay,6555,Latin America and the Caribbean,1995,14.504982648
+Trinidad and Tobago,4637,Latin America and the Caribbean,1995,16.011514367
+Suriname,1782,Latin America and the Caribbean,1995,14.123785996
+Saint Lucia,4947,Latin America and the Caribbean,1995,7.724035654
+Puerto Rico,12636,Latin America and the Caribbean,1995,8.562572256
+Paraguay,2223,Latin America and the Caribbean,1995,2.894456821
+Mexico,4505,Latin America and the Caribbean,1995,3.599530072
+Guyana,939,Latin America and the Caribbean,1995,14.961869901
+Guatemala,1696,Latin America and the Caribbean,1995,2.441702332
+Grenada,3869,Latin America and the Caribbean,1995,1.130799588
+El Salvador,1845,Latin America and the Caribbean,1995,12.819460437
+Ecuador,2453,Latin America and the Caribbean,1995,5.481617856
+Cuba,2993,Latin America and the Caribbean,1995,21.852012116
+Costa Rica,3672,Latin America and the Caribbean,1995,6.666241388
+Colombia,2796,Latin America and the Caribbean,1995,3.475275785
+Chile,5695,Latin America and the Caribbean,1995,7.210619801
+Brazil,5313,Latin America and the Caribbean,1995,4.514323726
+Belize,3436,Latin America and the Caribbean,1995,7.756232687
+Barbados,9378,Latin America and the Caribbean,1995,7.048092869
+Bahamas,13473,Latin America and the Caribbean,1995,0.785854617
+Aruba,17949,Latin America and the Caribbean,1995,10.872371944
+Argentina,8232,Latin America and the Caribbean,1995,7.031334741
+Antigua and Barbuda,8636,Latin America and the Caribbean,1995,0
+Ukraine,996,Eastern Europe,1995,30.033894244
+Slovakia,5141,Eastern Europe,1995,14.684633999
+Russian Federation,2844,Eastern Europe,1995,43.532433993
+Romania,1756,Eastern Europe,1995,13.020189919
+Poland,3937,Eastern Europe,1995,15.230619667
+Hungary,4767,Eastern Europe,1995,34.568288699
+Bulgaria,1636,Eastern Europe,1995,17.948621601
+Belarus,1444,Eastern Europe,1995,33.110734370
+Japan,46043,Eastern Asia,1995,17.954448477
+Uzbekistan,681,Central Asia,1995,7.576917190
+Turkmenistan,650,Central Asia,1995,6.390445760
+Kyrgyzstan,425,Central Asia,1995,15.491370922
+Kazakhstan,1359,Central Asia,1995,31.395100603
+New Zealand,18945,Australia and New Zealand,1995,16.153891754
+Australia,21902,Australia and New Zealand,1995,12.942628964
+United States,31518,,1995,12.860445740
+United Kingdom,24389,,1995,7.881715596
+Saint Vincent and Grenadines,3293,,1995,7.293642028
+Republic of Korea,13217,,1995,11.505261857
+Czech Republic,6134,,1995,17.784756216
+Switzerland,49621,Western Europe,1996,21.526712967
+Netherlands,30625,Western Europe,1996,10.835732494
+Luxembourg,56169,Western Europe,1996,18.571060098
+Germany,32147,Western Europe,1996,15.696722627
+France,29305,Western Europe,1996,20.585272195
+Belgium,29438,Western Europe,1996,21.061894032
+Austria,31660,Western Europe,1996,23.739922543
+Kuwait,20076,Western Asia,1996,1.912411551
+Israel,21545,Western Asia,1996,5.995650215
+Georgia,718,Western Asia,1996,3.758395490
+Azerbaijan,476,Western Asia,1996,1.034777523
+Armenia,458,Western Asia,1996,2.495482316
+South Africa,3908,Sub-Saharan Africa,1996,0.378570756
+Mauritius,4444,Sub-Saharan Africa,1996,15.376884422
+Spain,17166,Southern Europe,1996,8.890983686
+Slovenia,11346,Southern Europe,1996,32.063810681
+Portugal,12887,Southern Europe,1996,6.862155789
+Malta,10254,Southern Europe,1996,2.871912694
+Italy,24172,Southern Europe,1996,8.659226688
+Greece,14330,Southern Europe,1996,3.497575620
+Croatia,5610,Southern Europe,1996,23.715883245
+Albania,1127,Southern Europe,1996,3.027004966
+Sri Lanka,834,Southern Asia,1996,29.409597820
+Thailand,3324,South-eastern Asia,1996,8.067810574
+Singapore,34148,South-eastern Asia,1996,8.465870851
+Sweden,34819,Northern Europe,1996,15.143274960
+Norway,40098,Northern Europe,1996,12.677783227
+Lithuania,2484,Northern Europe,1996,51.019758157
+Latvia,2526,Northern Europe,1996,39.011593467
+Ireland,22478,Northern Europe,1996,12.086024054
+Iceland,29740,Northern Europe,1996,13.387423935
+Finland,27508,Northern Europe,1996,25.967265004
+Estonia,3536,Northern Europe,1996,40.604916399
+Denmark,38158,Northern Europe,1996,18.140036199
+Canada,22686,Northern America,1996,14.224047700
+Kiribati,991,Micronesia,1996,8.938414325
+Uruguay,6914,Latin America and the Caribbean,1996,13.244461759
+Trinidad and Tobago,4982,Latin America and the Caribbean,1996,12.627736911
+Suriname,2174,Latin America and the Caribbean,1996,5.305642930
+Saint Lucia,5031,Latin America and the Caribbean,1996,5.318300271
+Puerto Rico,13328,Latin America and the Caribbean,1996,9.730077079
+Paraguay,2341,Latin America and the Caribbean,1996,2.367615610
+Panama,3992,Latin America and the Caribbean,1996,4.569624292
+Mexico,4904,Latin America and the Caribbean,1996,3.589400548
+Guyana,1070,Latin America and the Caribbean,1996,9.104040980
+Guatemala,1775,Latin America and the Caribbean,1996,1.777561200
+Grenada,4087,Latin America and the Caribbean,1996,1.113933075
+El Salvador,1959,Latin America and the Caribbean,1996,11.037547898
+Ecuador,2474,Latin America and the Caribbean,1996,5.816092982
+Cuba,2443,Latin America and the Caribbean,1996,19.664896110
+Costa Rica,3639,Latin America and the Caribbean,1996,6.546704314
+Colombia,2883,Latin America and the Caribbean,1996,3.587150063
+Chile,5946,Latin America and the Caribbean,1996,6.986619291
+Brazil,5771,Latin America and the Caribbean,1996,4.545543077
+Belize,3545,Latin America and the Caribbean,1996,4.421697268
+Bahamas,14297,Latin America and the Caribbean,1996,1.188410620
+Argentina,8563,Latin America and the Caribbean,1996,7.013690699
+Ukraine,925,Eastern Europe,1996,31.468930658
+Slovakia,5529,Eastern Europe,1996,13.353373992
+Russian Federation,2813,Eastern Europe,1996,41.293836691
+Romania,1738,Eastern Europe,1996,13.216620789
+Poland,4413,Eastern Europe,1996,15.026225537
+Hungary,4792,Eastern Europe,1996,35.287170402
+Bulgaria,1270,Eastern Europe,1996,19.162909849
+Belarus,1524,Eastern Europe,1996,37.450437799
+Japan,40693,Eastern Asia,1996,18.493075725
+Uzbekistan,703,Central Asia,1996,8.557254023
+Turkmenistan,608,Central Asia,1996,7.232302581
+Kyrgyzstan,459,Central Asia,1996,12.063938876
+Kazakhstan,1452,Central Asia,1996,32.945187987
+New Zealand,20434,Australia and New Zealand,1996,15.731973780
+Australia,23526,Australia and New Zealand,1996,14.257923844
+United States,32928,,1996,12.552551283
+United Kingdom,25609,,1996,7.571046913
+Saint Vincent and Grenadines,3450,,1996,8.325094958
+Republic of Korea,14071,,1996,13.778874588
+Czech Republic,6861,,1996,16.059156689
+Switzerland,42923,Western Europe,1997,20.089285714
+Netherlands,28156,Western Europe,1997,10.737778264
+Luxembourg,50260,Western Europe,1997,20.631686195
+Germany,28420,Western Europe,1997,15.699154198
+France,26394,Western Europe,1997,20.235986593
+Belgium,26609,Western Europe,1997,22.409670284
+Austria,28325,Western Europe,1997,21.191096704
+Kuwait,18766,Western Asia,1997,2.040185471
+Israel,21921,Western Asia,1997,7.241807586
+Georgia,828,Western Asia,1997,4.150356082
+Bahrain,11985,Western Asia,1997,0
+Azerbaijan,590,Western Asia,1997,1.594349744
+Armenia,465,Western Asia,1997,2.183344203
+South Africa,3960,Sub-Saharan Africa,1997,0.269932455
+Mauritius,4139,Sub-Saharan Africa,1997,12.058910744
+Spain,15738,Southern Europe,1997,9.017511028
+Slovenia,11014,Southern Europe,1997,31.477254631
+Portugal,12237,Southern Europe,1997,6.565892759
+Malta,10575,Southern Europe,1997,4.280821918
+Italy,22869,Southern Europe,1997,8.663477373
+Greece,13968,Southern Europe,1997,3.649205576
+Croatia,5546,Southern Europe,1997,22.025098368
+Albania,793,Southern Europe,1997,5.709871360
+Sri Lanka,900,Southern Asia,1997,35.093034095
+Thailand,2689,South-eastern Asia,1997,7.429408801
+Singapore,34779,South-eastern Asia,1997,10.520833333
+Philippines,1312,South-eastern Asia,1997,1.296742179
+Sweden,31821,Northern Europe,1997,14.450206346
+Norway,39335,Northern Europe,1997,12.993344872
+Lithuania,3008,Northern Europe,1997,48.509737468
+Latvia,2771,Northern Europe,1997,37.626873912
+Ireland,24259,Northern Europe,1997,13.648538420
+Iceland,30326,Northern Europe,1997,13.256792097
+Finland,26296,Northern Europe,1997,27.409188920
+Estonia,3806,Northern Europe,1997,39.211738883
+Denmark,35148,Northern Europe,1997,16.547505722
+Canada,23245,Northern America,1997,13.106593888
+Kiribati,988,Micronesia,1997,7.317644304
+Uruguay,8012,Latin America and the Caribbean,1997,15.242363609
+Trinidad and Tobago,4937,Latin America and the Caribbean,1997,13.766200021
+Suriname,2314,Latin America and the Caribbean,1997,7.963883787
+Saint Lucia,5053,Latin America and the Caribbean,1997,6.718072361
+Puerto Rico,14037,Latin America and the Caribbean,1997,7.952791299
+Paraguay,2326,Latin America and the Caribbean,1997,2.940508610
+Panama,4227,Latin America and the Caribbean,1997,5.739823688
+Mexico,5864,Latin America and the Caribbean,1997,3.925434094
+Guyana,1139,Latin America and the Caribbean,1997,6.082873063
+Guatemala,1967,Latin America and the Caribbean,1997,1.979167876
+El Salvador,2065,Latin America and the Caribbean,1997,11.658209582
+Ecuador,2701,Latin America and the Caribbean,1997,5.552479902
+Cuba,2472,Latin America and the Caribbean,1997,19.774880191
+Costa Rica,3827,Latin America and the Caribbean,1997,5.701986151
+Colombia,3106,Latin America and the Caribbean,1997,3.616897200
+Chile,6368,Latin America and the Caribbean,1997,6.821819327
+Brazil,5891,Latin America and the Caribbean,1997,4.596064338
+Belize,3487,Latin America and the Caribbean,1997,0.532907008
+Bahamas,24740,Latin America and the Caribbean,1997,0.781384300
+Argentina,9057,Latin America and the Caribbean,1997,6.754545656
+Ukraine,1046,Eastern Europe,1997,31.097802725
+Slovakia,5468,Eastern Europe,1997,12.454558161
+Russian Federation,2907,Eastern Europe,1997,39.305530028
+Romania,1677,Eastern Europe,1997,13.379194160
+Hungary,4856,Eastern Europe,1997,32.943850349
+Bulgaria,1411,Eastern Europe,1997,18.465067621
+Belarus,1458,Eastern Europe,1997,36.380144654
+Japan,37080,Eastern Asia,1997,19.553166471
+Uzbekistan,724,Central Asia,1997,7.631001311
+Turkmenistan,612,Central Asia,1997,8.311701278
+Kyrgyzstan,435,Central Asia,1997,12.217049681
+Kazakhstan,1540,Central Asia,1997,32.248204188
+New Zealand,19041,Australia and New Zealand,1997,16.195031987
+Australia,25234,Australia and New Zealand,1997,15.364693722
+United States,34644,,1997,12.281155025
+United Kingdom,28091,,1997,7.496385477
+Saint Vincent and Grenadines,3613,,1997,3.116721209
+Republic of Korea,12978,,1997,14.023619463
+Czech Republic,6314,,1997,17.023102782
+Switzerland,43872,Western Europe,1998,20.386110858
+Netherlands,29351,Western Europe,1998,10.309068451
+Luxembourg,50788,Western Europe,1998,16.083837000
+Germany,28733,Western Europe,1998,14.927418725
+France,27190,Western Europe,1998,19.055475057
+Belgium,27087,Western Europe,1998,20.985351102
+Austria,28972,Western Europe,1998,20.694180236
+Kuwait,14209,Western Asia,1998,1.917003603
+Israel,21637,Western Asia,1998,5.932614455
+Georgia,858,Western Asia,1998,3.516065807
+Bahrain,11325,Western Asia,1998,0
+Azerbaijan,631,Western Asia,1998,0.794957697
+Armenia,532,Western Asia,1998,1.854974705
+South Africa,3512,Sub-Saharan Africa,1998,0.458803662
+Mauritius,4063,Sub-Saharan Africa,1998,15.102796453
+Spain,16473,Southern Europe,1998,8.705541273
+Slovenia,11767,Southern Europe,1998,32.547997660
+Serbia,2547,Southern Europe,1998,20.337088637
+Portugal,12892,Southern Europe,1998,5.781362592
+Malta,11103,Southern Europe,1998,3.395585739
+Italy,23342,Southern Europe,1998,8.302213550
+Greece,14008,Southern Europe,1998,3.908587545
+Croatia,6015,Southern Europe,1998,24.338323991
+Albania,899,Southern Europe,1998,5.111693829
+Sri Lanka,935,Southern Asia,1998,32.655349184
+Thailand,2005,South-eastern Asia,1998,8.754355106
+Singapore,29150,South-eastern Asia,1998,11.155703694
+Philippines,1124,South-eastern Asia,1998,1.374263154
+Sweden,31966,Northern Europe,1998,14.749050477
+Norway,37334,Northern Europe,1998,13.270693079
+Lithuania,3354,Northern Europe,1998,46.344748227
+Latvia,3061,Northern Europe,1998,35.791988396
+Ireland,26115,Northern Europe,1998,14.437230661
+Iceland,33513,Northern Europe,1998,11.892821889
+Finland,27646,Northern Europe,1998,25.347427989
+Estonia,4250,Northern Europe,1998,36.089365440
+Denmark,35710,Northern Europe,1998,15.394237753
+Canada,22268,Northern America,1998,13.037255464
+Kiribati,939,Micronesia,1998,5.749604715
+Uruguay,8420,Latin America and the Caribbean,1998,17.280913016
+Trinidad and Tobago,5175,Latin America and the Caribbean,1998,14.641363650
+Suriname,2318,Latin America and the Caribbean,1998,7.114713719
+Saint Lucia,5407,Latin America and the Caribbean,1998,5.865102639
+Puerto Rico,15610,Latin America and the Caribbean,1998,9.264513105
+Paraguay,2057,Latin America and the Caribbean,1998,3.144873378
+Panama,4488,Latin America and the Caribbean,1998,5.737695067
+Mexico,6064,Latin America and the Caribbean,1998,3.814539749
+Guyana,1092,Latin America and the Caribbean,1998,5.326523500
+Guatemala,2091,Latin America and the Caribbean,1998,2.167459659
+El Salvador,2185,Latin America and the Caribbean,1998,10.227036209
+Ecuador,2626,Latin America and the Caribbean,1998,5.123659426
+Cuba,2497,Latin America and the Caribbean,1998,19.945715833
+Costa Rica,4046,Latin America and the Caribbean,1998,6.625613612
+Colombia,2814,Latin America and the Caribbean,1998,5.865029047
+Chile,6023,Latin America and the Caribbean,1998,7.612260539
+Brazil,5663,Latin America and the Caribbean,1998,4.538292915
+Belize,3531,Latin America and the Caribbean,1998,6.150439756
+Bahamas,26269,Latin America and the Caribbean,1998,1.153291687
+Argentina,9126,Latin America and the Caribbean,1998,7.164824139
+Antigua and Barbuda,10078,Latin America and the Caribbean,1998,0
+Ukraine,879,Eastern Europe,1998,31.020190706
+Slovakia,5871,Eastern Europe,1998,13.245163449
+Russian Federation,1948,Eastern Europe,1998,37.030780875
+Romania,1967,Eastern Europe,1998,13.299966258
+Hungary,5010,Eastern Europe,1998,33.335480364
+Bulgaria,1852,Eastern Europe,1998,19.026520666
+Belarus,1570,Eastern Europe,1998,36.679457029
+Japan,33791,Eastern Asia,1998,26.360421659
+Uzbekistan,719,Central Asia,1998,7.765612716
+Turkmenistan,636,Central Asia,1998,9.879976581
+Kyrgyzstan,398,Central Asia,1998,12.295576974
+Kazakhstan,1599,Central Asia,1998,31.153840598
+New Zealand,16052,Australia and New Zealand,1998,16.386890488
+Australia,22897,Australia and New Zealand,1998,15.107569685
+United States,36164,,1998,12.158395751
+United Kingdom,29508,,1998,7.904208841
+Saint Vincent and Grenadines,3874,,1998,10.368173854
+Republic of Korea,8624,,1998,19.746196052
+Czech Republic,6779,,1998,16.445255549
+Switzerland,42859,Western Europe,1999,19.159331126
+Netherlands,29799,Western Europe,1999,10.241370011
+Luxembourg,55054,Western Europe,1999,17.331451633
+Germany,28154,Western Europe,1999,14.281838518
+France,27118,Western Europe,1999,18.654373287
+Belgium,26969,Western Europe,1999,19.246959846
+Austria,28722,Western Europe,1999,20.564406332
+Kuwait,15864,Western Asia,1999,2.422710275
+Israel,21319,Western Asia,1999,6.694503431
+Georgia,669,Western Asia,1999,4.513163393
+Cyprus,12389,Western Asia,1999,0.116722479
+Bahrain,11703,Western Asia,1999,3.004797070
+Azerbaijan,645,Western Asia,1999,0.759878419
+Armenia,515,Western Asia,1999,1.871142514
+South Africa,3424,Sub-Saharan Africa,1999,0.699115656
+Mauritius,4117,Sub-Saharan Africa,1999,16.692248657
+Spain,16756,Southern Europe,1999,8.520937067
+Slovenia,12041,Southern Europe,1999,31.309700700
+Serbia,2570,Southern Europe,1999,21.932668801
+San Marino,48255,Southern Europe,1999,7.939028263
+Portugal,13180,Southern Europe,1999,5.635196798
+Malta,11607,Southern Europe,1999,7.592800900
+Italy,23002,Southern Europe,1999,7.580987561
+Greece,13756,Southern Europe,1999,3.676767548
+Croatia,5459,Southern Europe,1999,23.086978851
+Albania,1127,Southern Europe,1999,4.587912995
+Sri Lanka,920,Southern Asia,1999,33.013544366
+Thailand,2203,South-eastern Asia,1999,9.174398074
+Singapore,28789,South-eastern Asia,1999,9.242267525
+Philippines,1262,South-eastern Asia,1999,1.586548237
+Sweden,32328,Northern Europe,1999,14.561925363
+Norway,39013,Northern Europe,1999,14.015282187
+Lithuania,3292,Northern Europe,1999,46.498344659
+Latvia,3228,Northern Europe,1999,32.699065741
+Ireland,28344,Northern Europe,1999,12.177360965
+Iceland,34858,Northern Europe,1999,12.117895395
+Finland,27800,Northern Europe,1999,24.813666224
+Estonia,4361,Northern Europe,1999,35.638190128
+Denmark,35763,Northern Europe,1999,15.312889353
+Canada,23572,Northern America,1999,14.204207200
+Kiribati,973,Micronesia,1999,0
+Uruguay,7903,Latin America and the Caribbean,1999,14.827834019
+Trinidad and Tobago,5803,Latin America and the Caribbean,1999,11.847169805
+Suriname,2142,Latin America and the Caribbean,1999,11.855708766
+Saint Lucia,5590,Latin America and the Caribbean,1999,5.763148985
+Puerto Rico,16560,Latin America and the Caribbean,1999,8.274351143
+Paraguay,1868,Latin America and the Caribbean,1999,3.583974071
+Panama,4606,Latin America and the Caribbean,1999,5.430349502
+Mexico,6800,Latin America and the Caribbean,1999,3.769033065
+Guyana,1057,Latin America and the Caribbean,1999,24.806192113
+Guatemala,1926,Latin America and the Caribbean,1999,2.459878230
+El Salvador,2229,Latin America and the Caribbean,1999,10.172319085
+Ecuador,1805,Latin America and the Caribbean,1999,5.660056805
+Cuba,2741,Latin America and the Caribbean,1999,19.806688651
+Costa Rica,4115,Latin America and the Caribbean,1999,6.753773925
+Colombia,2419,Latin America and the Caribbean,1999,6.014694378
+Chile,5470,Latin America and the Caribbean,1999,7.574279232
+Brazil,3864,Latin America and the Caribbean,1999,4.194760858
+Belize,3615,Latin America and the Caribbean,1999,8.880162211
+Bahamas,29019,Latin America and the Caribbean,1999,2.265938042
+Aruba,21027,Latin America and the Caribbean,1999,10.984450900
+Argentina,8546,Latin America and the Caribbean,1999,7.303722921
+Antigua and Barbuda,10378,Latin America and the Caribbean,1999,0
+Ukraine,666,Eastern Europe,1999,30.291846109
+Slovakia,5966,Eastern Europe,1999,13.573418069
+Russian Federation,1412,Eastern Europe,1999,41.071873977
+Romania,1698,Eastern Europe,1999,12.838560730
+Poland,4640,Eastern Europe,1999,15.800323717
+Hungary,5147,Eastern Europe,1999,34.816054828
+Bulgaria,1715,Eastern Europe,1999,16.614547581
+Belarus,1269,Eastern Europe,1999,35.521582734
+Japan,38164,Eastern Asia,1999,26.028944286
+Uzbekistan,801,Central Asia,1999,8.415410544
+Turkmenistan,619,Central Asia,1999,11.165129230
+Kyrgyzstan,291,Central Asia,1999,12.935948442
+Kazakhstan,1225,Central Asia,1999,28.976142419
+New Zealand,16556,Australia and New Zealand,1999,14.538077931
+Australia,22016,Australia and New Zealand,1999,14.102947663
+United States,38072,,1999,11.500749890
+United Kingdom,29832,,1999,7.966566356
+Saint Vincent and Grenadines,4041,,1999,6.205719605
+Republic of Korea,11074,,1999,16.146590502
+Czech Republic,6606,,1999,16.396422728
+Switzerland,39952,Western Europe,2000,20.265540255
+Netherlands,27644,Western Europe,2000,10.051405472
+Luxembourg,51841,Western Europe,2000,15.115904858
+Germany,24922,Western Europe,2000,14.152233659
+France,24648,Western Europe,2000,19.629937411
+Belgium,24592,Western Europe,2000,22.152103184
+Austria,25922,Western Europe,2000,20.916553358
+Kuwait,19112,Western Asia,2000,1.723130441
+Israel,23451,Western Asia,2000,6.981741682
+Georgia,734,Western Asia,2000,3.120798925
+Cyprus,11635,Western Asia,2000,0.799790683
+Bahrain,15345,Western Asia,2000,4.910310636
+Azerbaijan,711,Western Asia,2000,0.836114763
+Armenia,530,Western Asia,2000,1.691390545
+South Africa,3361,Sub-Saharan Africa,2000,0.658145141
+Mauritius,4339,Sub-Saharan Africa,2000,12.972588069
+Spain,15538,Southern Europe,2000,8.856994661
+Slovenia,10783,Southern Europe,2000,31.169112046
+Serbia,915,Southern Europe,2000,21.583015579
+San Marino,43435,Southern Europe,2000,3.941818755
+Portugal,12152,Southern Europe,2000,5.379829847
+Montenegro,1701,Southern Europe,2000,0
+Malta,11873,Southern Europe,2000,6.341748558
+Italy,21027,Southern Europe,2000,7.565524384
+Greece,12509,Southern Europe,2000,3.671996862
+Croatia,5288,Southern Europe,2000,22.486644002
+Albania,1299,Southern Europe,2000,1.931123270
+Sri Lanka,953,Southern Asia,2000,30.641162236
+Maldives,2524,Southern Asia,2000,0
+Thailand,2169,South-eastern Asia,2000,8.894284427
+Singapore,31446,South-eastern Asia,2000,10.139125870
+Philippines,1205,South-eastern Asia,2000,2.086447576
+Sweden,30896,Northern Europe,2000,13.449862338
+Norway,41099,Northern Europe,2000,12.978865561
+Lithuania,3481,Northern Europe,2000,49.198748162
+Latvia,3494,Northern Europe,2000,33.889249054
+Ireland,28340,Northern Europe,2000,13.140805863
+Iceland,34372,Northern Europe,2000,19.251279248
+Finland,25716,Northern Europe,2000,23.864050702
+Estonia,4262,Northern Europe,2000,28.257162666
+Denmark,32841,Northern Europe,2000,14.564048806
+Canada,25589,Northern America,2000,12.430811383
+Kiribati,928,Micronesia,2000,0
+Uruguay,7483,Latin America and the Caribbean,2000,18.195713090
+Trinidad and Tobago,6920,Latin America and the Caribbean,2000,14.087339810
+Suriname,2129,Latin America and the Caribbean,2000,12.410471574
+Saint Lucia,5557,Latin America and the Caribbean,2000,9.922041106
+Puerto Rico,17569,Latin America and the Caribbean,2000,8.684641312
+Paraguay,1782,Latin America and the Caribbean,2000,3.349167210
+Panama,4577,Latin America and the Caribbean,2000,5.318931304
+Mexico,7892,Latin America and the Caribbean,2000,3.853066476
+Jamaica,3795,Latin America and the Caribbean,2000,0.126697696
+Guatemala,1977,Latin America and the Caribbean,2000,1.865598014
+El Salvador,2303,Latin America and the Caribbean,2000,9.007092157
+Ecuador,1650,Latin America and the Caribbean,2000,4.806747593
+Cuba,2940,Latin America and the Caribbean,2000,17.745146799
+Costa Rica,4233,Latin America and the Caribbean,2000,6.767813863
+Colombia,2755,Latin America and the Caribbean,2000,6.504407357
+Chile,5584,Latin America and the Caribbean,2000,10.564005286
+Brazil,4156,Latin America and the Caribbean,2000,4.288087693
+Belize,3960,Latin America and the Caribbean,2000,8.566981900
+Barbados,12430,Latin America and the Caribbean,2000,3.981953785
+Bahamas,29942,Latin America and the Caribbean,2000,4.078031275
+Aruba,22333,Latin America and the Caribbean,2000,11.920656113
+Argentina,8462,Latin America and the Caribbean,2000,8.259508640
+Antigua and Barbuda,11021,Latin America and the Caribbean,2000,2.655125720
+Ukraine,663,Eastern Europe,2000,30.698943669
+Slovakia,5696,Eastern Europe,2000,14.261085059
+Russian Federation,1879,Eastern Europe,2000,40.967197481
+Romania,1758,Eastern Europe,2000,13.320557622
+Poland,4744,Eastern Europe,2000,16.120510434
+Hungary,4966,Eastern Europe,2000,34.312882687
+Bulgaria,1680,Eastern Europe,2000,17.664876975
+Belarus,1335,Eastern Europe,2000,36.496124736
+Japan,40813,Eastern Asia,2000,25.042449997
+Uzbekistan,632,Central Asia,2000,8.807169210
+Turkmenistan,721,Central Asia,2000,9.512035084
+Kyrgyzstan,313,Central Asia,2000,11.672612070
+Kazakhstan,1328,Central Asia,2000,32.151207682
+New Zealand,14725,Australia and New Zealand,2000,12.815884982
+Australia,23219,Australia and New Zealand,2000,13.376665300
+United States,39218,,2000,11.189107905
+United Kingdom,29358,,2000,7.642439439
+Saint Vincent and Grenadines,4087,,2000,5.156978423
+Republic of Korea,12686,,2000,14.555559739
+Czech Republic,6278,,2000,16.792701886
+Switzerland,40582,Western Europe,2001,19.487777318
+Netherlands,28366,Western Europe,2001,9.801615697
+Luxembourg,51391,Western Europe,2001,17.635832146
+Germany,24874,Western Europe,2001,14.239714882
+France,24796,Western Europe,2001,18.823204051
+Belgium,24494,Western Europe,2001,22.296475149
+Austria,25848,Western Europe,2001,19.503416045
+Qatar,32510,Western Asia,2001,4.263341014
+Kuwait,17116,Western Asia,2001,1.471648688
+Israel,22623,Western Asia,2001,6.888832078
+Georgia,777,Western Asia,2001,2.414904792
+Bahrain,14383,Western Asia,2001,3.685407229
+Azerbaijan,759,Western Asia,2001,4.216546954
+Armenia,587,Western Asia,2001,1.661812328
+South Africa,2953,Sub-Saharan Africa,2001,0.932364733
+Seychelles,8257,Sub-Saharan Africa,2001,7.961466502
+Mauritius,4244,Sub-Saharan Africa,2001,10.571150862
+Spain,16169,Southern Europe,2001,8.237435702
+Slovenia,10979,Southern Europe,2001,30.557557078
+Serbia,1718,Southern Europe,2001,20.189263848
+Portugal,12391,Southern Europe,2001,7.757757350
+Montenegro,2004,Southern Europe,2001,0
+Malta,11691,Southern Europe,2001,8.096270048
+Italy,21392,Southern Europe,2001,7.417108202
+Greece,13043,Southern Europe,2001,3.198765238
+Croatia,5571,Southern Europe,2001,21.073363771
+Albania,1451,Southern Europe,2001,4.250988355
+Sri Lanka,912,Southern Asia,2001,26.582558448
+Maldives,3406,Southern Asia,2001,1.174154511
+Singapore,28774,South-eastern Asia,2001,9.829197551
+Philippines,1109,South-eastern Asia,2001,1.751576113
+Sweden,28429,Northern Europe,2001,14.183612252
+Norway,41281,Northern Europe,2001,13.024592756
+Lithuania,3719,Northern Europe,2001,46.537212467
+Latvia,3724,Northern Europe,2001,31.575750359
+Ireland,30536,Northern Europe,2001,13.654268330
+Iceland,30850,Northern Europe,2001,13.649910138
+Finland,26383,Northern Europe,2001,24.576529455
+Estonia,4711,Northern Europe,2001,30.250224425
+Denmark,32837,Northern Europe,2001,14.486541764
+Canada,25165,Northern America,2001,12.623857074
+Kiribati,854,Micronesia,2001,0
+Fiji,2307,Melanesia,2001,5.003759769
+Uruguay,6827,Latin America and the Caribbean,2001,16.301734322
+Trinidad and Tobago,7458,Latin America and the Caribbean,2001,15.126496382
+Suriname,1798,Latin America and the Caribbean,2001,16.960531430
+Saint Lucia,5195,Latin America and the Caribbean,2001,4.889429054
+Puerto Rico,19649,Latin America and the Caribbean,2001,8.205071131
+Paraguay,1630,Latin America and the Caribbean,2001,3.233138650
+Panama,4558,Latin America and the Caribbean,2001,5.905981155
+Mexico,8311,Latin America and the Caribbean,2001,4.129476031
+Jamaica,3838,Latin America and the Caribbean,2001,0.209093213
+Guyana,1054,Latin America and the Caribbean,2001,29.829231435
+Guatemala,1867,Latin America and the Caribbean,2001,2.016955003
+Grenada,5693,Latin America and the Caribbean,2001,0
+El Salvador,2373,Latin America and the Caribbean,2001,9.932186739
+Ecuador,2160,Latin America and the Caribbean,2001,5.155217963
+Cuba,3037,Latin America and the Caribbean,2001,15.833722148
+Costa Rica,4412,Latin America and the Caribbean,2001,5.489554598
+Colombia,2662,Latin America and the Caribbean,2001,6.539345005
+Chile,5020,Latin America and the Caribbean,2001,11.492553886
+Brazil,3492,Latin America and the Caribbean,2001,4.813371178
+Belize,4013,Latin America and the Caribbean,2001,8.744517418
+Barbados,12348,Latin America and the Caribbean,2001,0.792374191
+Bahamas,30122,Latin America and the Caribbean,2001,0.362135149
+Aruba,22317,Latin America and the Caribbean,2001,4.648730316
+Argentina,7900,Latin America and the Caribbean,2001,9.208800014
+Antigua and Barbuda,10468,Latin America and the Caribbean,2001,2.614481614
+Ukraine,812,Eastern Europe,2001,28.054114209
+Slovakia,6020,Eastern Europe,2001,13.567946393
+Russian Federation,2229,Eastern Europe,2001,41.417521095
+Romania,1914,Eastern Europe,2001,12.786228780
+Poland,5249,Eastern Europe,2001,16.131525243
+Hungary,5546,Eastern Europe,2001,30.686484901
+Bulgaria,1854,Eastern Europe,2001,17.307861009
+Belarus,1299,Eastern Europe,2001,34.718765908
+Japan,35843,Eastern Asia,2001,24.263321840
+Uzbekistan,513,Central Asia,2001,8.609395117
+Turkmenistan,863,Central Asia,2001,10.864308208
+Kyrgyzstan,345,Central Asia,2001,12.653125412
+Kazakhstan,1608,Central Asia,2001,31.780270181
+New Zealand,14968,Australia and New Zealand,2001,14.114678988
+Australia,20860,Australia and New Zealand,2001,13.556978995
+United States,40018,,2001,11.531207089
+United Kingdom,29179,,2001,7.428202188
+Saint Vincent and Grenadines,4418,,2001,8.218530732
+Republic of Korea,11922,,2001,15.457093035
+Czech Republic,6863,,2001,16.497116359
+Switzerland,43419,Western Europe,2002,20.829702060
+Netherlands,30757,Western Europe,2002,10.376516872
+Luxembourg,56484,Western Europe,2002,20.329772833
+Germany,26441,Western Europe,2002,14.212722928
+France,26714,Western Europe,2002,19.027266701
+Belgium,26526,Western Europe,2002,21.273608736
+Austria,27772,Western Europe,2002,20.213032082
+Kuwait,17668,Western Asia,2002,2.084681620
+Israel,20536,Western Asia,2002,6.479509484
+Bahrain,14572,Western Asia,2002,3.782091042
+Azerbaijan,820,Western Asia,2002,1.209619101
+Armenia,788,Western Asia,2002,2.454521693
+South Africa,2769,Sub-Saharan Africa,2002,0.564541061
+Seychelles,9070,Sub-Saharan Africa,2002,6.501612400
+Mauritius,4415,Sub-Saharan Africa,2002,12.132381883
+Spain,17924,Southern Europe,2002,8.571295448
+Slovenia,12362,Southern Europe,2002,28.329741402
+Serbia,2258,Southern Europe,2002,20.257454596
+Portugal,13614,Southern Europe,2002,12.272014371
+Montenegro,2220,Southern Europe,2002,0
+Malta,12524,Southern Europe,2002,5.074027389
+Italy,23227,Southern Europe,2002,7.462379721
+Greece,14676,Southern Europe,2002,3.081459772
+Croatia,6373,Southern Europe,2002,20.724160008
+Albania,1573,Southern Europe,2002,4.718254572
+Sri Lanka,951,Southern Asia,2002,25.189763942
+Maldives,3401,Southern Asia,2002,1.137453696
+Thailand,2305,South-eastern Asia,2002,8.413516763
+Singapore,29048,South-eastern Asia,2002,10.141539239
+Philippines,1158,South-eastern Asia,2002,1.851787458
+Sweden,31175,Northern Europe,2002,13.938388543
+Norway,46049,Northern Europe,2002,11.640815338
+Lithuania,4360,Northern Europe,2002,47.366183660
+Latvia,4311,Northern Europe,2002,30.255355198
+Ireland,35154,Northern Europe,2002,12.336612015
+Iceland,34556,Northern Europe,2002,11.258936781
+Finland,28390,Northern Europe,2002,22.275955761
+Estonia,5561,Northern Europe,2002,28.176715856
+Denmark,35435,Northern Europe,2002,13.647484677
+Canada,25570,Northern America,2002,12.313561712
+Fiji,2548,Melanesia,2002,5.807626520
+Uruguay,4439,Latin America and the Caribbean,2002,22.020992041
+Trinidad and Tobago,7578,Latin America and the Caribbean,2002,13.122476447
+Suriname,2507,Latin America and the Caribbean,2002,16.039946441
+Saint Lucia,5155,Latin America and the Caribbean,2002,8.266284581
+Puerto Rico,20325,Latin America and the Caribbean,2002,6.782160138
+Paraguay,1315,Latin America and the Caribbean,2002,3.679894119
+Panama,4641,Latin America and the Caribbean,2002,5.714191838
+Mexico,8357,Latin America and the Caribbean,2002,4.140947372
+Jamaica,4013,Latin America and the Caribbean,2002,0.082791155
+Guyana,1090,Latin America and the Caribbean,2002,26.552450897
+Guatemala,2022,Latin America and the Caribbean,2002,2.510419701
+Grenada,5879,Latin America and the Caribbean,2002,0
+El Salvador,2421,Latin America and the Caribbean,2002,8.335790097
+Ecuador,2472,Latin America and the Caribbean,2002,4.996203059
+Cuba,3205,Latin America and the Caribbean,2002,15.325282948
+Costa Rica,4485,Latin America and the Caribbean,2002,7.472070758
+Colombia,2613,Latin America and the Caribbean,2002,6.347677252
+Chile,4866,Latin America and the Caribbean,2002,11.184105872
+Brazil,3121,Latin America and the Caribbean,2002,4.729007822
+Belize,4161,Latin America and the Caribbean,2002,6.246207660
+Barbados,12511,Latin America and the Caribbean,2002,0
+Bahamas,31432,Latin America and the Caribbean,2002,1.061740192
+Aruba,21987,Latin America and the Caribbean,2002,10.194372706
+Argentina,2840,Latin America and the Caribbean,2002,9.189854993
+Antigua and Barbuda,10499,Latin America and the Caribbean,2002,0
+Ukraine,920,Eastern Europe,2002,27.216663858
+Slovakia,6869,Eastern Europe,2002,14.037948275
+Russian Federation,2527,Eastern Europe,2002,40.283796358
+Romania,2231,Eastern Europe,2002,14.816009986
+Poland,5466,Eastern Europe,2002,16.300984458
+Hungary,6995,Eastern Europe,2002,29.328015517
+Bulgaria,2157,Eastern Europe,2002,17.456633454
+Belarus,1541,Eastern Europe,2002,34.754659141
+Japan,34239,Eastern Asia,2002,24.723560392
+Uzbekistan,428,Central Asia,2002,6.963512608
+Turkmenistan,1077,Central Asia,2002,10.039356207
+Kyrgyzstan,359,Central Asia,2002,12.675594428
+Kazakhstan,1788,Central Asia,2002,30.774867617
+New Zealand,18208,Australia and New Zealand,2002,12.762387304
+Australia,21474,Australia and New Zealand,2002,12.623803365
+United States,40845,,2002,11.774464922
+United Kingdom,31630,,2002,7.363759187
+Saint Vincent and Grenadines,4723,,2002,7.157537398
+Republic of Korea,13501,,2002,19.088876465
+Czech Republic,8399,,2002,15.729359855
+Switzerland,50639,Western Europe,2003,18.208446682
+Netherlands,37614,Western Europe,2003,9.879371038
+Luxembourg,69768,Western Europe,2003,11.330000425
+Germany,31816,Western Europe,2003,14.163917294
+France,32656,Western Europe,2003,19.288364906
+Belgium,32538,Western Europe,2003,21.327763975
+Austria,33889,Western Europe,2003,18.855138278
+Kuwait,24544,Western Asia,2003,2.255690749
+Israel,21133,Western Asia,2003,6.946379778
+Bahrain,15756,Western Asia,2003,4.837013969
+Azerbaijan,948,Western Asia,2003,1.680913166
+Armenia,928,Western Asia,2003,1.950822090
+South Africa,4132,Sub-Saharan Africa,2003,0.603555664
+Seychelles,9001,Sub-Saharan Africa,2003,10.203821331
+Mauritius,5136,Sub-Saharan Africa,2003,8.056881584
+Spain,22701,Southern Europe,2003,8.706414981
+Slovenia,15568,Southern Europe,2003,29.461272842
+Serbia,2979,Southern Europe,2003,19.375771147
+Portugal,16671,Southern Europe,2003,11.682657388
+Montenegro,2946,Southern Europe,2003,0
+Malta,14444,Southern Europe,2003,5.294016438
+Italy,28572,Southern Europe,2003,7.417510458
+Greece,19202,Southern Europe,2003,3.566108278
+Croatia,8202,Southern Europe,2003,20.470465733
+Albania,2021,Southern Europe,2003,4.360165110
+Sri Lanka,1077,Southern Asia,2003,25.489888611
+Maldives,3867,Southern Asia,2003,1.469993753
+Thailand,2531,South-eastern Asia,2003,7.453587414
+Singapore,30067,South-eastern Asia,2003,9.918789908
+Philippines,1169,South-eastern Asia,2003,2.150972377
+Sweden,38997,Northern Europe,2003,13.096930595
+Norway,53533,Northern Europe,2003,11.747845370
+Lithuania,5778,Northern Europe,2003,44.712452833
+Latvia,5364,Northern Europe,2003,27.577251689
+Ireland,44473,Northern Europe,2003,12.289937492
+Iceland,42174,Northern Europe,2003,9.689561361
+Finland,34701,Northern Europe,2003,21.805910761
+Estonia,7523,Northern Europe,2003,26.163591297
+Denmark,43129,Northern Europe,2003,12.517839899
+Canada,29787,Northern America,2003,12.567245193
+Fiji,3192,Melanesia,2003,1.378186885
+Uruguay,3929,Latin America and the Caribbean,2003,17.450743239
+Trinidad and Tobago,9465,Latin America and the Caribbean,2003,12.055677136
+Suriname,2916,Latin America and the Caribbean,2003,17.662738046
+Saint Lucia,5599,Latin America and the Caribbean,2003,6.796848981
+Puerto Rico,21264,Latin America and the Caribbean,2003,7.445241950
+Paraguay,1339,Latin America and the Caribbean,2003,3.536233899
+Panama,4790,Latin America and the Caribbean,2003,6.820652516
+Mexico,7779,Latin America and the Caribbean,2003,4.340923133
+Jamaica,3852,Latin America and the Caribbean,2003,0.081952905
+Guyana,1116,Latin America and the Caribbean,2003,29.787650161
+Guatemala,2079,Latin America and the Caribbean,2003,2.399701033
+Grenada,6385,Latin America and the Caribbean,2003,4.321194378
+El Salvador,2507,Latin America and the Caribbean,2003,9.974369467
+Ecuador,2755,Latin America and the Caribbean,2003,5.734431105
+Cuba,3409,Latin America and the Caribbean,2003,14.234065775
+Costa Rica,4583,Latin America and the Caribbean,2003,8.395811050
+Colombia,2489,Latin America and the Caribbean,2003,5.964066356
+Chile,5208,Latin America and the Caribbean,2003,11.388237122
+Brazil,3376,Latin America and the Caribbean,2003,4.739508104
+Belize,4289,Latin America and the Caribbean,2003,5.197280090
+Barbados,12887,Latin America and the Caribbean,2003,0
+Bahamas,30704,Latin America and the Caribbean,2003,0.346154911
+Aruba,22345,Latin America and the Caribbean,2003,2.210995280
+Argentina,3668,Latin America and the Caribbean,2003,9.454978420
+Antigua and Barbuda,10878,Latin America and the Caribbean,2003,1.271326502
+Ukraine,1097,Eastern Europe,2003,26.944650200
+Slovakia,9138,Eastern Europe,2003,14.724338099
+Russian Federation,3141,Eastern Europe,2003,37.545649949
+Romania,2898,Eastern Europe,2003,14.009886604
+Poland,5983,Eastern Europe,2003,16.053353469
+Hungary,8840,Eastern Europe,2003,29.007929836
+Bulgaria,2800,Eastern Europe,2003,14.573279172
+Belarus,1892,Eastern Europe,2003,36.685207062
+Japan,36926,Eastern Asia,2003,26.480335562
+Uzbekistan,441,Central Asia,2003,6.161106942
+Turkmenistan,1431,Central Asia,2003,9.024017770
+Kyrgyzstan,424,Central Asia,2003,10.595369050
+Kazakhstan,2232,Central Asia,2003,31.284700695
+New Zealand,23663,Australia and New Zealand,2003,13.916373055
+Australia,25059,Australia and New Zealand,2003,11.586396388
+United States,42468,,2003,11.613350295
+United Kingdom,36289,,2003,7.083629249
+Saint Vincent and Grenadines,4902,,2003,4.069507183
+Republic of Korea,14971,,2003,23.974891878
+Czech Republic,10220,,2003,17.633391633
+Switzerland,56123,Western Europe,2004,18.282353001
+Netherlands,42614,Western Europe,2004,9.917553946
+Luxembourg,80639,Western Europe,2004,14.414313879
+Germany,35772,Western Europe,2004,13.628667398
+France,37240,Western Europe,2004,19.016465718
+Belgium,37661,Western Europe,2004,20.176640548
+Austria,38711,Western Europe,2004,18.293847825
+Qatar,45517,Western Asia,2004,3.012087075
+Kuwait,29778,Western Asia,2004,2.254411884
+Israel,22168,Western Asia,2004,6.726753543
+Georgia,1253,Western Asia,2004,4.278885534
+Cyprus,25227,Western Asia,2004,1.013587869
+Bahrain,17497,Western Asia,2004,5.588383613
+Azerbaijan,1122,Western Asia,2004,1.395664394
+South Africa,5323,Sub-Saharan Africa,2004,0.890576018
+Seychelles,10526,Sub-Saharan Africa,2004,7.524926318
+Mauritius,5789,Sub-Saharan Africa,2004,8.793472161
+Spain,26372,Southern Europe,2004,8.649805972
+Slovenia,18067,Southern Europe,2004,26.836322543
+Serbia,3508,Southern Europe,2004,18.980114485
+Montenegro,3565,Southern Europe,2004,0
+Malta,15916,Southern Europe,2004,6.300568626
+Italy,32704,Southern Europe,2004,7.248833731
+Greece,22804,Southern Europe,2004,3.346831271
+Croatia,9829,Southern Europe,2004,20.592963874
+Albania,2544,Southern Europe,2004,5.078276767
+Maldives,4373,Southern Asia,2004,0.356473197
+Thailand,2849,South-eastern Asia,2004,7.079019206
+Singapore,34799,South-eastern Asia,2004,10.209057110
+Sweden,44831,Northern Europe,2004,13.565391175
+Norway,61450,Northern Europe,2004,12.296720565
+Lithuania,7028,Northern Europe,2004,42.817662844
+Latvia,6644,Northern Europe,2004,26.022925134
+Ireland,51662,Northern Europe,2004,12.364500134
+Iceland,50528,Northern Europe,2004,12.887167327
+Finland,39793,Northern Europe,2004,21.517706099
+Estonia,9293,Northern Europe,2004,24.891149385
+Denmark,49552,Northern Europe,2004,13.029952925
+Canada,33787,Northern America,2004,11.930405681
+Fiji,3744,Melanesia,2004,3.294856729
+Uruguay,4463,Latin America and the Caribbean,2004,16.957504168
+Trinidad and Tobago,11066,Latin America and the Caribbean,2004,13.998646797
+Suriname,3360,Latin America and the Caribbean,2004,15.168082732
+Saint Lucia,5989,Latin America and the Caribbean,2004,5.364770891
+Puerto Rico,22874,Latin America and the Caribbean,2004,7.945408494
+Paraguay,1598,Latin America and the Caribbean,2004,4.654585035
+Panama,5144,Latin America and the Caribbean,2004,6.373239521
+Mexico,8217,Latin America and the Caribbean,2004,4.260814453
+Jamaica,4119,Latin America and the Caribbean,2004,0.040577697
+Guyana,1180,Latin America and the Caribbean,2004,27.915018280
+Guatemala,2215,Latin America and the Caribbean,2004,2.311004226
+Grenada,6428,Latin America and the Caribbean,2004,1.072938349
+El Salvador,2573,Latin America and the Caribbean,2004,8.700266446
+Ecuador,3051,Latin America and the Caribbean,2004,6.594880022
+Cuba,3611,Latin America and the Caribbean,2004,14.321229043
+Costa Rica,4850,Latin America and the Caribbean,2004,8.505945132
+Colombia,3033,Latin America and the Caribbean,2004,5.812761322
+Chile,6744,Latin America and the Caribbean,2004,11.793901336
+Brazil,3984,Latin America and the Caribbean,2004,4.759124942
+Belize,4449,Latin America and the Caribbean,2004,8.410747253
+Barbados,13786,Latin America and the Caribbean,2004,1.176816711
+Bahamas,30671,Latin America and the Caribbean,2004,0.677421868
+Aruba,24133,Latin America and the Caribbean,2004,8.664103536
+Argentina,4683,Latin America and the Caribbean,2004,8.875820839
+Antigua and Barbuda,11535,Latin America and the Caribbean,2004,2.508717794
+Ukraine,1432,Eastern Europe,2004,24.835168045
+Slovakia,11177,Eastern Europe,2004,13.200005467
+Russian Federation,4312,Eastern Europe,2004,35.817751117
+Romania,3698,Eastern Europe,2004,13.196985828
+Poland,7014,Eastern Europe,2004,16.694345775
+Hungary,10806,Eastern Europe,2004,28.473390153
+Bulgaria,3485,Eastern Europe,2004,13.601764765
+Japan,39960,Eastern Asia,2004,24.924481328
+Uzbekistan,516,Central Asia,2004,5.368904925
+Turkmenistan,1624,Central Asia,2004,9.308952743
+Kyrgyzstan,484,Central Asia,2004,9.579470015
+Kazakhstan,3110,Central Asia,2004,31.672285121
+New Zealand,27325,Australia and New Zealand,2004,13.017717245
+Australia,32454,Australia and New Zealand,2004,11.212147136
+United States,44867,,2004,11.853026449
+United Kingdom,42486,,2004,7.409439704
+Saint Vincent and Grenadines,5286,,2004,4.051043144
+Republic of Korea,16708,,2004,25.102681369
+Czech Republic,12226,,2004,16.241482840
+Switzerland,57790,Western Europe,2005,18.368236046
+Netherlands,44289,Western Europe,2005,10.273752423
+Luxembourg,85397,Western Europe,2005,11.204148736
+Germany,36289,Western Europe,2005,13.024523364
+France,38420,Western Europe,2005,18.741902105
+Belgium,39124,Western Europe,2005,20.492850530
+Austria,40367,Western Europe,2005,17.872973114
+United Arab Emirates,42196,Western Asia,2005,2.242763758
+Qatar,55899,Western Asia,2005,2.134021576
+Kuwait,39166,Western Asia,2005,2.520640165
+Israel,22901,Western Asia,2005,6.831851732
+Georgia,1552,Western Asia,2005,2.105517909
+Cyprus,26671,Western Asia,2005,2.424197484
+Bahrain,19485,Western Asia,2005,5.124826122
+South Africa,5914,Sub-Saharan Africa,2005,1.051275938
+Seychelles,11361,Sub-Saharan Africa,2005,6.180469716
+Mauritius,5641,Sub-Saharan Africa,2005,9.156670635
+Spain,28092,Southern Europe,2005,8.250905397
+Slovenia,19012,Southern Europe,2005,26.310049550
+Serbia,3719,Southern Europe,2005,20.357042984
+San Marino,69301,Southern Europe,2005,3.538069629
+Montenegro,3870,Southern Europe,2005,20.232086031
+Malta,16648,Southern Europe,2005,4.946486823
+Italy,33536,Southern Europe,2005,6.773501670
+Greece,23414,Southern Europe,2005,3.779712319
+Croatia,10722,Southern Europe,2005,20.633281199
+Albania,2931,Southern Europe,2005,0
+Maldives,4026,Southern Asia,2005,0.346097406
+Thailand,3094,South-eastern Asia,2005,6.434829212
+Singapore,38122,South-eastern Asia,2005,10.740785065
+Sweden,45563,Northern Europe,2005,14.276304941
+Norway,71215,Northern Europe,2005,12.295010117
+Lithuania,8229,Northern Europe,2005,41.546866377
+Latvia,7916,Northern Europe,2005,26.381879578
+Ireland,55213,Northern Europe,2005,11.765144754
+Iceland,60712,Northern Europe,2005,12.003098982
+Finland,41202,Northern Europe,2005,20.033117121
+Estonia,10870,Northern Europe,2005,21.187509459
+Denmark,51960,Northern Europe,2005,12.397217051
+Canada,38218,Northern America,2005,12.233189496
+Fiji,4104,Melanesia,2005,3.002974310
+Uruguay,5655,Latin America and the Caribbean,2005,16.220557896
+Trinidad and Tobago,13258,Latin America and the Caribbean,2005,11.281897283
+Suriname,4009,Latin America and the Caribbean,2005,16.091363184
+Saint Lucia,6292,Latin America and the Caribbean,2005,2.646045155
+Puerto Rico,23944,Latin America and the Caribbean,2005,8.246307209
+Paraguay,1704,Latin America and the Caribbean,2005,4.662089236
+Panama,5499,Latin America and the Caribbean,2005,5.776473966
+Mexico,9071,Latin America and the Caribbean,2005,4.418484076
+Jamaica,4505,Latin America and the Caribbean,2005,2.050524110
+Guyana,1235,Latin America and the Caribbean,2005,25.310427147
+Guatemala,2450,Latin America and the Caribbean,2005,2.143196890
+Grenada,7422,Latin America and the Caribbean,2005,6.404440412
+El Salvador,2733,Latin America and the Caribbean,2005,8.459011627
+Ecuador,3397,Latin America and the Caribbean,2005,7.718346329
+Cuba,4017,Latin America and the Caribbean,2005,13.158878815
+Costa Rica,5133,Latin America and the Caribbean,2005,6.997511767
+Colombia,3742,Latin America and the Caribbean,2005,5.365969593
+Chile,8256,Latin America and the Caribbean,2005,11.293461193
+Brazil,5230,Latin America and the Caribbean,2005,5.002816687
+Belize,4547,Latin America and the Caribbean,2005,4.897559383
+Barbados,15230,Latin America and the Caribbean,2005,0.390794446
+Bahamas,32596,Latin America and the Caribbean,2005,1.325543556
+Aruba,24870,Latin America and the Caribbean,2005,10.669170365
+Argentina,5590,Latin America and the Caribbean,2005,8.601819766
+Antigua and Barbuda,12649,Latin America and the Caribbean,2005,0
+Ukraine,1917,Eastern Europe,2005,23.634117777
+Slovakia,12229,Eastern Europe,2005,13.243751738
+Russian Federation,5611,Eastern Europe,2005,33.637825349
+Romania,4847,Eastern Europe,2005,12.654375604
+Poland,8417,Eastern Europe,2005,16.620217581
+Hungary,11764,Eastern Europe,2005,27.255859463
+Bulgaria,4003,Eastern Europe,2005,13.263009669
+Japan,39412,Eastern Asia,2005,25.169590152
+Uzbekistan,606,Central Asia,2005,5.173652743
+Turkmenistan,1906,Central Asia,2005,11.005213367
+Kyrgyzstan,533,Central Asia,2005,10.185212675
+Kazakhstan,4096,Central Asia,2005,27.982967887
+New Zealand,29803,Australia and New Zealand,2005,13.353146562
+United States,47423,,2005,11.817533716
+United Kingdom,44372,,2005,7.123868208
+Saint Vincent and Grenadines,5556,,2005,8.071187877
+Republic of Korea,19460,,2005,26.024939740
+Czech Republic,13961,,2005,16.031989402
+Switzerland,60536,Western Europe,2006,18.388764900
+Netherlands,47281,Western Europe,2006,9.922767037
+Luxembourg,95351,Western Europe,2006,14.612619458
+Germany,38088,Western Europe,2006,12.400259732
+France,40097,Western Europe,2006,18.025248041
+Belgium,41135,Western Europe,2006,19.422441824
+Austria,42698,Western Europe,2006,16.481835860
+United Arab Emirates,45110,Western Asia,2006,1.827827207
+Qatar,64762,Western Asia,2006,3.084811029
+Kuwait,46890,Western Asia,2006,2.077837645
+Israel,24306,Western Asia,2006,5.793683307
+Georgia,1859,Western Asia,2006,1.728069123
+Cyprus,28600,Western Asia,2006,2.663205434
+Bahrain,20826,Western Asia,2006,3.151226221
+Armenia,2310,Western Asia,2006,2.821592854
+South Africa,6166,Sub-Saharan Africa,2006,1.166086652
+Seychelles,12442,Sub-Saharan Africa,2006,9.793000453
+Mauritius,6246,Sub-Saharan Africa,2006,10.486083279
+Spain,30246,Southern Europe,2006,7.766298655
+Slovenia,20634,Southern Europe,2006,27.572619190
+Serbia,4353,Southern Europe,2006,20.521029362
+Montenegro,4654,Southern Europe,2006,0
+Malta,17504,Southern Europe,2006,6.735088256
+Italy,34578,Southern Europe,2006,6.585894879
+Greece,25739,Southern Europe,2006,3.710368625
+Croatia,11914,Southern Europe,2006,18.795989370
+Albania,3235,Southern Europe,2006,0
+Sri Lanka,1580,Southern Asia,2006,22.440751107
+Thailand,3598,South-eastern Asia,2006,5.853673225
+Singapore,43318,South-eastern Asia,2006,10.903015915
+Philippines,1599,South-eastern Asia,2006,2.339219388
+Sweden,48977,Northern Europe,2006,13.957484360
+Norway,79007,Northern Europe,2006,12.168057340
+Lithuania,9667,Northern Europe,2006,33.559763092
+Latvia,10139,Northern Europe,2006,23.023664261
+Ireland,58941,Northern Europe,2006,11.479137683
+Iceland,60243,Northern Europe,2006,11.307460450
+Finland,43487,Northern Europe,2006,21.326414632
+Estonia,13264,Northern Europe,2006,19.313245994
+Denmark,55354,Northern Europe,2006,12.719011596
+Canada,42566,Northern America,2006,11.364606409
+Fiji,4206,Melanesia,2006,3.253094845
+Uruguay,6362,Latin America and the Caribbean,2006,17.157089729
+Trinidad and Tobago,15190,Latin America and the Caribbean,2006,11.659628165
+Suriname,5794,Latin America and the Caribbean,2006,24.708080645
+Saint Lucia,7391,Latin America and the Caribbean,2006,1.303271211
+Puerto Rico,24943,Latin America and the Caribbean,2006,7.573514534
+Paraguay,2038,Latin America and the Caribbean,2006,4.805244034
+Panama,5972,Latin America and the Caribbean,2006,6.089614771
+Mexico,9906,Latin America and the Caribbean,2006,4.295775235
+Jamaica,4738,Latin America and the Caribbean,2006,0
+Guyana,2182,Latin America and the Caribbean,2006,30.071453364
+Guatemala,2653,Latin America and the Caribbean,2006,2.614692431
+Grenada,7423,Latin America and the Caribbean,2006,1.062405711
+El Salvador,2947,Latin America and the Caribbean,2006,7.570393609
+Ecuador,3759,Latin America and the Caribbean,2006,7.229279159
+Cuba,4951,Latin America and the Caribbean,2006,12.915775813
+Costa Rica,5716,Latin America and the Caribbean,2006,8.851983704
+Colombia,4095,Latin America and the Caribbean,2006,5.482429079
+Chile,10270,Latin America and the Caribbean,2006,11.909820300
+Brazil,6403,Latin America and the Caribbean,2006,4.982230872
+Belize,4815,Latin America and the Caribbean,2006,4.350818349
+Barbados,16531,Latin America and the Caribbean,2006,3.503540522
+Bahamas,32957,Latin America and the Caribbean,2006,0.648300319
+Aruba,25622,Latin America and the Caribbean,2006,9.523003344
+Argentina,6475,Latin America and the Caribbean,2006,8.652829601
+Antigua and Barbuda,14114,Latin America and the Caribbean,2006,0
+Ukraine,2418,Eastern Europe,2006,22.470808707
+Slovakia,13763,Eastern Europe,2006,0
+Russian Federation,7313,Eastern Europe,2006,31.482564293
+Romania,6018,Eastern Europe,2006,13.255995488
+Poland,9485,Eastern Europe,2006,15.970515430
+Hungary,12021,Eastern Europe,2006,25.659178135
+Bulgaria,4638,Eastern Europe,2006,13.277148031
+Japan,37534,Eastern Asia,2006,24.663220162
+Turkmenistan,2397,Central Asia,2006,11.801336396
+Kyrgyzstan,610,Central Asia,2006,9.964543014
+Kazakhstan,5770,Central Asia,2006,29.036145299
+New Zealand,28628,Australia and New Zealand,2006,13.517673011
+Australia,39014,Australia and New Zealand,2006,11.078406757
+United States,49666,,2006,11.933435660
+United Kingdom,47163,,2006,7.220035883
+Saint Vincent and Grenadines,6142,,2006,6.032393956
+Republic of Korea,21753,,2006,22.902799684
+Czech Republic,15896,,2006,14.314461522
+Switzerland,66807,Western Europe,2007,18.932024982
+Netherlands,54418,Western Europe,2007,8.777727961
+Luxembourg,112581,Western Europe,2007,17.256179039
+Germany,43667,Western Europe,2007,11.943904397
+France,45682,Western Europe,2007,17.410212122
+Belgium,47040,Western Europe,2007,18.513965632
+Austria,49218,Western Europe,2007,16.271441581
+United Arab Emirates,45285,Western Asia,2007,1.773364383
+Qatar,71460,Western Asia,2007,3.675551041
+Kuwait,37283,Western Asia,2007,1.658580814
+Israel,27712,Western Asia,2007,5.055193094
+Georgia,2448,Western Asia,2007,2.503068666
+Cyprus,33048,Western Asia,2007,2.607862568
+Bahrain,22524,Western Asia,2007,4.146065902
+Azerbaijan,4172,Western Asia,2007,0.694348007
+Armenia,3366,Western Asia,2007,2.595681006
+South Africa,6708,Sub-Saharan Africa,2007,0.935450862
+Seychelles,12554,Sub-Saharan Africa,2007,7.287655925
+Mauritius,7179,Sub-Saharan Africa,2007,11.187130748
+Spain,34769,Southern Europe,2007,7.671457246
+Slovenia,24964,Southern Europe,2007,22.518175384
+Serbia,5748,Southern Europe,2007,19.302072441
+Portugal,24003,Southern Europe,2007,10.194176067
+Montenegro,6268,Southern Europe,2007,20.604723079
+Malta,20333,Southern Europe,2007,6.708275173
+Italy,38935,Southern Europe,2007,6.639735649
+Greece,29896,Southern Europe,2007,3.078774096
+Croatia,14204,Southern Europe,2007,18.317810466
+Albania,3863,Southern Europe,2007,4.475978434
+Maldives,6115,Southern Asia,2007,1.636468370
+Thailand,4461,South-eastern Asia,2007,6.369013842
+Singapore,53098,South-eastern Asia,2007,9.676658013
+Philippines,1915,South-eastern Asia,2007,2.176681577
+Sweden,56531,Northern Europe,2007,13.048780304
+Norway,90797,Northern Europe,2007,10.979386146
+Lithuania,12869,Northern Europe,2007,33.194434864
+Latvia,14758,Northern Europe,2007,21.634498285
+Ireland,67032,Northern Europe,2007,11.374058257
+Iceland,73590,Northern Europe,2007,12.771303916
+Finland,51089,Northern Europe,2007,19.904566107
+Estonia,17504,Northern Europe,2007,19.757323394
+Denmark,62229,Northern Europe,2007,11.318914608
+Canada,46890,Northern America,2007,11.557925451
+Fiji,4570,Melanesia,2007,1.744837629
+Uruguay,7581,Latin America and the Caribbean,2007,18.653109483
+Trinidad and Tobago,17827,Latin America and the Caribbean,2007,10.790880964
+Suriname,6397,Latin America and the Caribbean,2007,25.921069255
+Puerto Rico,25625,Latin America and the Caribbean,2007,7.756972617
+Paraguay,2599,Latin America and the Caribbean,2007,4.277233305
+Panama,6876,Latin America and the Caribbean,2007,5.521226371
+Mexico,10496,Latin America and the Caribbean,2007,4.272426377
+Guyana,2602,Latin America and the Caribbean,2007,27.661979581
+Guatemala,2914,Latin America and the Caribbean,2007,2.792867375
+Grenada,8035,Latin America and the Caribbean,2007,3.177360249
+El Salvador,3111,Latin America and the Caribbean,2007,9.162632335
+Ecuador,4024,Latin America and the Caribbean,2007,7.927521784
+Cuba,5488,Latin America and the Caribbean,2007,12.240093508
+Costa Rica,6661,Latin America and the Caribbean,2007,6.724378437
+Colombia,5150,Latin America and the Caribbean,2007,5.415242321
+Chile,11387,Latin America and the Caribbean,2007,12.121661337
+Brazil,7970,Latin America and the Caribbean,2007,5.051536742
+Belize,4951,Latin America and the Caribbean,2007,3.069049784
+Barbados,17528,Latin America and the Caribbean,2007,0
+Bahamas,33710,Latin America and the Caribbean,2007,1.587357019
+Aruba,27672,Latin America and the Caribbean,2007,8.437572510
+Argentina,7918,Latin America and the Caribbean,2007,8.112240363
+Antigua and Barbuda,15775,Latin America and the Caribbean,2007,1.202920691
+Ukraine,3229,Eastern Europe,2007,22.697514532
+Slovakia,16815,Eastern Europe,2007,0
+Russian Federation,9643,Eastern Europe,2007,30.530728816
+Romania,8593,Eastern Europe,2007,11.868116798
+Poland,11816,Eastern Europe,2007,14.552127033
+Hungary,14609,Eastern Europe,2007,25.592978874
+Bulgaria,6073,Eastern Europe,2007,12.335086593
+Belarus,4898,Eastern Europe,2007,28.763185200
+Japan,37408,Eastern Asia,2007,25.405123277
+Turkmenistan,2916,Central Asia,2007,8.151691464
+Kyrgyzstan,814,Central Asia,2007,10.324205764
+Kazakhstan,7423,Central Asia,2007,29.315556444
+New Zealand,34892,Australia and New Zealand,2007,12.552567051
+Australia,43171,Australia and New Zealand,2007,11.294980397
+United States,51585,,2007,12.326719816
+United Kingdom,53576,,2007,6.791238699
+Saint Vincent and Grenadines,6539,,2007,11.034316725
+Republic of Korea,23982,,2007,26.004926240
+Czech Republic,19273,,2007,14.045208460
+Switzerland,76202,Western Europe,2008,18.062166017
+Netherlands,60375,Western Europe,2008,9.279702286
+Luxembourg,121315,Western Europe,2008,9.340292938
+Germany,47702,Western Europe,2008,12.024745271
+France,49901,Western Europe,2008,17.702590226
+Belgium,51345,Western Europe,2008,19.790413678
+Austria,54294,Western Europe,2008,15.986861248
+United Arab Emirates,48457,Western Asia,2008,1.536013841
+Qatar,87961,Western Asia,2008,2.518190108
+Kuwait,43746,Western Asia,2008,1.394909589
+Israel,32874,Western Asia,2008,5.391737117
+Cyprus,37267,Western Asia,2008,5.488371346
+Bahrain,25106,Western Asia,2008,4.198767710
+Armenia,3829,Western Asia,2008,2.068699881
+South Africa,6573,Sub-Saharan Africa,2008,1.009601840
+Seychelles,11667,Sub-Saharan Africa,2008,4.825090470
+Mauritius,8716,Sub-Saharan Africa,2008,7.328193129
+Spain,37848,Southern Europe,2008,8.002410399
+Slovenia,28599,Southern Europe,2008,20.990267307
+Serbia,7049,Southern Europe,2008,18.444503080
+Portugal,26121,Southern Europe,2008,10.348292831
+Montenegro,7705,Southern Europe,2008,21.357633574
+Malta,23007,Southern Europe,2008,3.587949615
+Italy,41935,Southern Europe,2008,6.847942438
+Greece,33168,Southern Europe,2008,3.490312231
+Croatia,16680,Southern Europe,2008,18.766641195
+Albania,4672,Southern Europe,2008,5.803285312
+Maldives,7236,Southern Asia,2008,0
+Thailand,4921,South-eastern Asia,2008,6.379949140
+Singapore,55735,South-eastern Asia,2008,9.249325872
+Philippines,2188,South-eastern Asia,2008,2.286550280
+Sweden,59155,Northern Europe,2008,13.466069648
+Norway,103431,Northern Europe,2008,11.292261849
+Lithuania,15669,Northern Europe,2008,36.381426676
+Latvia,17217,Northern Europe,2008,25.489364357
+Ireland,67173,Northern Europe,2008,12.358970952
+Iceland,59489,Northern Europe,2008,12.801681737
+Finland,56521,Northern Europe,2008,20.577295733
+Estonia,19141,Northern Europe,2008,19.145493886
+Denmark,68447,Northern Europe,2008,11.680330846
+Canada,49041,Northern America,2008,11.728899638
+Fiji,4675,Melanesia,2008,4.909388609
+Uruguay,9793,Latin America and the Caribbean,2008,16.866664022
+Trinidad and Tobago,22857,Latin America and the Caribbean,2008,16.320357965
+Suriname,7601,Latin America and the Caribbean,2008,31.627254518
+Saint Lucia,8122,Latin America and the Caribbean,2008,0
+Puerto Rico,26840,Latin America and the Caribbean,2008,8.598918084
+Paraguay,3438,Latin America and the Caribbean,2008,4.124731126
+Panama,7972,Latin America and the Caribbean,2008,5.894215936
+Mexico,10864,Latin America and the Caribbean,2008,4.543381942
+Guyana,2873,Latin America and the Caribbean,2008,25.102614407
+Guatemala,3252,Latin America and the Caribbean,2008,4.088794998
+Grenada,8733,Latin America and the Caribbean,2008,0
+El Salvador,3271,Latin America and the Caribbean,2008,8.910246001
+Ecuador,4787,Latin America and the Caribbean,2008,7.192023860
+Cuba,5686,Latin America and the Caribbean,2008,12.876603240
+Costa Rica,7517,Latin America and the Caribbean,2008,6.408743786
+Colombia,5971,Latin America and the Caribbean,2008,5.433302310
+Chile,11653,Latin America and the Caribbean,2008,13.544667335
+Brazil,9555,Latin America and the Caribbean,2008,5.174911560
+Belize,5098,Latin America and the Caribbean,2008,4.097032631
+Barbados,17760,Latin America and the Caribbean,2008,0.385484207
+Bahamas,32746,Latin America and the Caribbean,2008,1.244373100
+Aruba,29447,Latin America and the Caribbean,2008,4.218786255
+Argentina,9843,Latin America and the Caribbean,2008,8.327543889
+Antigua and Barbuda,16238,Latin America and the Caribbean,2008,0
+Ukraine,4104,Eastern Europe,2008,21.556853076
+Slovakia,19530,Eastern Europe,2008,11.504619270
+Russian Federation,12359,Eastern Europe,2008,28.433776213
+Romania,10454,Eastern Europe,2008,12.097601215
+Poland,14721,Eastern Europe,2008,15.668988455
+Hungary,16540,Eastern Europe,2008,25.919145665
+Bulgaria,7487,Eastern Europe,2008,12.920517079
+Belarus,6601,Eastern Europe,2008,28.873271107
+Japan,41773,Eastern Asia,2008,24.935739042
+Turkmenistan,4368,Central Asia,2008,10.969745939
+Kyrgyzstan,1096,Central Asia,2008,10.083301286
+Kazakhstan,9387,Central Asia,2008,28.116102268
+New Zealand,33585,Australia and New Zealand,2008,13.103352694
+Australia,52315,Australia and New Zealand,2008,11.635008443
+United States,52128,,2008,12.760506420
+United Kingdom,50111,,2008,7.383410249
+Saint Vincent and Grenadines,6966,,2008,4.006972132
+Republic of Korea,21278,,2008,27.298350526
+Czech Republic,23811,,2008,13.929864194
+Switzerland,73529,Western Europe,2009,15.004294895
+Netherlands,54988,Western Europe,2009,9.806324451
+Luxembourg,109483,Western Europe,2009,10.229982801
+Germany,43570,Western Europe,2009,12.210542643
+France,45775,Western Europe,2009,17.864335760
+Belgium,47630,Western Europe,2009,19.786961366
+Austria,50356,Western Europe,2009,16.081754708
+United Arab Emirates,34960,Western Asia,2009,1.709759972
+Turkey,9773,Western Asia,2009,1.591815485
+Qatar,64911,Western Asia,2009,2.920388226
+Oman,18557,Western Asia,2009,0.498552472
+Kuwait,33453,Western Asia,2009,1.926932002
+Israel,30812,Western Asia,2009,6.001335446
+Georgia,2589,Western Asia,2009,4.520589119
+Cyprus,33816,Western Asia,2009,4.171152828
+Bahrain,20988,Western Asia,2009,3.293922165
+Armenia,3215,Western Asia,2009,1.970483642
+South Africa,6517,Sub-Saharan Africa,2009,0.815663404
+Seychelles,10157,Sub-Saharan Africa,2009,4.794495919
+Mauritius,7873,Sub-Saharan Africa,2009,9.917631911
+Spain,34470,Southern Europe,2009,7.884555574
+Slovenia,25872,Southern Europe,2009,23.017069191
+Serbia,6116,Southern Europe,2009,19.703684144
+Portugal,24254,Southern Europe,2009,10.199088192
+Montenegro,7023,Southern Europe,2009,18.067182904
+Malta,21695,Southern Europe,2009,9.157928477
+Italy,38101,Southern Europe,2009,6.929159889
+Greece,30785,Southern Europe,2009,3.647518037
+Croatia,14872,Southern Europe,2009,18.737918194
+Albania,4387,Southern Europe,2009,0
+Thailand,4736,South-eastern Asia,2009,6.366448042
+Singapore,54413,South-eastern Asia,2009,9.869630384
+Philippines,2073,South-eastern Asia,2009,2.554380501
+Sweden,49070,Northern Europe,2009,14.184685519
+Norway,85394,Northern Europe,2009,12.655890533
+Lithuania,12412,Northern Europe,2009,37.725878726
+Latvia,12890,Northern Europe,2009,25.414763022
+Ireland,57390,Northern Europe,2009,12.798509447
+Iceland,43700,Northern Europe,2009,12.153785904
+Finland,49878,Northern Europe,2009,20.506449814
+Estonia,15609,Northern Europe,2009,21.365993916
+Denmark,61863,Northern Europe,2009,11.978146623
+Canada,42933,Northern America,2009,12.180093675
+Fiji,3765,Melanesia,2009,3.410269897
+Uruguay,10166,Latin America and the Caribbean,2009,16.408150002
+Trinidad and Tobago,15652,Latin America and the Caribbean,2009,10.448152269
+Suriname,8238,Latin America and the Caribbean,2009,27.845798048
+Saint Lucia,7902,Latin America and the Caribbean,2009,8.134150920
+Puerto Rico,27661,Latin America and the Caribbean,2009,9.470582934
+Paraguay,2920,Latin America and the Caribbean,2009,5.186741004
+Panama,8436,Latin America and the Caribbean,2009,5.506277312
+Mexico,8651,Latin America and the Caribbean,2009,4.827749307
+Jamaica,4686,Latin America and the Caribbean,2009,1.401387296
+Guyana,3076,Latin America and the Caribbean,2009,23.278196835
+Guatemala,3053,Latin America and the Caribbean,2009,4.134322604
+Grenada,8140,Latin America and the Caribbean,2009,0
+El Salvador,3184,Latin America and the Caribbean,2009,9.151894316
+Ecuador,4762,Latin America and the Caribbean,2009,7.341874940
+Cuba,5797,Latin America and the Caribbean,2009,13.793129210
+Costa Rica,7403,Latin America and the Caribbean,2009,6.733747386
+Colombia,5643,Latin America and the Caribbean,2009,5.427624795
+Chile,11062,Latin America and the Caribbean,2009,13.783235774
+Brazil,9283,Latin America and the Caribbean,2009,5.204668580
+Belize,4841,Latin America and the Caribbean,2009,5.431063511
+Barbados,17007,Latin America and the Caribbean,2009,1.917780897
+Bahamas,30450,Latin America and the Caribbean,2009,1.830311794
+Aruba,26361,Latin America and the Caribbean,2009,4.219631837
+Argentina,8961,Latin America and the Caribbean,2009,7.761450892
+Antigua and Barbuda,14335,Latin America and the Caribbean,2009,0
+Ukraine,2691,Eastern Europe,2009,22.303623881
+Slovakia,17299,Eastern Europe,2009,11.688641053
+Russian Federation,9118,Eastern Europe,2009,27.898630868
+Romania,8465,Eastern Europe,2009,12.682139007
+Poland,12141,Eastern Europe,2009,17.880705959
+Hungary,13697,Eastern Europe,2009,25.801750051
+Bulgaria,7186,Eastern Europe,2009,12.022465389
+Belarus,5366,Eastern Europe,2009,29.912860120
+Japan,43415,Eastern Asia,2009,25.331131324
+Uzbekistan,1332,Central Asia,2009,5.532245955
+Turkmenistan,4508,Central Asia,2009,3.679367024
+Kyrgyzstan,977,Central Asia,2009,9.541400303
+Kazakhstan,8024,Central Asia,2009,26.707240146
+New Zealand,30259,Australia and New Zealand,2009,12.768143482
+Australia,45128,Australia and New Zealand,2009,11.383720170
+United States,50563,,2009,12.939983005
+United Kingdom,41074,,2009,7.318978655
+Saint Vincent and Grenadines,6754,,2009,1.000730533
+Republic of Korea,19036,,2009,32.507375419
+Czech Republic,20748,,2009,14.732213343
+Switzerland,78474,Western Europe,2010,13.523055802
+Netherlands,53302,Western Europe,2010,10.222154046
+Luxembourg,111328,Western Europe,2010,11.297567466
+Germany,43614,Western Europe,2010,12.801684033
+France,44747,Western Europe,2010,17.574759996
+Belgium,47355,Western Europe,2010,19.713703747
+Austria,49181,Western Europe,2010,15.862615693
+United Arab Emirates,36964,Western Asia,2010,1.415864004
+Turkey,11525,Western Asia,2010,2.275471473
+Qatar,74055,Western Asia,2010,2.781736656
+Oman,21337,Western Asia,2010,0.472995590
+Kuwait,35171,Western Asia,2010,1.188439591
+Israel,34104,Western Asia,2010,7.007478293
+Georgia,2775,Western Asia,2010,2.670608994
+Cyprus,32477,Western Asia,2010,4.827965610
+Bahrain,22572,Western Asia,2010,1.667895642
+Armenia,3460,Western Asia,2010,2.727722819
+South Africa,8128,Sub-Saharan Africa,2010,0.851087790
+Seychelles,11563,Sub-Saharan Africa,2010,7.152649461
+Mauritius,8587,Sub-Saharan Africa,2010,8.412515419
+Spain,32839,Southern Europe,2010,7.243890840
+Slovenia,24689,Southern Europe,2010,21.287820590
+Serbia,5682,Southern Europe,2010,17.379732467
+Portugal,23673,Southern Europe,2010,10.917260477
+Malta,22132,Southern Europe,2010,7.849114696
+Italy,36869,Southern Europe,2010,6.920800280
+Greece,27886,Southern Europe,2010,3.511751419
+Croatia,14232,Southern Europe,2010,18.458773305
+Albania,4359,Southern Europe,2010,3.508739869
+Maldives,7806,Southern Asia,2010,0.301605446
+Thailand,5707,South-eastern Asia,2010,6.292479254
+Singapore,66099,South-eastern Asia,2010,8.275553567
+Philippines,2412,South-eastern Asia,2010,2.556760074
+Sweden,55352,Northern Europe,2010,12.931926047
+Norway,93638,Northern Europe,2010,11.957533301
+Lithuania,12584,Northern Europe,2010,34.511551369
+Latvia,11951,Northern Europe,2010,22.033234972
+Ireland,52042,Northern Europe,2010,11.395458277
+Iceland,45179,Northern Europe,2010,15.613332428
+Finland,48939,Northern Europe,2010,18.840745146
+Estonia,15540,Northern Europe,2010,17.779903925
+Denmark,61711,Northern Europe,2010,10.790019136
+Canada,49974,Northern America,2010,12.237449258
+Uruguay,12882,Latin America and the Caribbean,2010,17.491092973
+Trinidad and Tobago,18000,Latin America and the Caribbean,2010,12.997541840
+Suriname,9176,Latin America and the Caribbean,2010,28.568307664
+Saint Lucia,8557,Latin America and the Caribbean,2010,2.476734178
+Puerto Rico,28267,Latin America and the Caribbean,2010,8.217495853
+Paraguay,3619,Latin America and the Caribbean,2010,4.029123153
+Panama,8991,Latin America and the Caribbean,2010,4.611510758
+Nicaragua,1715,Latin America and the Caribbean,2010,6.872344920
+Mexico,9991,Latin America and the Caribbean,2010,4.588392438
+Jamaica,5100,Latin America and the Caribbean,2010,0.115980039
+Guyana,3384,Latin America and the Caribbean,2010,30.513898709
+Guatemala,3260,Latin America and the Caribbean,2010,2.775554399
+Grenada,8118,Latin America and the Caribbean,2010,0
+El Salvador,3318,Latin America and the Caribbean,2010,7.175674356
+Ecuador,5206,Latin America and the Caribbean,2010,6.826201687
+Cuba,5997,Latin America and the Caribbean,2010,14.525658018
+Costa Rica,8906,Latin America and the Caribbean,2010,7.431900729
+Colombia,6836,Latin America and the Caribbean,2010,5.017968591
+Chile,13874,Latin America and the Caribbean,2010,12.703268968
+Brazil,12161,Latin America and the Caribbean,2010,5.191331251
+Belize,4923,Latin America and the Caribbean,2010,5.285486758
+Barbados,17034,Latin America and the Caribbean,2010,1.145357294
+Bahamas,30239,Latin America and the Caribbean,2010,2.995186735
+Aruba,25974,Latin America and the Caribbean,2010,7.367955708
+Argentina,11273,Latin America and the Caribbean,2010,7.831615425
+Ukraine,3141,Eastern Europe,2010,20.992309156
+Slovakia,17387,Eastern Europe,2010,12.258230207
+Russian Federation,11307,Eastern Europe,2010,24.732700025
+Romania,8190,Eastern Europe,2010,13.593040010
+Poland,13304,Eastern Europe,2010,17.644712106
+Hungary,13761,Eastern Europe,2010,26.161432541
+Bulgaria,7066,Eastern Europe,2010,11.992617350
+Belarus,6371,Eastern Europe,2010,27.379436117
+Japan,47059,Eastern Asia,2010,24.281072898
+Uzbekistan,1533,Central Asia,2010,5.707205616
+Turkmenistan,4962,Central Asia,2010,3.911069315
+Kyrgyzstan,991,Central Asia,2010,10.335797663
+Kazakhstan,10062,Central Asia,2010,24.529049388
+New Zealand,36145,Australia and New Zealand,2010,13.216717175
+Australia,54887,Australia and New Zealand,2010,11.608080318
+United States,51989,,2010,13.327582483
+United Kingdom,41798,,2010,7.170799559
+Saint Vincent and Grenadines,6809,,2010,4.997501249
+Republic of Korea,22994,,2010,32.685824997
+Czech Republic,20862,,2010,15.102652285
+Switzerland,93053,Western Europe,2011,13.753584711
+Netherlands,56667,Western Europe,2011,10.461470025
+Luxembourg,122729,Western Europe,2011,11.249330154
+Germany,47947,Western Europe,2011,12.955024005
+France,48217,Western Europe,2011,17.538230030
+Belgium,50893,Western Europe,2011,20.163926542
+Austria,53923,Western Europe,2011,16.109774606
+Turkey,12237,Western Asia,2011,1.687382744
+Qatar,90490,Western Asia,2011,2.696753810
+Kuwait,46203,Western Asia,2011,1.229865453
+Israel,37528,Western Asia,2011,5.866747376
+Georgia,3435,Western Asia,2011,2.355684576
+Cyprus,34249,Western Asia,2011,3.746160186
+Bahrain,26078,Western Asia,2011,1.631229712
+Armenia,3798,Western Asia,2011,2.509019363
+South Africa,8906,Sub-Saharan Africa,2011,0.764847130
+Seychelles,13204,Sub-Saharan Africa,2011,6.194481955
+Mauritius,9817,Sub-Saharan Africa,2011,10.056658190
+Cabo Verde,4124,Sub-Saharan Africa,2011,9.288357044
+Spain,34097,Southern Europe,2011,7.286463485
+Slovenia,26377,Southern Europe,2011,22.370087644
+Serbia,6734,Southern Europe,2011,18.202827322
+Portugal,24337,Southern Europe,2011,10.106515920
+Malta,23984,Southern Europe,2011,5.045115949
+Italy,40210,Southern Europe,2011,7.336140380
+Greece,26825,Southern Europe,2011,4.446008677
+Croatia,14890,Southern Europe,2011,16.758060161
+Bosnia and Herzegovina,5076,Southern Europe,2011,0.136116943
+Maldives,8135,Southern Asia,2011,0.586479306
+Thailand,6153,South-eastern Asia,2011,6.426953631
+Singapore,76638,South-eastern Asia,2011,8.553417201
+Philippines,2662,South-eastern Asia,2011,2.908490032
+Sweden,63380,Northern Europe,2011,12.515977005
+Norway,107430,Northern Europe,2011,12.878771563
+Lithuania,15097,Northern Europe,2011,35.349615686
+Latvia,14447,Northern Europe,2011,22.522395707
+Ireland,56655,Northern Europe,2011,13.131543698
+Iceland,49861,Northern Europe,2011,9.137828920
+Finland,53809,Northern Europe,2011,17.931629763
+Estonia,18545,Northern Europe,2011,17.447998162
+Denmark,65598,Northern Europe,2011,11.231562789
+Canada,54841,Northern America,2011,11.430176979
+Fiji,4862,Melanesia,2011,4.894857180
+Trinidad and Tobago,20557,Latin America and the Caribbean,2011,11.235174016
+Suriname,9184,Latin America and the Caribbean,2011,26.374758318
+Saint Lucia,8826,Latin America and the Caribbean,2011,4.911229526
+Puerto Rico,28876,Latin America and the Caribbean,2011,7.423823799
+Paraguay,4474,Latin America and the Caribbean,2011,5.311470513
+Panama,10403,Latin America and the Caribbean,2011,4.318888750
+Nicaragua,1888,Latin America and the Caribbean,2011,7.126412319
+Mexico,10965,Latin America and the Caribbean,2011,5.162783742
+Jamaica,5552,Latin America and the Caribbean,2011,1.922310217
+Guyana,3815,Latin America and the Caribbean,2011,28.432523846
+Guatemala,3661,Latin America and the Caribbean,2011,2.757859477
+Grenada,8188,Latin America and the Caribbean,2011,1.051502597
+El Salvador,3631,Latin America and the Caribbean,2011,8.682754528
+Ecuador,5836,Latin America and the Caribbean,2011,6.758172917
+Cuba,6419,Latin America and the Caribbean,2011,14.225857492
+Costa Rica,9978,Latin America and the Caribbean,2011,7.460723775
+Colombia,7885,Latin America and the Caribbean,2011,4.805080973
+Chile,15854,Latin America and the Caribbean,2011,12.739787853
+Brazil,14245,Latin America and the Caribbean,2011,5.348029150
+Belize,5098,Latin America and the Caribbean,2011,11.314466746
+Barbados,17708,Latin America and the Caribbean,2011,0
+Bahamas,29761,Latin America and the Caribbean,2011,1.182092481
+Aruba,27066,Latin America and the Caribbean,2011,9.425268097
+Argentina,13946,Latin America and the Caribbean,2011,7.659985250
+Ukraine,3788,Eastern Europe,2011,20.831209605
+Russian Federation,15226,Eastern Europe,2011,23.034471542
+Romania,9086,Eastern Europe,2011,12.497720127
+Poland,14686,Eastern Europe,2011,16.976671199
+Hungary,14827,Eastern Europe,2011,25.487068946
+Bulgaria,8137,Eastern Europe,2011,10.812684483
+Belarus,6902,Eastern Europe,2011,24.275425491
+Japan,50919,Eastern Asia,2011,23.787905100
+Uzbekistan,1767,Central Asia,2011,6.313022198
+Turkmenistan,6319,Central Asia,2011,2.810145490
+Kyrgyzstan,1273,Central Asia,2011,9.670389596
+Kazakhstan,12969,Central Asia,2011,22.897191543
+New Zealand,41184,Australia and New Zealand,2011,12.052434201
+Australia,66770,Australia and New Zealand,2011,11.454890860
+United States,53452,,2011,13.608721527
+United Kingdom,44491,,2011,7.460702833
+Saint Vincent and Grenadines,6759,,2011,4.998150684
+Republic of Korea,25157,,2011,33.277531158
+Czech Republic,23010,,2011,16.050363011
+Switzerland,87951,Western Europe,2012,13.665822712
+Netherlands,52334,Western Europe,2012,11.086206430
+Luxembourg,113120,Western Europe,2012,10.178746777
+Germany,45142,Western Europe,2012,12.605066368
+France,45002,Western Europe,2012,16.336774105
+Belgium,47678,Western Europe,2012,19.401229785
+Austria,50979,Western Europe,2012,15.887886308
+Turkey,12671,Western Asia,2012,2.102167089
+Qatar,93270,Western Asia,2012,2.146620147
+Kuwait,49781,Western Asia,2012,1.601510911
+Israel,36263,Western Asia,2012,6.060298561
+Georgia,3772,Western Asia,2012,2.475659978
+Cyprus,30752,Western Asia,2012,4.420947925
+Bahrain,25587,Western Asia,2012,1.580990832
+Armenia,3773,Western Asia,2012,2.807092350
+South Africa,8347,Sub-Saharan Africa,2012,1.025603097
+Seychelles,13044,Sub-Saharan Africa,2012,3.693489609
+Mauritius,9884,Sub-Saharan Africa,2012,9.741247066
+Spain,30146,Southern Europe,2012,7.985313882
+Slovenia,23820,Southern Europe,2012,22.610622470
+Serbia,5933,Southern Europe,2012,18.100604412
+Portugal,21573,Southern Europe,2012,10.728462611
+Malta,23074,Southern Europe,2012,6.263497838
+Italy,36497,Southern Europe,2012,7.495366897
+Greece,23309,Southern Europe,2012,4.819824889
+Croatia,13952,Southern Europe,2012,19.140191047
+Thailand,6584,South-eastern Asia,2012,6.599621031
+Singapore,80040,South-eastern Asia,2012,10.794140324
+Sweden,60776,Northern Europe,2012,12.895426694
+Norway,108408,Northern Europe,2012,10.942116205
+Lithuania,15099,Northern Europe,2012,32.666495171
+Latvia,14558,Northern Europe,2012,22.987065634
+Ireland,53443,Northern Europe,2012,12.841149297
+Iceland,48083,Northern Europe,2012,12.447937343
+Finland,50232,Northern Europe,2012,17.082644386
+Estonia,18411,Northern Europe,2012,18.935293229
+Denmark,62071,Northern Europe,2012,12.541411799
+Canada,55347,Northern America,2012,11.910975560
+Fiji,5073,Melanesia,2012,4.087163879
+Uruguay,16264,Latin America and the Caribbean,2012,19.004174890
+Suriname,10227,Latin America and the Caribbean,2012,27.312080564
+Saint Lucia,8764,Latin America and the Caribbean,2012,6.099792607
+Puerto Rico,29247,Latin America and the Caribbean,2012,7.141474922
+Paraguay,4319,Latin America and the Caribbean,2012,4.828557246
+Panama,11908,Latin America and the Caribbean,2012,3.976150168
+Nicaragua,2006,Latin America and the Caribbean,2012,6.017393695
+Mexico,10982,Latin America and the Caribbean,2012,4.920051900
+Guyana,4212,Latin America and the Caribbean,2012,30.322835156
+Guatemala,3779,Latin America and the Caribbean,2012,3.149505921
+Grenada,8382,Latin America and the Caribbean,2012,2.095864859
+El Salvador,3806,Latin America and the Caribbean,2012,9.112228664
+Ecuador,6364,Latin America and the Caribbean,2012,7.064344379
+Cuba,6791,Latin America and the Caribbean,2012,13.880461834
+Costa Rica,10832,Latin America and the Caribbean,2012,7.039282459
+Colombia,8586,Latin America and the Caribbean,2012,4.921513130
+Chile,16617,Latin America and the Caribbean,2012,11.452390125
+Brazil,13283,Latin America and the Caribbean,2012,5.547137563
+Belize,5264,Latin America and the Caribbean,2012,6.021154322
+Barbados,17620,Latin America and the Caribbean,2012,0
+Bahamas,31204,Latin America and the Caribbean,2012,1.455358338
+Argentina,14203,Latin America and the Caribbean,2012,8.449140932
+Antigua and Barbuda,13657,Latin America and the Caribbean,2012,0
+Ukraine,4096,Eastern Europe,2012,21.106379251
+Slovakia,18256,Eastern Europe,2012,11.159052258
+Russian Federation,16413,Eastern Europe,2012,22.011825451
+Romania,9015,Eastern Europe,2012,13.102894642
+Poland,13894,Eastern Europe,2012,17.682284556
+Hungary,13525,Eastern Europe,2012,24.848778416
+Bulgaria,7745,Eastern Europe,2012,12.529362100
+Japan,51379,Eastern Asia,2012,21.814718184
+Uzbekistan,1964,Central Asia,2012,6.955544782
+Turkmenistan,7498,Central Asia,2012,2.942394316
+Kyrgyzstan,1339,Central Asia,2012,10.623717652
+Kazakhstan,13845,Central Asia,2012,21.566142594
+New Zealand,42756,Australia and New Zealand,2012,13.322429487
+Australia,72669,Australia and New Zealand,2012,12.147516617
+United States,55170,,2012,13.863469644
+United Kingdom,44585,,2012,7.442810193
+Saint Vincent and Grenadines,6918,,2012,9.983327843
+Republic of Korea,25464,,2012,29.485026182
+Czech Republic,20898,,2012,16.708442812
+Switzerland,89634,Western Europe,2013,13.942919692
+Netherlands,54510,Western Europe,2013,11.673317187
+Luxembourg,120423,Western Europe,2013,7.802000823
+Germany,48563,Western Europe,2013,13.059235117
+France,46922,Western Europe,2013,16.024017599
+Belgium,49489,Western Europe,2013,18.002785254
+Austria,53229,Western Europe,2013,15.978484123
+Turkey,13603,Western Asia,2013,2.590141504
+Qatar,93066,Western Asia,2013,1.732737833
+Kuwait,48729,Western Asia,2013,1.147145147
+Israel,40477,Western Asia,2013,5.148070691
+Georgia,3850,Western Asia,2013,3.744693031
+Cyprus,29624,Western Asia,2013,5.534946422
+Bahrain,26793,Western Asia,2013,0.411694766
+Armenia,3957,Western Asia,2013,2.383778353
+South Africa,7612,Sub-Saharan Africa,2013,1.218026822
+Seychelles,16090,Sub-Saharan Africa,2013,10.903672114
+Mauritius,10572,Sub-Saharan Africa,2013,8.541123768
+Spain,30792,Southern Europe,2013,8.756970332
+Slovenia,24697,Southern Europe,2013,22.892033778
+Serbia,6662,Southern Europe,2013,17.518337909
+Portugal,22641,Southern Europe,2013,10.535725624
+Malta,25191,Southern Europe,2013,5.462744085
+Italy,37050,Southern Europe,2013,7.460437379
+Greece,22994,Southern Europe,2013,5.109627391
+Croatia,14362,Southern Europe,2013,17.109836994
+Thailand,6917,South-eastern Asia,2013,6.518395576
+Singapore,83151,South-eastern Asia,2013,9.750219585
+Sweden,64133,Northern Europe,2013,13.630196803
+Norway,109804,Northern Europe,2013,11.620090171
+Lithuania,16538,Northern Europe,2013,38.658503606
+Latvia,15820,Northern Europe,2013,20.026520761
+Ireland,56628,Northern Europe,2013,11.520143219
+Iceland,51749,Northern Europe,2013,16.308544346
+Finland,52572,Northern Europe,2013,17.272156019
+Estonia,20221,Northern Europe,2013,17.536859583
+Denmark,64831,Northern Europe,2013,11.510089820
+Canada,55310,Northern America,2013,12.168752684
+Uruguay,18179,Latin America and the Caribbean,2013,17.252983723
+Suriname,10451,Latin America and the Caribbean,2013,26.606602093
+Saint Lucia,9041,Latin America and the Caribbean,2013,8.495661144
+Puerto Rico,29510,Latin America and the Caribbean,2013,6.941914038
+Paraguay,5006,Latin America and the Caribbean,2013,5.582240663
+Panama,13189,Latin America and the Caribbean,2013,3.760065043
+Nicaragua,2062,Latin America and the Caribbean,2013,6.589154927
+Mexico,11478,Latin America and the Caribbean,2013,5.143344127
+Guyana,4372,Latin America and the Caribbean,2013,30.707725333
+Guatemala,3947,Latin America and the Caribbean,2013,3.335317909
+Grenada,8789,Latin America and the Caribbean,2013,0
+El Salvador,3885,Latin America and the Caribbean,2013,8.555393522
+Ecuador,6769,Latin America and the Caribbean,2013,4.809808708
+Cuba,7148,Latin America and the Caribbean,2013,13.889030446
+Costa Rica,11443,Latin America and the Caribbean,2013,7.153982456
+Colombia,8731,Latin America and the Caribbean,2013,4.748968558
+Chile,17140,Latin America and the Caribbean,2013,10.700491878
+Brazil,13191,Latin America and the Caribbean,2013,5.608164079
+Belize,5272,Latin America and the Caribbean,2013,5.557589706
+Barbados,17395,Latin America and the Caribbean,2013,0
+Bahamas,30455,Latin America and the Caribbean,2013,1.432833084
+Argentina,14206,Latin America and the Caribbean,2013,7.686740244
+Antigua and Barbuda,13287,Latin America and the Caribbean,2013,0
+Slovakia,19226,Eastern Europe,2013,12.026061412
+Russian Federation,17052,Eastern Europe,2013,21.296975884
+Romania,10080,Eastern Europe,2013,12.666191136
+Poland,14552,Eastern Europe,2013,17.260861698
+Hungary,14333,Eastern Europe,2013,22.175487394
+Bulgaria,8057,Eastern Europe,2013,10.418105598
+Belarus,8477,Eastern Europe,2013,21.346226364
+Japan,42781,Eastern Asia,2013,21.566788921
+Uzbekistan,2150,Central Asia,2013,7.265566980
+Turkmenistan,8255,Central Asia,2013,2.127186816
+Kyrgyzstan,1463,Central Asia,2013,8.898288177
+Kazakhstan,15552,Central Asia,2013,23.081904878
+New Zealand,46198,Australia and New Zealand,2013,12.421999288
+Australia,72856,Australia and New Zealand,2013,12.073973458
+United States,56520,,2013,13.931532331
+United Kingdom,45594,,2013,8.027718527
+Saint Vincent and Grenadines,7183,,2013,0
+Republic of Korea,27060,,2013,29.899546147
+Czech Republic,21073,,2013,15.870332240
+Switzerland,90809,Western Europe,2014,13.214469691
+Netherlands,55325,Western Europe,2014,11.566395639
+Luxembourg,126352,Western Europe,2014,12.763363432
+Germany,50167,Western Europe,2014,13.174323534
+France,47318,Western Europe,2014,14.733902013
+Belgium,50173,Western Europe,2014,17.950914882
+Austria,54278,Western Europe,2014,16.140196151
+Turkey,13170,Western Asia,2014,2.279666754
+Qatar,91587,Western Asia,2014,2.442618451
+Oman,22328,Western Asia,2014,0.192779154
+Kuwait,43774,Western Asia,2014,1.830277309
+Israel,41869,Western Asia,2014,5.185812269
+Georgia,4757,Western Asia,2014,5.589811560
+Cyprus,29024,Western Asia,2014,5.467074544
+Bahrain,27503,Western Asia,2014,0.741371669
+Armenia,4142,Western Asia,2014,2.069190151
+South Africa,7174,Sub-Saharan Africa,2014,1.185799947
+Seychelles,16018,Sub-Saharan Africa,2014,4.770707854
+Mauritius,11120,Sub-Saharan Africa,2014,10.421877605
+Spain,31171,Southern Europe,2014,8.853870634
+Slovenia,25569,Southern Europe,2014,19.879228563
+Serbia,6500,Southern Europe,2014,16.672032885
+Portugal,23091,Southern Europe,2014,12.288282298
+Malta,27634,Southern Europe,2014,7.871594613
+Italy,37035,Southern Europe,2014,7.137610585
+Greece,22834,Southern Europe,2014,5.442873097
+Croatia,14299,Southern Europe,2014,17.913623584
+Bosnia and Herzegovina,5079,Southern Europe,2014,8.565558955
+Thailand,6662,South-eastern Asia,2014,6.463862015
+Singapore,84442,South-eastern Asia,2014,9.622239027
+Sweden,62956,Northern Europe,2014,12.595281992
+Norway,103443,Northern Europe,2014,11.352388497
+Lithuania,17442,Northern Europe,2014,33.434271278
+Latvia,16544,Northern Europe,2014,20.168517999
+Ireland,59634,Northern Europe,2014,11.229093611
+Iceland,56833,Northern Europe,2014,14.451246748
+Finland,52832,Northern Europe,2014,15.290863622
+Estonia,21117,Northern Europe,2014,19.406499325
+Denmark,66114,Northern Europe,2014,11.780866150
+Uruguay,18012,Latin America and the Caribbean,2014,18.598679211
+Suriname,10530,Latin America and the Caribbean,2014,25.718252525
+Saint Lucia,9372,Latin America and the Caribbean,2014,8.454310491
+Puerto Rico,29515,Latin America and the Caribbean,2014,6.338311405
+Paraguay,5254,Latin America and the Caribbean,2014,6.448216736
+Panama,14181,Latin America and the Caribbean,2014,4.175883675
+Nicaragua,2199,Latin America and the Caribbean,2014,5.756675152
+Mexico,11663,Latin America and the Caribbean,2014,5.482170615
+Guatemala,4210,Latin America and the Caribbean,2014,3.670990357
+Grenada,9456,Latin America and the Caribbean,2014,0
+El Salvador,3965,Latin America and the Caribbean,2014,6.776293996
+Ecuador,7116,Latin America and the Caribbean,2014,5.134610387
+Cuba,7459,Latin America and the Caribbean,2014,13.437018162
+Costa Rica,11485,Latin America and the Caribbean,2014,6.085827425
+Colombia,8591,Latin America and the Caribbean,2014,4.829425421
+Chile,15883,Latin America and the Caribbean,2014,10.903970880
+Brazil,12975,Latin America and the Caribbean,2014,5.616382114
+Belize,5448,Latin America and the Caribbean,2014,7.673124880
+Argentina,13400,Latin America and the Caribbean,2014,8.226281557
+Antigua and Barbuda,14093,Latin America and the Caribbean,2014,0
+Ukraine,3299,Eastern Europe,2014,19.691497403
+Slovakia,19679,Eastern Europe,2014,10.799881318
+Russian Federation,15319,Eastern Europe,2014,19.701744055
+Romania,10526,Eastern Europe,2014,11.655617398
+Poland,15119,Eastern Europe,2014,16.456075672
+Hungary,14886,Eastern Europe,2014,20.450901476
+Bulgaria,8241,Eastern Europe,2014,10.517333699
+Belarus,8849,Eastern Europe,2014,19.546474634
+Japan,40328,Eastern Asia,2014,20.251259624
+Uzbekistan,2309,Central Asia,2014,7.670197752
+Turkmenistan,9046,Central Asia,2014,2.826721749
+Kyrgyzstan,1465,Central Asia,2014,9.045547570
+Kazakhstan,14351,Central Asia,2014,20.215383602
+Australia,66809,Australia and New Zealand,2014,13.184305232
+United States,58531,,2014,14.364076596
+United Kingdom,49906,,2014,7.904840513
+Saint Vincent and Grenadines,7203,,2014,1.986570782
+Republic of Korea,29120,,2014,28.543770254
+Czech Republic,20859,,2014,14.945107093
+Switzerland,86068,Western Europe,2015,13.595181857
+Netherlands,47206,Western Europe,2015,11.664446083
+Luxembourg,107456,Western Europe,2015,11.901485454
+Germany,43201,Western Europe,2015,12.910709302
+Belgium,42830,Western Europe,2015,17.572829826
+Austria,46484,Western Europe,2015,15.220114982
+Turkey,11961,Western Asia,2015,2.131316236
+Qatar,69937,Western Asia,2015,2.803563244
+Israel,39793,Western Asia,2015,4.550183737
+Georgia,4046,Western Asia,2015,5.551700208
+Cyprus,24718,Western Asia,2015,5.024892059
+Armenia,3775,Western Asia,2015,2.647267680
+South Africa,6403,Sub-Saharan Africa,2015,0.971236489
+Seychelles,16005,Sub-Saharan Africa,2015,8.144364681
+Mauritius,10125,Sub-Saharan Africa,2015,9.005514146
+Spain,27108,Southern Europe,2015,8.156332174
+Slovenia,22036,Southern Europe,2015,21.589741701
+Serbia,5492,Southern Europe,2015,15.695185893
+Malta,25750,Southern Europe,2015,8.279818915
+Italy,31537,Southern Europe,2015,6.861937423
+Greece,18927,Southern Europe,2015,5.120369333
+Croatia,12351,Southern Europe,2015,18.467294521
+Thailand,6552,South-eastern Asia,2015,6.864042466
+Singapore,81766,South-eastern Asia,2015,8.846190559
+Sweden,54629,Northern Europe,2015,12.968312991
+Norway,79187,Northern Europe,2015,12.082961202
+Lithuania,15073,Northern Europe,2015,32.535369505
+Latvia,14382,Northern Europe,2015,20.634255423
+Iceland,54909,Northern Europe,2015,12.963695172
+Finland,44862,Northern Europe,2015,14.107075210
+Estonia,18149,Northern Europe,2015,15.682174595
+Denmark,55972,Northern Europe,2015,10.477312161
+Uruguay,16696,Latin America and the Caribbean,2015,19.744295701
+Puerto Rico,29728,Latin America and the Caribbean,2015,6.513867476
+Panama,15158,Latin America and the Caribbean,2015,3.069725751
+Nicaragua,2303,Latin America and the Caribbean,2015,5.751866663
+Mexico,10228,Latin America and the Caribbean,2015,5.451307581
+Guatemala,4472,Latin America and the Caribbean,2015,3.464625091
+Grenada,10290,Latin America and the Caribbean,2015,0
+Ecuador,6832,Latin America and the Caribbean,2015,7.382676676
+Cuba,8044,Latin America and the Caribbean,2015,13.949321588
+Colombia,6552,Latin America and the Caribbean,2015,5.241577025
+Chile,14729,Latin America and the Caribbean,2015,11.095198067
+Brazil,9431,Latin America and the Caribbean,2015,5.841839076
+Belize,5561,Latin America and the Caribbean,2015,8.129191614
+Argentina,14981,Latin America and the Caribbean,2015,7.740627468
+Antigua and Barbuda,14853,Latin America and the Caribbean,2015,1.088269543
+Ukraine,2256,Eastern Europe,2015,18.772874639
+Russian Federation,9987,Eastern Europe,2015,18.560937227
+Romania,9431,Eastern Europe,2015,11.810902364
+Poland,13228,Eastern Europe,2015,15.019435898
+Hungary,13087,Eastern Europe,2015,19.894522818
+Japan,36510,Eastern Asia,2015,19.183176490
+Turkmenistan,7326,Central Asia,2015,2.721776710
+Kyrgyzstan,1285,Central Asia,2015,8.025671371
+Kazakhstan,11784,Central Asia,2015,18.355247147
+Australia,60656,Australia and New Zealand,2015,13.610131117
+United States,60387,,2015,14.725812872
+United Kingdom,47240,,2015,8.038250679
+Saint Vincent and Grenadines,7496,,2015,2.971827079
+Republic of Korea,28410,,2015,27.757373517
+Czech Republic,18703,,2015,13.884822048
+Netherlands,48108,Western Europe,2016,13.244796852
+Austria,46976,Western Europe,2016,16.046219525
+Qatar,62484,Western Asia,2016,3.072583921
+Cyprus,25098,Western Asia,2016,5.060842574
+Armenia,3788,Western Asia,2016,2.791628282
+Mauritius,10570,Sub-Saharan Africa,2016,9.874731972
+Croatia,12905,Southern Europe,2016,19.147512379
+Thailand,6713,South-eastern Asia,2016,7.703678610
+Sweden,55594,Northern Europe,2016,13.906234079
+Lithuania,15742,Northern Europe,2016,33.615562288
+Iceland,64708,Northern Europe,2016,14.882447270
+Grenada,10838,Latin America and the Caribbean,2016,0
+Romania,10020,Eastern Europe,2016,11.733320196
+Hungary,13448,Eastern Europe,2016,20.988347355
+Mongolia,4145,Eastern Asia,2016,19.514769636
+Czech Republic,19505,,2016,14.759334383

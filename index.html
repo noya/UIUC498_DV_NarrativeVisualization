@@ -42,7 +42,7 @@
             }
         #middlebox{ 
             float:left;  
-            width:70%; 
+            width:50%; 
             height: inherit;
             /*height:70vh; */
         } 
@@ -111,6 +111,7 @@
   height: 40px;
   padding: 10px;
   font: 15px sans-serif;
+  font-weight:bold;
   pointer-events: none;
   background: rgba(255, 255, 255, .8);
 }
@@ -304,7 +305,7 @@ body{
     
     <script type="text/javascript">
 		// Set the dimensions of the canvas / graph
-        var margin = {top:60, right: 80, bottom: 100, left:180}
+        var margin = {top:60, right: 50, bottom: 100, left:140}
             , width = document.getElementById('middlebox').clientWidth - margin.left - margin.right
             , height = document.getElementById('middlebox').clientHeight - margin.top - margin.bottom;
         
@@ -356,7 +357,7 @@ body{
             svg.append("text")             
               .attr("transform",
                     "translate(" + (width/2) + " ," + 
-                                   (height + margin.top + 20) + ")")
+                                   (height + margin.top*2/3) + ")")
               .style("text-anchor", "middle")
               .text("Year");
 
@@ -476,7 +477,7 @@ body{
             // Load data needed to generate world map
             var world = await d3.json("https://unpkg.com/world-atlas@1/world/110m.json");
             var countryCode = await d3.json("data/ISO-3166-Countries-with-Regional-Codes/slim-2/slim-2.json");
-            var data = await d3.csv("data/suicides_country.csv");
+            var data = await d3.csv("data/suicides_country_year.csv");
 
             // Set title
             var title = d3.select("#graph_title").append("h2")
@@ -559,7 +560,7 @@ body{
 
             var slider = svg.append("g")
                 .attr("class", "slider")
-                .attr("transform", "translate(0," + (height + margin.top) + ")");
+                .attr("transform", "translate(0," + (height + margin.top*4/3) + ")");
 
             slider.append("line")
                 .attr("class", "track")
@@ -690,77 +691,105 @@ body{
  
         async function load_suicides_gdp() {
             var countryCode = await d3.json("data/ISO-3166-Countries-with-Regional-Codes/all/all.json");
-            var data = await d3.csv("data/suicides_gdp_2015.csv");
-                console.log(data);
+            var data = await d3.csv("data/suicides_gdp_year.csv");
+            console.log(data);
 
-                // Set title
-                var title = d3.select("#graph_title").append("h2")
-                        .attr("class", "text-info")
-                        .text("Suicides Per 100k ppl By GDP per Capita")
-                        .attr("align", "center");
+            // Set title
+            var title = d3.select("#graph_title").append("h2")
+                    .attr("class", "text-info")
+                    .text("Suicides Per 100k ppl By GDP per Capita")
+                    .attr("align", "center");
 
-                // Add information to the graph to guide use
-                var header = d3.select("#highlight").append("h4")
-                    // .attr("class", "text-primary")
-                    .text("What GDP Bucket Has The Highest Suicide Rate?")
-                    .attr("align", "left");
-                var info = d3.select("#highlight").append("p")
-                    .text("We see the lower the gdp, the higher the overall suicide rate")
-                    .attr("align", "left");
+            // Add information to the graph to guide use
+            var header = d3.select("#highlight").append("h4")
+                // .attr("class", "text-primary")
+                .text("What GDP Bucket Has The Highest Suicide Rate?")
+                .attr("align", "left");
+            var info = d3.select("#highlight").append("p")
+                .text("We see the lower the gdp, the higher the overall suicide rate")
+                .attr("align", "left");
 
             // // Add Slider
             
             var countryMap = load_countrymap(countryCode);
             console.log('country map', countryMap);
+            var dmap = new Map();
+
             data.forEach(function(d) {
                 d.gdp = +d['Gdp Per Capita ($)'];
                 d.Suicide_Rate = +d.Suicide_Rate;
                 if (countryMap.has(d.Country)) {
                     var subRegion = countryMap.get(d.Country);
-                    console.log('region', subRegion)
                     d.SubRegion = subRegion['sub-region'];
                 }
                 else {
                     d.SubRegion = "undef";
                 }
                 
+                // var yrMap = new Map();
+                var subRAr = new Array();
+
+                if (dmap.has(d.Year)) {
+                    subRAr = dmap.get(d.Year);
+                }
+                
+                subRAr.push({"Country" : d.Country, "Suicide_Rate": d.Suicide_Rate, "SubRegion": d.SubRegion, "gdp": d.gdp, "Year": d.Year})
+                dmap.set(d.Year, subRAr);
             });
 
+            console.log("dmap", dmap);
+
+            // specify scale domains
             var xscale = d3.scaleLinear()
                         .domain(d3.extent(data, function(d) {return d.gdp}))
                         .range([0, width]);
             ys.domain(d3.extent(data, function(d) {return d.Suicide_Rate}));
 
             colors.domain(countryMap, function(d) {return d['sub-region']});
-            // draw dots
-            svg.selectAll(".dot")
-                .data(data)
-            .enter().append("circle")
-                .attr("class", "dot")
-                .attr("r", 8)
-                .attr("cx", function(d) {return xscale(d.gdp)})
-                .attr("cy", function(d) {return ys(d.Suicide_Rate)})
-                .attr("data-legend", function(d) {return d.SubRegion;})
-                .style("fill", function(d) { return colors(d.SubRegion);}) 
-                .on("mouseover", function(d) {
-                    console.log('tooltip', d);
 
-                   d3.select(this).style("stroke", "black");
-                    tooltip.html("GDP per Capita: " + d.gdp + "<br/>Suicide Rate: " + d.Suicide_Rate.toFixed(2)
-                    + "<br>Country: " + d.Country + "<br>Sub-Region: " + d.SubRegion)
-                        .style("height", "70px")
-                        .style("width", "200px")
-                        .style("display", "inline")
-                        .style("left", d3.event.pageX + 10 + "px")
-                        .style("top", d3.event.pageY +20 + "px");
-                    return mouseover();
 
-                })
-                .on("mouseout", function(d) {
-                    d3.select(this).style("stroke", "none");
-                    mouseout();
-                   })
+            // draw plot
+            var plot = svg.append("g")
 
+            function drawPlot(year) {
+                var data = dmap.get(year);
+                var circles = plot.selectAll("circle").data(data)
+                var new_circles = circles
+                    .enter()
+                    .append("circle")
+                    .attr("data-legend", function(d) {return d.SubRegion;})
+                    .on("mouseover", function(d) {
+                        console.log('tooltip', d);
+
+                       d3.select(this).style("stroke", "black");
+                        tooltip.html("Year: " + d.Year + "<br>GDP per Capita: " + d.gdp + "<br/>Suicide Rate: " + d.Suicide_Rate.toFixed(2)
+                        + "<br>Country: " + d.Country + "<br>Sub-Region: " + d.SubRegion)
+                            .style("height", "70px")
+                            .style("width", "250px")
+                            .style("display", "inline")
+                            .style("left", d3.event.pageX + 10 + "px")
+                            .style("top", d3.event.pageY +20 + "px");
+                        return mouseover();
+
+                    })
+                    .on("mouseout", function(d) {
+                        d3.select(this).style("stroke", "none");
+                        mouseout();
+                       })
+
+                new_circles.merge(circles)
+                    .transition(t)
+                    .duration(1500)
+                    .attr("class", "dot")
+                    .attr("r", 8)
+                    .attr("cx", function(d) {return xscale(d.gdp)})
+                    .attr("cy", function(d) {return ys(d.Suicide_Rate)})
+                    .attr("data-legend", function(d) {return d.SubRegion;})
+                    .style("fill", function(d) { return colors(d.SubRegion);}) 
+                    
+                circles.exit().remove();
+            }
+            
             // Create an axis component with d3.axisBottom
             var xaxis = svg.append("g")
                 .attr("class", "x axis")
@@ -771,24 +800,90 @@ body{
                 .attr("class", "y axis")
                 .call(d3.axisLeft(ys)); 
 
-            // Draw Legend
+            // Draw Slider
+             var slider = svg.append("g")
+                .attr("class", "slider")
+                .attr("transform", "translate(0," + (height + margin.top*4/3) + ")");
+
+            slider.append("line")
+                .attr("class", "track")
+                .attr("x1", xs.range()[0])
+                .attr("x2", xs.range()[1])
+              .select(function() { return this.parentNode.appendChild(this.cloneNode(true)); })
+                .attr("class", "track-inset")
+              .select(function() { return this.parentNode.appendChild(this.cloneNode(true)); })
+                .attr("class", "track-overlay")
+                .call(d3.drag()
+                    .on("start.interrupt", function() { slider.interrupt(); })
+                    .on("start drag", function() { 
+                        update(xs.invert(d3.event.x)); 
+                    })
+                    );
+
+            slider.insert("g", ".track-overlay")
+                .attr("class", "ticks")
+                .attr("transform", "translate(0," + 18 + ")")
+              .selectAll("text")
+              .data(xs.ticks(50))
+              .enter().append("text")
+                .attr("x", xs)
+                .attr("text-anchor", "middle")
+                .text(function(d, i) { 
+                    // Only return even years
+                    if (i % 2) {
+                        return formatTime(d);
+                    }
+                });
+
+            var handle = slider.insert("circle", ".track-overlay")
+                .attr("class", "handle")
+                .attr("r", 9);
+
+            var label = slider.append("text")  
+                .attr("class", "label")
+                .attr("text-anchor", "middle")
+                .text(formatTime(xs.domain()[0]))
+                .attr("transform", "translate(0," + (-25) + ")");
+
+            // Start the plot at beginning of year
+            drawPlot(formatTime(xs.domain()[0]));
+
+            function update(y) {
+                // check that the newYear did not exceed our boundary
+                y = Math.max(y, xs.domain()[0]);
+                y = Math.min(y, xs.domain()[1]);
+
+                handle
+                    .transition().duration(t)
+                    .attr("cx", xs(y));
+                label
+                    .transition().duration(t)
+                    .attr("x", xs(y))
+                    .text(formatTime(y));
+                var yr = formatTime(y);
+                console.log('update', yr)
+
+                console.log('data', dmap.get(yr));
+                drawPlot(yr);
+            }
+
+            // legend
             var colorLegend = d3.legendColor()
+                .labelFormat(d3.format(".0f"))
                 .scale(colors)
                 .title("Suicide Rate/100k")
                 .shapePadding(5)
                 .shapeWidth(20)
-                .labelWrap(150)
                 .shapeHeight(20)
-                .labelOffset(5);
+                .labelOffset(12);
 
             svg.append("g")
-                .attr("transform", "translate("+ (width*5/6) +"," + (20)+")")
+                .attr("transform", "translate("+width*5/6+"," + 0 + ")")
                 .call(colorLegend);
-            
+
         }
         function load_suicide_sex() {
             d3.csv("data/suicides_sex_year.csv").then(function(data) {      
-            // d3.csv("data/suicides_sex_year.csv", function(data) {      
                 // write title of graph
                 var title = d3.select("#graph_title").append("h2")
                     .attr("class", "text-info")
@@ -836,7 +931,8 @@ body{
                 console.log("datamap", dataMap);
 
                 var stack = d3.stack()
-                    .keys(["male", "female"])
+                    // .keys(["male", "female"])
+                    .keys(["female", "male"])
                     .order(d3.stackOrderNone)
                     .offset(d3.stackOffsetNone);
 
@@ -844,6 +940,7 @@ body{
                 // transition before
                 xs.domain(d3.extent(dataObj, function(d) { return (parseTime(d.year));}));
                 ys.domain([0,  0]);      
+                colors.domain(["female", "male"]);
 
                 var groups = svg.selectAll("g.sex")
                     .data(series)
@@ -859,21 +956,21 @@ body{
                     .attr("height", function(d) { return  height - ys(d[1] - d[0]); })
                     .attr("width", width/dataObj.length - 5)
                     .attr("data-legend", function(d) {
-                        var sex = "Female";
+                        var sex = "Male";
                         if (d[0] == 0) {
-                            sex = "Male";
+                            sex = "Female";
                         }
                         return sex;
                     })
                     .on("mouseover", function(d) { 
                         d3.select(this).style("stroke", "black");
-                        var sex = "Female";
+                        var sex = "Male";
                         if (d[0] == 0) {
-                            sex = "Male";
+                            sex = "Female";
                         }
                         tooltip.html("Year: " + d.data.year + "<br>Sex: " + sex +  "<br>Suicide Rate: " + (d[1] - d[0]).toFixed(2))
                             .style("height", "70px")
-                            .style("width", "150px")
+                            .style("width", "180px")
                             .style("display", "inline")
                             .style("left", d3.event.pageX + 10 + "px")
                             .style("top", d3.event.pageY +20 + "px");
@@ -918,7 +1015,6 @@ body{
         // load suicides_year data
         function load_suicides_year() {
             d3.csv("data/suicides_year.csv").then(function(data) {            
-                // d3.csv("data/suicides_year.csv", function(data) {            
 
                 // write title of graph
                 var title = d3.select("#graph_title").append("h2")
@@ -1061,7 +1157,6 @@ body{
                 )
                 d3.annotation().annotations(annotations);
                 const makeAnnotations = d3.annotation()
-                            // .type(d3.annotationCalloutCircle)
                             .type(type)
                             //Gives you access to any data objects in the annotations array
                             .accessors({ 
@@ -1083,16 +1178,14 @@ body{
                     .transition()
                         .style("display", "none")
                     .transition()
-                        .delay(t)
+                        .delay(600)
                         .style("display", "inline");
             });
         }
 
-
         // load suicides_year data
         function load_suicides_age_year() {
             d3.csv("data/suicides_age_year.csv").then(function(data) {
-                // d3.csv("data/suicides_age_year.csv", function(data) {
 
                 // write title of graph
                 var title = d3.select("#graph_title").append("h2")
@@ -1112,8 +1205,7 @@ body{
                 // create separate lines for each age bucket
                 data.forEach(function(d) {
                     d.Year = parseTime(d.Year);
-                    // d.Suicide_Rate = +d.Suicide_Rate;
-                    d.Suicide_Rate = +d.Avg_Suicides_per_100K_Pop;
+                    d.Suicide_Rate = +d.Suicide_Rate;
                 });
                 
                 // sort data using Age
@@ -1204,33 +1296,6 @@ body{
             svg.append("g")
                 .attr("transform", "translate("+(width*5/6)+"," + 20 +")")
                 .call(colorLegend);
-
-                // var legendSpacing = 3;
-                // var legendRectSize = 20;
-
-                // var legend = svg.selectAll('.legend')
-                //     .data(colors.domain())
-                //     .enter()
-                //     .append('g')
-                //     .attr('class', 'legend')
-                //     .attr('transform', function(d, i) {
-                //         var legendHeight = legendRectSize + legendSpacing;       
-                //         var offset =  legendHeight * colors.domain().length / 2;    
-                //         var horz = - margin.left;                       
-                //         var vert = i * legendHeight - offset + height/2;                      
-                //         return 'translate(' + horz + ',' + vert + ')';
-                // });
-
-                // legend.append('rect')
-                //     .attr('width', legendRectSize)
-                //     .attr('height', legendRectSize)
-                //     .style('fill', colors)
-                //     .style('stroke', colors);
-
-                // legend.append('text')
-                //         .attr("x", legendRectSize + legendSpacing)
-                //         .attr('y', legendRectSize + legendSpacing)
-                //         .text(function(d) {return d;});
 
                 // annotations
                 // make annotations
