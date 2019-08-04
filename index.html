@@ -12,16 +12,16 @@
     }
     #page_button {
                 float:left;  
-                width:35%; 
+                width:20%; 
                 height:inherit; 
                 padding: inherit;                   
             }
         
         #graph_title {
             float:left;  
-            width:65%; 
+            width:70%; 
             height:inherit; 
-            text-align: left;
+            text-align: center;
             padding: inherit;
         }
 
@@ -45,7 +45,7 @@
             }
         #middlebox{ 
             float:left;  
-            width:50%; 
+            width:70%; 
             height: inherit;
             /*height:70vh; */
         } 
@@ -270,17 +270,11 @@ body{
             </div>
             <div id = "middlebox"></div>
         </div>
-       <!--  <div id="bottom">
-            <div id = "bt_left"></div>
-            <div id = "bt_middle">
-                
-            </div>
 
-        </div> -->
     
     <script type="text/javascript">
 		// Set the dimensions of the canvas / graph
-        var margin = {top:60, right: 50, bottom: 100, left:140}
+        var margin = {top:60, right: 100, bottom: 100, left:140}
             , width = document.getElementById('middlebox').clientWidth - margin.left - margin.right
             , height = document.getElementById('middlebox').clientHeight - margin.top - margin.bottom;
         
@@ -350,11 +344,7 @@ body{
             d3.selectAll("#highlight > *").remove();     
         }
         
-        // Page Control Logic
-        var page_num = 1;
-        var pages = 5;
-        gotoPage(page_num);
-        
+        // process information related to countries
         function load_countrymap(countryCode) {
             
             var transName  = new Map([
@@ -376,25 +366,25 @@ body{
             console.log('innder countryMap', countryMap)
 
             return countryMap;
-        
             
         }
 
-        // var countryMap = load_countrymap();
-        // var countryCode = await d3.json("data/ISO-3166-Countries-with-Regional-Codes/all/all.json");
-        // console.log('countryCode', countryCode);
-
-        // console.log('countryMap', countryMap)
-
+        // Page Control Logic
+        
         // go to specific page based on the page number
         function gotoPage(num) {
             // Select active page
-            // var old_button = document.getElementById("b" + page_num.toString());
             // Clear graphs, deselect button
-            var old_button = document.getElementById("b" + page_num.toString());
-            old_button.className = old_button.className.replace(" active", "")
+            var buttons = document.getElementsByClassName("btn");
 
-            // old_button.setAttribute("aria-pressed", false);
+            for (var i = 0; i < buttons.length; i++) {
+                console.log('buttons', i, 'b', buttons[i]);
+                if (buttons[i].className.includes("active")) {
+                    console.log("button", i, 'is active');
+                    buttons[i].className = buttons[i].className.replace(" active", "")
+                }
+            }
+
             clear_graph();
 
             // Load new pages, select button
@@ -433,6 +423,8 @@ body{
         function nextPage(offset) {
             prev_page_num = page_num
             next_page_num  = page_num + offset;
+            var pages = document.getElementsByClassName("btn").length - 2;
+            console.log('pages', pages)
             if (next_page_num > pages) {
                 next_page_num = pages;
             }
@@ -445,7 +437,10 @@ body{
             
         }
 
+        // start at page 1
+        gotoPage(1);
         
+        // page spcific functions
         async function load_suicides_country() {
 
             // Load data needed to generate world map
@@ -488,6 +483,7 @@ body{
                 codeMap.set(d['country-code'], d.name);
             })
 
+            // Create data map, using year as key
             var dmap = new Map();
             data.forEach(function(d) {
                 var tmpMap = new Map();  
@@ -574,12 +570,16 @@ body{
                 .text(formatTime(xs.domain()[0]))
                 .attr("transform", "translate(0," + (-25) + ")")
 
+            // var worldMap = svg.selectAll(".world")
+            // var plot = svg.append("g")
+                    
             var worldMap = svg.selectAll(".world")
                     .data(topojson.feature(world,world.objects.countries).features);
 
             // todo: instead of passing year, could pass through map[year]
             function drawCountry(year) {
                 console.log("redraw country with year", year)
+                var data = dmap.get(year);
                 
                 worldMap.enter().append("path")
                     .attr("stroke", "black")
@@ -597,11 +597,10 @@ body{
                         }
                     })
                     .attr("data-legend",function(d) { 
+                        console.log('data legend', d)
                         var country = codeMap.get(d.id);
-                        
-                        var tmpMap = dmap.get(year);
-                        if (tmpMap.has(country)) {
-                            var val = tmpMap.get(country);
+                        if (data.has(country)) {
+                            var val = data.get(country);
                             return val;
                         }
                         return 0;
@@ -609,9 +608,9 @@ body{
                     .on("mouseover", function(d) { 
                             d3.select(this).style("stroke", "grey");
                             var country = codeMap.get(d.id);
-                            var tmpMap = dmap.get(year);
-                            if (tmpMap.has(country)) {
-                                var val = tmpMap.get(country);
+                            console.log('mouseover', d);
+                            if (data.has(country)) {
+                                var val = data.get(country);
                                 tooltip.html("Year: " + year + "<br>Country: " + country +  "<br>Suicide Rate: " + val.toFixed(2))
                                     .style("height", "70px")
                                     .style("width", "200px")
@@ -626,8 +625,7 @@ body{
                             d3.select(this).style("stroke", "black");
                             d3.select(this).style("stroke-wdth", 3);
                             var country = codeMap.get(d.id);
-                            var tmpMap = dmap.get(year);
-                            if (tmpMap.has(country)) {
+                            if (data.has(country)) {
                                 return mouseout();
                             }
                         })
@@ -637,11 +635,6 @@ body{
 
             }
 
-            // years.forEach(function (year) {
-            //     var y = parseTime(year)
-            //     update(y);
-            // })
-               
 
             drawCountry(formatTime(xs.domain()[0]));
 
@@ -651,9 +644,9 @@ body{
                 y = Math.max(y, xs.domain()[0]);
                 y = Math.min(y, xs.domain()[1]);
 
-                handle//.transition().duration(1500)
+                handle.transition(t)
                     .attr("cx", xs(y));
-                label//.transition().duration(1500)
+                label.transition(t)
                     .attr("x", xs(y))
                     .text(formatTime(y));
                 drawCountry(formatTime(y));
@@ -751,7 +744,6 @@ body{
 
                 new_circles.merge(circles)
                     .transition(t)
-                    .duration(1500)
                     .attr("class", "dot")
                     .attr("r", 8)
                     .attr("cx", function(d) {return xscale(d.gdp)})
@@ -826,10 +818,10 @@ body{
                 y = Math.min(y, xs.domain()[1]);
 
                 handle
-                    .transition().duration(t)
+                    .transition(t)
                     .attr("cx", xs(y));
                 label
-                    .transition().duration(t)
+                    .transition(t)
                     .attr("x", xs(y))
                     .text(formatTime(y));
                 var yr = formatTime(y);
