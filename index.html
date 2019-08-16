@@ -10,12 +10,12 @@
         height:5vh;
         padding: 8px;
     }
-    #page_button {
-                float:left;  
-                width:20%; 
-                height:inherit; 
-                padding: inherit;                   
-            }
+      #page_button {
+                  float:left;  
+                  width:20%; 
+                  height:inherit; 
+                  padding: inherit;                   
+              }
         
         #graph_title {
             float:left;  
@@ -335,7 +335,7 @@ body{
               .attr("x", 0 - (height/2))
               .attr("dy", "1em")
               .style("text-anchor", "middle")
-              .text("Suicides Per 100K Pop");
+              .text("Suicides Per 100,000 Pop");
         }
 
         function clear_graph() {
@@ -451,7 +451,7 @@ body{
             // Set title
             var title = d3.select("#graph_title").append("h2")
                     .attr("class", "text-info")
-                    .text("Suicides Per 100k ppl By Country");
+                    .text("Suicides Rate By Country");
 
                 // Add information to the graph to guide use
                 var header = d3.select("#highlight").append("h4")
@@ -663,7 +663,7 @@ body{
             // Set title
             var title = d3.select("#graph_title").append("h2")
                     .attr("class", "text-info")
-                    .text("Suicides Per 100k ppl By GDP per Capita");
+                    .text("Suicides Rate By GDP per Capita");
 
             // Add information to the graph to guide use
             var header = d3.select("#highlight").append("h4")
@@ -983,7 +983,7 @@ body{
                 // write title of graph
                 var title = d3.select("#graph_title").append("h2")
                     .attr("class", "text-info")
-                    .text("Suicides Per 100,000 ppl Per Year");
+                    .text("Suicides Rate Per Year");
 
                 // Add information to the graph to guide use
                 var header = d3.select("#highlight").append("h4")
