@@ -26,7 +26,7 @@
         }
 
     #main {
-        height:60vh;
+        height:80vh;
     }
     
         #leftbox { 
@@ -274,7 +274,7 @@ body{
     
     <script type="text/javascript">
 		// Set the dimensions of the canvas / graph
-        var margin = {top:60, right: 100, bottom: 100, left:140}
+        var margin = {top:80, right: 200, bottom: 100, left:80}
             , width = document.getElementById('middlebox').clientWidth - margin.left - margin.right
             , height = document.getElementById('middlebox').clientHeight - margin.top - margin.bottom;
         
@@ -331,7 +331,7 @@ body{
 
             svg.append("text")             
               .attr("transform", "rotate(-90)")
-              .attr("y", 0 - margin.left/3)
+              .attr("y", 0 - margin.left/2 - 20)
               .attr("x", 0 - (height/2))
               .attr("dy", "1em")
               .style("text-anchor", "middle")
@@ -502,7 +502,7 @@ body{
 
         
             // Draw Map
-            var path = d3.geoPath().projection(d3.geoMercator());
+            var path = d3.geoPath().projection(d3.geoMercator().scale(100).translate([width / 2, margin.top + height / 2])); // translate map to svg);
             // Add world map colors
             var mapColors = d3.scaleQuantize()
                             .domain(d3.extent(data, function(d) {
@@ -522,14 +522,14 @@ body{
                 .labelOffset(12);
 
             svg.append("g")
-                .attr("transform", "translate(50, 300)")
+                .attr("transform", "translate("+(width)+"," +(0)+")")
                 .call(colorLegend);
 
             // Add slider
 
             var slider = svg.append("g")
                 .attr("class", "slider")
-                .attr("transform", "translate(0," + (height + margin.top*4/3) + ")");
+                .attr("transform", "translate(0," + (height + margin.top) + ")");
 
             slider.append("line")
                 .attr("class", "track")
@@ -571,10 +571,10 @@ body{
                 .attr("transform", "translate(0," + (-25) + ")")
 
             // var worldMap = svg.selectAll(".world")
-            // var plot = svg.append("g")
-                    
-            var worldMap = svg.selectAll(".world")
-                    .data(topojson.feature(world,world.objects.countries).features);
+            //         .data(topojson.feature(world,world.objects.countries).features);
+            var worldMap = svg.selectAll("g")
+                      // .attr("transform", "scale(20)")
+                      .data(topojson.feature(world,world.objects.countries).features);
 
             // todo: instead of passing year, could pass through map[year]
             function drawCountry(year) {
@@ -767,7 +767,7 @@ body{
             // Draw Slider
              var slider = svg.append("g")
                 .attr("class", "slider")
-                .attr("transform", "translate(0," + (height + margin.top*4/3) + ")");
+                .attr("transform", "translate(0," + (height + margin.top) + ")");
 
             slider.append("line")
                 .attr("class", "track")
@@ -836,13 +836,14 @@ body{
                 .labelFormat(d3.format(".0f"))
                 .scale(colors)
                 .title("Suicide Rate/100k")
+                .labelWrap(margin.right - 20)
                 .shapePadding(5)
                 .shapeWidth(20)
                 .shapeHeight(20)
                 .labelOffset(12);
 
             svg.append("g")
-                .attr("transform", "translate("+width*5/6+"," + 0 + ")")
+                .attr("transform", "translate("+width+"," + 0 + ")")
                 .call(colorLegend);
 
         }
@@ -969,7 +970,7 @@ body{
                     .labelOffset(12);
 
                 svg.append("g")
-                    .attr("transform", "translate("+width*5/6+"," + 0 + ")")
+                    .attr("transform", "translate("+(width + 20)+"," + 0 + ")")
                     .call(colorLegend);
 
 
@@ -1255,7 +1256,7 @@ body{
                     .labelOffset(12);
 
             svg.append("g")
-                .attr("transform", "translate("+(width*5/6)+"," + 20 +")")
+                .attr("transform", "translate("+(width + 20)+"," + 20 +")")
                 .call(colorLegend);
 
                 // annotations
