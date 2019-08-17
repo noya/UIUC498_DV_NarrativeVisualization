@@ -187,6 +187,7 @@ body{
       --annotation-context-color: #00796B;
       --annotation-above-color: #00BFA5;
       --annotation-anomaly-color: #E8336D;
+      --accent-color: #E8336D;
     }
 
     .annotation path {
@@ -225,7 +226,9 @@ body{
     .annotation-note-title {
       font-weight: bold;
     }
-
+    .annotation.callout.circle .annotation-subject path{
+      fill: var(--accent-color);
+    }
 
 </style>
 <html>
@@ -320,14 +323,24 @@ body{
                 .style("display", "none");  
         }
 
-        function label_axes() {
+        function label_axes(xaxes_text) {
             // axis labels
-            svg.append("text")             
+            if (xaxes_text == null) {
+              svg.append("text")             
               .attr("transform",
                     "translate(" + (width/2) + " ," + 
                                    (height + margin.top*2/3) + ")")
               .style("text-anchor", "middle")
               .text("Year");
+            }
+            else {
+              svg.append("text")             
+              .attr("transform",
+                    "translate(" + (width/2) + " ," + 
+                                   (height + margin.top*2/3) + ")")
+              .style("text-anchor", "middle")
+              .text(xaxes_text);
+            }
 
             svg.append("text")             
               .attr("transform", "rotate(-90)")
@@ -403,7 +416,7 @@ body{
                     break;
                 case 3:
                     load_suicides_gdp();
-                    label_axes();
+                    label_axes("GDP per Capita ($)");
                     break;
                 case 4:
                     load_suicides_age_year();
@@ -451,7 +464,7 @@ body{
             // Set title
             var title = d3.select("#graph_title").append("h2")
                     .attr("class", "text-info")
-                    .text("Suicides Rate By Country");
+                    .text("Suicide Rates By Country");
 
                 // Add information to the graph to guide use
                 var header = d3.select("#highlight").append("h4")
@@ -459,7 +472,7 @@ body{
                     .text("Which Country Has The Highest Suicide Rate?")
                     .attr("align", "left");
                 var info = d3.select("#highlight").append("p")
-                    .text("Former soviet countries on average has the highest suicide rate. In 2015, Lithuania was ranked number one in suicide rate, with 32.54 people commiting suicide per 100,000 population. Keep note that starting from 2009 South Korea's Suicide Rate exceeds most of former soviet union countries")
+                    .text("Former soviet countries on average has the highest suicide rate from 1985~2016. In 2015, Lithuania was ranked number one in suicide rate, with 32.54 people commiting suicide per 100,000 population. Keep note that starting from around 2007 the overall suicide rates in former soviet regions begins to drop and Asian countries begin to top the highest suicide rate chart. ")
                     .attr("align", "left");
 
             // Add Slider
@@ -663,7 +676,7 @@ body{
             // Set title
             var title = d3.select("#graph_title").append("h2")
                     .attr("class", "text-info")
-                    .text("Suicides Rate By GDP per Capita");
+                    .text("Suicide Rates By GDP per Capita");
 
             // Add information to the graph to guide use
             var header = d3.select("#highlight").append("h4")
@@ -671,7 +684,7 @@ body{
                 .text("What GDP Bucket Has The Highest Suicide Rate?")
                 .attr("align", "left");
             var info = d3.select("#highlight").append("p")
-                .text("We see the lower the gdp, the higher the overall suicide rate")
+                .text("We plot each country's suicide rate along its GDP per capita. Each country, represented as a circle, is colored using its geo region. We see that in general, the lower the GDP per capita, the higher the overall suicide rate. This corresponds to a cluster of circles in the top left corner of this plot. However interestingly we see that Latin American countries (colored yellow) defy this trend. Despite having a overall low GDP per capita it enjoyed a relatively low suicide rate. ")
                 .attr("align", "left");
 
             // // Add Slider
@@ -852,7 +865,7 @@ body{
                 // write title of graph
                 var title = d3.select("#graph_title").append("h2")
                     .attr("class", "text-info")
-                    .text("Suicide Rates Per Sex Per Year");
+                    .text("Suicide Rates By Sex");
 
                 // Add information to the graph to guide use
                 var header = d3.select("#highlight").append("h4")
@@ -983,14 +996,14 @@ body{
                 // write title of graph
                 var title = d3.select("#graph_title").append("h2")
                     .attr("class", "text-info")
-                    .text("Suicides Rate Per Year");
+                    .text("World Suicide Rates");
 
                 // Add information to the graph to guide use
                 var header = d3.select("#highlight").append("h4")
-                    .text("What Year Has The Highest Suicide Rate?")
+                    .text("Suicide Rate is a world epidemic")
                     .attr("align", "left")
                 var info = d3.select("#highlight").append("p")
-                    .text("\n \n The average suicide rate slowly climbs up from 1985 to 1995. In 1995 it has the highest suicide rate followed by a slow steady decline. However notice the inflection point in 2015. In 2016 the suicide rate again climbs back up")
+                    .text("\n \n Suicide is a world wide epidemic. As we will see, suicide rate is particular high in old male or people in countries with low GDP per capita. However, we also noticed the rise in GDP per capita in recent decades did not curb world suicide rate. In fact, we can see in 2015 the world suicide rate for the first time since 1998 starts increasing again. With the human life span elongating and the high risk group population increasing, we need to treat suicide rate as an epidemic and look for possible ways to address this issue.")
                     .attr("align", "left")
                 
                 
@@ -1036,7 +1049,8 @@ body{
                         });;
 
                 // transition after
-                ys.domain([0, 10 + d3.max(data, function(d) {return d.Suicide_Rate;})]);
+                var padding = 10
+                ys.domain([0, padding + d3.max(data, function(d) {return d.Suicide_Rate;})]);
 
                 paths.transition().duration(t)
                     .attr("class", "line")
@@ -1056,93 +1070,135 @@ body{
                     .attr("class", "y axis")
                     .call(d3.axisLeft(ys)); 
 
+                // annotations
                 // make annotations
-                const annotations = [
+                const callouts  = [
                 {
-                    note: { label: "Cold War Ends" },
-                    subject: {
-                      y1: margin.top,
-                      y2: height - margin.bottom
-                    },
-                    y: margin.top ,
-                    data: { Year: "1985"}, //position the x based on an x scale
-                    dy: -50
+                    note: { label: "1995: Highest Suicide Rate"},
+                    data: {Year: "1995", Suicide_Rate: ys.domain()[1] - padding},
+                    dx: 0, dy:-50,
+                    subject: { radius: 30, radiusPadding: 10 }
                 },
                 {
-                    note: { label: "Soviet Union Collapses" },
-                    subject: {
-                      y1: margin.top,
-                      y2: height - margin.bottom
-                    },
-                    y: margin.top ,
-                    data: { Year: "1991"}, //position the x based on an x scale
-                    dy: -50
-                },
-                {
-                    note: { label: "September 11 Terrorist attack" },
-                    subject: {
-                      y1: margin.top,
-                      y2: height - margin.bottom
-                    },
-                    y: margin.top ,
-                    data: { Year: "2001"}, //position the x based on an x scale
-                    dy: -50
-                },
-                {
-                    note: { label: "Economy Collapses" },
-                    subject: {
-                      y1: margin.top,
-                      y2: height - margin.bottom
-                    },
-                    y: margin.top ,
-                    data: { Year: "2008"}, //position the x based on an x scale
-                    dy: -50
-                },
-                {
-                    note: { label: "Syrian Civil War Starts" },
-                    subject: {
-                      y1: margin.top,
-                      y2: height - margin.bottom
-                    },
-                    y: margin.top ,
-                    data: { Year: "2011"}, //position the x based on an x scale
-                    dy: 0
-                },
-                ]
+                    note: { label: "2015: Inflection Since 1998"},
+                    data: {Year: "2015", Suicide_Rate: 11.47},
+                    dx: -50, dy:-50,
+                    subject: { radius: 30, radiusPadding: 10 }
+                }]
 
-                const type = d3.annotationCustomType(
-                    d3.annotationXYThreshold, 
-                    {"note":{
-                        "lineType":"none",
-                        "orientation": "top",
-                        "align":"left"}
-                    }
-                )
-                d3.annotation().annotations(annotations);
-                const makeAnnotations = d3.annotation()
-                            .type(type)
+
+                d3.annotation().annotations(callouts);
+                const makeCallouts = d3.annotation()
+                            .type(d3.annotationCalloutCircle)
                             //Gives you access to any data objects in the annotations array
                             .accessors({ 
                               x: function(d){ return xs(parseTime(d.Year))},
-                              y: function(d){ return ys(d.Suicide_Rate ) }
+                              y: function(d){ console.log(d);
+                                return ys(d.Suicide_Rate ) }
                             })
                             .accessorsInverse({
-                                 year: d => timeFormat(xs.invert(d.Year)),
-                                 rate: d => ys.invert(d.Suicide_Rate)
+                                 Year: d => timeFormat(xs.invert(d.Year)),
+                                 Suicide_Rate: d => ys.invert(d.Suicide_Rate)
                               })
-                            .annotations(annotations)
-                            .textWrap(100)
+                            .annotations(callouts)
+                            // .textWrap(60)
 
-
-                var anno = svg.append("g")
-                    .attr("class", "annotation-group")
-                    .call(makeAnnotations);
-                anno
+                var callo = svg.append("g")
+                    .call(makeCallouts);
+                callo
                     .transition()
                         .style("display", "none")
                     .transition()
-                        .delay(600)
+                        .delay(t)
                         .style("display", "inline");
+
+                // make annotations
+                // const annotations = [
+                // {
+                //     note: { label: "Cold War Ends" },
+                //     subject: {
+                //       y1: margin.top,
+                //       y2: height - margin.bottom
+                //     },
+                //     y: margin.top ,
+                //     data: { Year: "1985"}, //position the x based on an x scale
+                //     dy: -50
+                // },
+                // {
+                //     note: { label: "Soviet Union Collapses" },
+                //     subject: {
+                //       y1: margin.top,
+                //       y2: height - margin.bottom
+                //     },
+                //     y: margin.top ,
+                //     data: { Year: "1991"}, //position the x based on an x scale
+                //     dy: -50
+                // },
+                // {
+                //     note: { label: "September 11 Terrorist attack" },
+                //     subject: {
+                //       y1: margin.top,
+                //       y2: height - margin.bottom
+                //     },
+                //     y: margin.top ,
+                //     data: { Year: "2001"}, //position the x based on an x scale
+                //     dy: -50
+                // },
+                // {
+                //     note: { label: "Economy Collapses" },
+                //     subject: {
+                //       y1: margin.top,
+                //       y2: height - margin.bottom
+                //     },
+                //     y: margin.top ,
+                //     data: { Year: "2008"}, //position the x based on an x scale
+                //     dy: -50
+                // },
+                // {
+                //     note: { label: "Syrian Civil War Starts" },
+                //     subject: {
+                //       y1: margin.top,
+                //       y2: height - margin.bottom
+                //     },
+                //     y: margin.top ,
+                //     data: { Year: "2011"}, //position the x based on an x scale
+                //     dy: 0
+                // },
+                // ]
+
+                // const type = d3.annotationCustomType(
+                //     d3.annotationXYThreshold, 
+                //     {"note":{
+                //         "lineType":"none",
+                //         "orientation": "top",
+                //         "align":"left"}
+                //     }
+                // )
+                // d3.annotation().annotations(annotations);
+                // const makeAnnotations = d3.annotation()
+                //             .type(type)
+                //             //Gives you access to any data objects in the annotations array
+                //             .accessors({ 
+                //               x: function(d){ return xs(parseTime(d.Year))},
+                //               y: function(d){ return ys(d.Suicide_Rate ) }
+                //             })
+                //             .accessorsInverse({
+                //                  year: d => timeFormat(xs.invert(d.Year)),
+                //                  rate: d => ys.invert(d.Suicide_Rate)
+                //               })
+                //             .annotations(annotations)
+                //             .textWrap(100)
+
+
+                // var anno = svg.append("g")
+                //     .attr("class", "annotation-group")
+                //     .call(makeAnnotations);
+                // anno
+                //     .transition()
+                //         .style("display", "none")
+                //     .transition()
+                //         .delay(600)
+                //         .style("display", "inline");
             });
         }
 
@@ -1153,14 +1209,14 @@ body{
                 // write title of graph
                 var title = d3.select("#graph_title").append("h2")
                     .attr("class", "text-info")
-                    .text("Suicide Rates per 100,000 ppl By Age");
+                    .text("Suicide Rates By Age");
 
                 // Add information to the graph to guide use
                 var header = d3.select("#highlight").append("h4")
                     .text("What Age Group Has The Highest Suicide Rate?")
                     .attr("align", "left")
                 var info = d3.select("#highlight").append("p")
-                    .text("Age group 75+ has the highest suicide rate amonst all age groups. However note that in 1995 there's a bump in suicide rate across all age groups")
+                    .text("Age group 75+ has the highest suicide rate amonst all age groups. However note that in 1995 there's a bump in suicide rate across all age groups. We show the major world events here again as a reference")
                     .attr("align", "left")
                     
                 console.log('data', data)
@@ -1261,17 +1317,101 @@ body{
 
                 // annotations
                 // make annotations
-                const annotations = [{
-                    note: { label: "Age 75+ Highest Suicide Rate"},
-                    data: {Year: "1995", Suicide_Rate: ys.domain()[1]},
-                    dx: 200, dy:0,
-                    subject: { radius: 30, radiusPadding: 10 }
-                }]
+                // const annotations = [{
+                //     note: { label: "Age 75+ Highest Suicide Rate"},
+                //     data: {Year: "1995", Suicide_Rate: ys.domain()[1]},
+                //     dx: 200, dy:0,
+                //     subject: { radius: 30, radiusPadding: 10 }
+                // }]
 
 
+                // d3.annotation().annotations(annotations);
+                // const makeAnnotations = d3.annotation()
+                //             .type(d3.annotationCalloutCurve)
+                //             //Gives you access to any data objects in the annotations array
+                //             .accessors({ 
+                //               x: function(d){ return xs(parseTime(d.Year))},
+                //               y: function(d){ return ys(d.Suicide_Rate ) }
+                //             })
+                //             .accessorsInverse({
+                //                  year: d => timeFormat(xs.invert(d.Year)),
+                //                  rate: d => ys.invert(d.Suicide_Rate)
+                //               })
+                //             .annotations(annotations)
+                //             // .textWrap(60)
+
+                // var anno = svg.append("g")
+                //     .call(makeAnnotations);
+                // anno
+                //     .transition()
+                //         .style("display", "none")
+                //     .transition()
+                //         .delay(t)
+                //         .style("display", "inline");
+                 const annotations = [
+                {
+                    note: { label: "Cold War Ends" },
+                    subject: {
+                      y1: margin.top,
+                      y2: height - margin.bottom
+                    },
+                    y: margin.top ,
+                    data: { Year: "1985"}, //position the x based on an x scale
+                    dy: -50
+                },
+                {
+                    note: { label: "Soviet Union Collapses" },
+                    subject: {
+                      y1: margin.top,
+                      y2: height - margin.bottom
+                    },
+                    y: margin.top ,
+                    data: { Year: "1991"}, //position the x based on an x scale
+                    dy: -50
+                },
+                {
+                    note: { label: "September 11 Terrorist attack" },
+                    subject: {
+                      y1: margin.top,
+                      y2: height - margin.bottom
+                    },
+                    y: margin.top ,
+                    data: { Year: "2001"}, //position the x based on an x scale
+                    dy: -50
+                },
+                {
+                    note: { label: "Economy Collapses" },
+                    subject: {
+                      y1: margin.top,
+                      y2: height - margin.bottom
+                    },
+                    y: margin.top ,
+                    data: { Year: "2008"}, //position the x based on an x scale
+                    dy: -50
+                },
+                {
+                    note: { label: "Syrian Civil War Starts" },
+                    subject: {
+                      y1: margin.top,
+                      y2: height - margin.bottom
+                    },
+                    y: margin.top ,
+                    data: { Year: "2011"}, //position the x based on an x scale
+                    dy: 0
+                },
+                ]
+
+                const type = d3.annotationCustomType(
+                    d3.annotationXYThreshold, 
+                    {"note":{
+                        "lineType":"none",
+                        "orientation": "top",
+                        "align":"left"}
+                    }
+                )
                 d3.annotation().annotations(annotations);
                 const makeAnnotations = d3.annotation()
-                            .type(d3.annotationCalloutCurve)
+                            .type(type)
                             //Gives you access to any data objects in the annotations array
                             .accessors({ 
                               x: function(d){ return xs(parseTime(d.Year))},
@@ -1282,15 +1422,17 @@ body{
                                  rate: d => ys.invert(d.Suicide_Rate)
                               })
                             .annotations(annotations)
-                            // .textWrap(60)
+                            .textWrap(100)
+
 
                 var anno = svg.append("g")
+                    .attr("class", "annotation-group")
                     .call(makeAnnotations);
                 anno
                     .transition()
                         .style("display", "none")
                     .transition()
-                        .delay(t)
+                        .delay(600)
                         .style("display", "inline");
 
             });
