@@ -515,7 +515,8 @@ body{
 
         
             // Draw Map
-            var path = d3.geoPath().projection(d3.geoMercator().scale(100).translate([width / 2, margin.top + height / 2])); // translate map to svg);
+            var scale_factor = window.innerWidth/1920*150;
+            var path = d3.geoPath().projection(d3.geoMercator().scale(scale_factor).translate([width / 2, margin.top + height / 2])); // translate map to svg);
             // Add world map colors
             var mapColors = d3.scaleQuantize()
                             .domain(d3.extent(data, function(d) {
@@ -583,10 +584,9 @@ body{
                 .text(formatTime(xs.domain()[0]))
                 .attr("transform", "translate(0," + (-25) + ")")
 
-            // var worldMap = svg.selectAll(".world")
-            //         .data(topojson.feature(world,world.objects.countries).features);
+            console.log("innerwidth", window.innerWidth, 'height', window.innerHeight);
+
             var worldMap = svg.selectAll("g")
-                      // .attr("transform", "scale(20)")
                       .data(topojson.feature(world,world.objects.countries).features);
 
             // todo: instead of passing year, could pass through map[year]
@@ -610,7 +610,6 @@ body{
                         }
                     })
                     .attr("data-legend",function(d) { 
-                        console.log('data legend', d)
                         var country = codeMap.get(d.id);
                         if (data.has(country)) {
                             var val = data.get(country);
@@ -1017,6 +1016,7 @@ body{
                 xs.domain(d3.extent(data, function(d) {return d.Year;}));
                 ys.domain([0, 0]);
 
+
                 // transition before 
                 var paths = svg.append("path")
                     .datum(data)
@@ -1077,19 +1077,25 @@ body{
                     note: { label: "1995: Highest Suicide Rate"},
                     data: {Year: "1995", Suicide_Rate: ys.domain()[1] - padding},
                     dx: 0, dy:-50,
-                    subject: { radius: 30, radiusPadding: 10 }
+                    subject: { radius: 30, radiusPadding: 10 },
+                    // connector: {
+                    //   end: "arrow"
+                    // }
                 },
                 {
                     note: { label: "2015: Inflection Since 1998"},
                     data: {Year: "2015", Suicide_Rate: 11.47},
                     dx: -50, dy:-50,
-                    subject: { radius: 30, radiusPadding: 10 }
+                    subject: { radius: 30, radiusPadding: 10 },
+                    // connector: {
+                    //   end: "arrow"
+                    // }
                 }]
 
 
                 d3.annotation().annotations(callouts);
                 const makeCallouts = d3.annotation()
-                            .type(d3.annotationCalloutCircle)
+                            .type(d3.annotationLabel)
                             //Gives you access to any data objects in the annotations array
                             .accessors({ 
                               x: function(d){ return xs(parseTime(d.Year))},
@@ -1111,6 +1117,7 @@ body{
                     .transition()
                         .delay(t)
                         .style("display", "inline");
+
 
                 // make annotations
                 // const annotations = [
